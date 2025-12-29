@@ -122,18 +122,57 @@ jQuery(document).ready(function ($) {
         $(".ellipse").css("background", "rgba(254, 204, 0, 0.0784313725)");
     });
 
-    $(".header-question").click(function () {
-        $(this).siblings(".pop-helper").show();
+    // Обработчик для header-question (делегирование событий)
+    $(document).on("click", ".header-question", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const $popHelper = $(this).siblings(".pop-helper");
+
+        // Скрываем все другие pop-helper
+        $(".pop-helper").not($popHelper).hide();
+
+        // Показываем текущий
+        $popHelper.toggle();
         $(".pop-it-record").hide();
     });
 
-    $(".footer-question").click(function () {
-        $(this).siblings(".pop-helper").show();
+    // Обработчик для footer-question (делегирование событий)
+    $(document).on("click", ".footer-question", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        const $popHelper = $(this).siblings(".pop-helper");
+
+        // Скрываем все другие pop-helper
+        $(".pop-helper").not($popHelper).hide();
+
+        // Показываем текущий
+        $popHelper.toggle();
         $(".pop-it-record").hide();
     });
 
-    $(".helper-header .close img").click(function () {
-        $(".pop-helper").hide();
+    // Кнопка закрытия в модальном окне (делегирование событий)
+    $(document).on("click", ".helper-header .close", function (e) {
+        e.stopPropagation();
+        e.preventDefault();
+        $(this).closest(".pop-helper").hide();
+    });
+
+    // Закрытие pop-helper при клике вне окна
+    $(document).on("click", function (e) {
+        if (
+            !$(e.target).closest(".pop-helper").length &&
+            !$(e.target).closest(".header-question").length &&
+            !$(e.target).closest(".footer-question").length
+        ) {
+            $(".pop-helper").hide();
+        }
+    });
+
+    // Закрытие pop-helper по клавише Escape
+    $(document).on("keydown", function (e) {
+        if (e.keyCode === 27) {
+            $(".pop-helper").hide();
+        }
     });
 
     // Инициализация кастомной карусели сертификатов
