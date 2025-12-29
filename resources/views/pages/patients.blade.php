@@ -4,9 +4,13 @@
     Для пациентов
 @endsection
 
+@push('styles')
+    <link rel="stylesheet" href="{{ asset('assets/front/css/new-styles/patients.css') }}">
+@endpush
+
 @section('content')
 
-<div class="patience-container">
+<div class="patience-container container">
   <h1 class="price-header">Пациентам</h1>
   <!-- <div class="patience-intro">
     <h2 class="h1">Правила внутреннего распорядка пациентов</h2>
@@ -47,11 +51,11 @@
               <a href="{{ asset('assets/docs/Публичный договор на оказание платных медицинских услуг ООО СиМедКомпани.pdf') }}" download>Скачать PDF</a>
             </div>
           </li>
-          <li>
+          <!-- <li>
             <div class="li-text">
               <a href="{{  route('uzi-doc') }}">Подготовка к ультразвуковому исследованию</a>
             </div>
-          </li>
+          </li> -->
           <li>
             <div class="li-text">
               <a href="{{ asset('assets/docs/Свидетельство о государственной регистрации юридического лица  ООО СиМедКомпани.pdf') }}">Свидетельство о государственной регистрации юридического лица</a>

@@ -57,7 +57,7 @@
         </p>
         <div class="flex">
           <p>Сб-Вс 09:00-16:00</p>
-          <div class="header-question"></div>
+          <div class="footer-question"></div>
           <div class="pop-helper">
             <div class="helper-header">
               <div class="close">

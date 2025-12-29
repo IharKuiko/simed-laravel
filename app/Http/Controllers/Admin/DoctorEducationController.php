@@ -35,7 +35,7 @@ class DoctorEducationController extends Controller
         ]);
 
         \App\Models\DoctorEducation::create($request->all());
-        return redirect()->back()->with('success', 'Doctor education created successfully.');
+        return redirect()->back()->with('success', 'Образование врача создано успешно.');
     }
 
     /**
@@ -51,7 +51,8 @@ class DoctorEducationController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $education = \App\Models\DoctorEducation::findOrFail($id);
+        return view('admin.doctor.doctor_education_edit', compact('education'));
     }
 
     /**
@@ -59,7 +60,15 @@ class DoctorEducationController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $request->validate([
+
+            'title' => 'required|string|max:255',
+        ]);
+
+        $education = \App\Models\DoctorEducation::findOrFail($id);
+        $education->update($request->all());
+
+        return redirect()->route('doctors.edit', ['doctor' => $education->doctor_id])->with('success', 'Образование врача обновлено успешно.');
     }
 
     /**
@@ -70,6 +79,6 @@ class DoctorEducationController extends Controller
         $education = \App\Models\DoctorEducation::findOrFail($id);
         $education->delete();
 
-        return redirect()->back()->with('success', 'Doctor education deleted successfully.');
+        return redirect()->back()->with('success', 'Образование врача удалено успешно.');
     }
 }

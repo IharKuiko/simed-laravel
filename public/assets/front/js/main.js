@@ -127,6 +127,11 @@ jQuery(document).ready(function ($) {
         $(".pop-it-record").hide();
     });
 
+    $(".footer-question").click(function () {
+        $(this).siblings(".pop-helper").show();
+        $(".pop-it-record").hide();
+    });
+
     $(".helper-header .close img").click(function () {
         $(".pop-helper").hide();
     });

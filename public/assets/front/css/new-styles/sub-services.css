@@ -49,7 +49,7 @@
     z-index: 1;
 }
 
-.pageContent h1::after {
+/* .pageContent h1::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -58,7 +58,7 @@
     height: 4px;
     background: linear-gradient(to right, var(--main-color), #4a90e2);
     border-radius: 2px;
-}
+} */
 
 /* Стили для первого параграфа - выделение и увеличенный размер */
 .pageContent p:first-of-type {

@@ -158,6 +158,14 @@ ul {
     margin-left: 10px;
 }
 
+.footer-question {
+    background-image: url(../../images/header_question.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 23px;
+    margin-left: 10px;
+}
+
 .flex {
     display: flex;
 }

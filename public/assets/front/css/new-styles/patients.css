@@ -1,0 +1,765 @@
+/* Стили для страницы "Пациентам" */
+
+/* ============================================
+   Базовые стили и переменные
+   ============================================ */
+:root {
+    --main-color: #065aad;
+    --sec-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --transition: all 0.3s ease;
+    --info-bg: #e3f2fd;
+    --info-border: #2196f3;
+    --warning-bg: #fff3e0;
+    --warning-border: #ff9800;
+    --card-bg: #f1f8ff;
+    --card-border: #065aad;
+}
+
+/* ============================================
+   Основной контейнер
+   ============================================ */
+.patience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 15px;
+    font-family: "IBMPlex", sans-serif;
+    color: var(--text-color);
+}
+
+/* ============================================
+   Заголовок страницы
+   ============================================ */
+.patience-container .price-header {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    /* color: var(--main-color); */
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   Блок 1: "Запись на приём" - Памятка для пациентов
+   ============================================ */
+.patience-info:first-of-type {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 35px 40px 35px 80px;
+    background: linear-gradient(135deg, var(--info-bg) 0%, #bbdefb 100%);
+    border-left: 5px solid var(--info-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.15);
+    transition: var(--transition);
+}
+
+.patience-info:first-of-type::before {
+    content: "📋";
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+}
+
+.patience-info:first-of-type:hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(33, 150, 243, 0.25);
+}
+
+.patience-info:first-of-type .h1 {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #1565c0;
+    margin: 0 0 15px 0;
+}
+
+.patience-info:first-of-type .desc {
+    font-family: "IBMPlex", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #0d47a1;
+    margin: 0;
+}
+
+/* ============================================
+   Блок 2: "Важно" - Важная информация
+   ============================================ */
+.patience-info:nth-of-type(2) {
+    position: relative;
+    margin-bottom: 30px;
+    padding: 35px 40px 35px 80px;
+    background: linear-gradient(135deg, var(--warning-bg) 0%, #ffe0b2 100%);
+    border-left: 5px solid var(--warning-border);
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(255, 152, 0, 0.15);
+    transition: var(--transition);
+}
+
+.patience-info:nth-of-type(2)::before {
+    content: "⚠️";
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+}
+
+.patience-info:nth-of-type(2):hover {
+    transform: translateX(5px);
+    box-shadow: 0 6px 25px rgba(255, 152, 0, 0.25);
+}
+
+.patience-info:nth-of-type(2) .h1 {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.3;
+    color: #e65100;
+    margin: 0 0 15px 0;
+}
+
+.patience-info:nth-of-type(2) .desc {
+    font-family: "IBMPlex", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #bf360c;
+    margin: 0;
+}
+
+/* ============================================
+   Блок 3: "Подготовка к УЗИ" - Карточка-ссылка
+   ============================================ */
+.patience-container > a[href*="uzi-doc"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 30px 40px;
+    font-family: Tenor, sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--main-color);
+    text-decoration: none;
+    background: linear-gradient(135deg, var(--card-bg) 0%, #e3f2fd 100%);
+    border: 2px solid var(--card-border);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(6, 90, 173, 0.15);
+    transition: var(--transition);
+}
+
+.patience-container > a[href*="uzi-doc"]::before {
+    content: "🩺";
+    font-size: 32px;
+}
+
+.patience-container > a[href*="uzi-doc"]:hover {
+    background: linear-gradient(135deg, var(--main-color) 0%, #044a8f 100%);
+    color: #fff;
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px rgba(6, 90, 173, 0.3);
+}
+
+/* ============================================
+   Блок 4: "Документы" - Простой список (без аккордеона)
+   ============================================ */
+.level-menu-first {
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: var(--sec-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.level-menu-first-p {
+    width: 100%;
+}
+
+/* Заголовок блока документов */
+.price-container-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--main-color);
+}
+
+.price-container-ul .text {
+    font-family: Tenor, sans-serif;
+    font-size: 32px;
+    color: var(--main-color);
+}
+
+/* Скрываем стрелки аккордеона */
+.price-container-ul .arrow-down,
+.price-container-ul .arrow-up {
+    display: none !important;
+}
+
+/* Список документов - всегда виден */
+.price-menu {
+    display: block !important;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.price-menu li {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.price-menu li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--main-color);
+}
+
+.price-menu .li-text {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.price-menu .li-text a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.price-menu .li-text a:hover {
+    text-decoration: underline;
+    color: #044a8f;
+}
+
+/* Стиль для кнопки скачивания PDF */
+.price-menu .li-text a[download] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: var(--transition);
+    margin-left: auto;
+}
+
+.price-menu .li-text a[download]:hover {
+    background-color: #044a8f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 90, 173, 0.3);
+    text-decoration: none !important;
+}
+
+.price-menu .li-text a[download]::before {
+    content: "📥";
+    font-size: 16px;
+}
+
+/* ============================================
+   Футер страницы
+   ============================================ */
+.patience-footer {
+    margin: 60px auto 0;
+    font-family: Tenor, sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--main-color);
+    padding: 40px 20px;
+    background: linear-gradient(
+        135deg,
+        var(--sec-color) 0%,
+        #e3f2fd 100%
+    );
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.patience-footer img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.patience-footer img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Анимация появления элементов
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.patience-info:first-of-type,
+.patience-info:nth-of-type(2),
+.patience-container > a[href*="uzi-doc"],
+.level-menu-first,
+.patience-footer {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.patience-info:nth-of-type(2) {
+    animation-delay: 0.1s;
+}
+
+.patience-container > a[href*="uzi-doc"] {
+    animation-delay: 0.2s;
+}
+
+.level-menu-first {
+    animation-delay: 0.3s;
+}
+
+.patience-footer {
+    animation-delay: 0.4s;
+}
+
+/* ============================================
+   Адаптивность для планшетов (max-width: 992px)
+   ============================================ */
+@media screen and (max-width: 992px) {
+    .patience-container {
+        padding: 40px 15px;
+    }
+
+    .patience-container .price-header {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    /* Блок 1: Запись на приём */
+    .patience-info:first-of-type {
+        padding: 30px 35px 30px 70px;
+    }
+
+    .patience-info:first-of-type::before {
+        font-size: 28px;
+        left: 20px;
+    }
+
+    .patience-info:first-of-type .h1 {
+        font-size: 24px;
+    }
+
+    .patience-info:first-of-type .desc {
+        font-size: 15px;
+    }
+
+    /* Блок 2: Важно */
+    .patience-info:nth-of-type(2) {
+        padding: 30px 35px 30px 70px;
+    }
+
+    .patience-info:nth-of-type(2)::before {
+        font-size: 28px;
+        left: 20px;
+    }
+
+    .patience-info:nth-of-type(2) .h1 {
+        font-size: 24px;
+    }
+
+    .patience-info:nth-of-type(2) .desc {
+        font-size: 15px;
+    }
+
+    /* Блок 3: Подготовка к УЗИ */
+    .patience-container > a[href*="uzi-doc"] {
+        font-size: 20px;
+        padding: 25px 30px;
+        max-width: 100%;
+    }
+
+    .patience-container > a[href*="uzi-doc"]::before {
+        font-size: 28px;
+    }
+
+    /* Блок 4: Документы */
+    .level-menu-first {
+        padding: 30px;
+    }
+
+    .price-container-ul .text {
+        font-size: 28px;
+    }
+
+    .price-menu li {
+        padding: 18px 20px;
+    }
+
+    .price-menu .li-text {
+        font-size: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .price-menu .li-text a[download] {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    /* Футер */
+    .patience-footer {
+        font-size: 24px;
+        padding: 30px 15px;
+    }
+
+    .patience-footer img {
+        max-width: 180px;
+    }
+}
+
+/* ============================================
+   Адаптивность для мобильных устройств (max-width: 768px)
+   ============================================ */
+@media screen and (max-width: 768px) {
+    .patience-container {
+        padding: 30px 15px;
+    }
+
+    .patience-container .price-header {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    /* Блок 1: Запись на приём */
+    .patience-info:first-of-type {
+        padding: 25px 20px 25px 60px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .patience-info:first-of-type::before {
+        font-size: 24px;
+        left: 15px;
+    }
+
+    .patience-info:first-of-type .h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .patience-info:first-of-type .desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Блок 2: Важно */
+    .patience-info:nth-of-type(2) {
+        padding: 25px 20px 25px 60px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .patience-info:nth-of-type(2)::before {
+        font-size: 24px;
+        left: 15px;
+    }
+
+    .patience-info:nth-of-type(2) .h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .patience-info:nth-of-type(2) .desc {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    /* Блок 3: Подготовка к УЗИ */
+    .patience-container > a[href*="uzi-doc"] {
+        font-size: 18px;
+        padding: 20px 25px;
+        margin-bottom: 30px;
+        border-radius: 12px;
+    }
+
+    .patience-container > a[href*="uzi-doc"]::before {
+        font-size: 24px;
+    }
+
+    /* Блок 4: Документы */
+    .level-menu-first {
+        padding: 25px 15px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+
+    .price-container-ul {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    .price-container-ul .text {
+        font-size: 24px;
+    }
+
+    .price-menu {
+        gap: 12px;
+    }
+
+    .price-menu li {
+        padding: 15px 18px;
+        border-radius: 10px;
+    }
+
+    .price-menu .li-text {
+        font-size: 14px;
+    }
+
+    .price-menu .li-text a[download] {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    /* Футер */
+    .patience-footer {
+        font-size: 22px;
+        line-height: 1.3;
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+
+    .patience-footer img {
+        max-width: 150px;
+    }
+}
+
+/* ============================================
+   Адаптивность для маленьких мобильных устройств (max-width: 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+    .patience-container {
+        padding: 20px 10px;
+    }
+
+    .patience-container .price-header {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    /* Блок 1: Запись на приём */
+    .patience-info:first-of-type {
+        padding: 20px 15px 20px 55px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .patience-info:first-of-type::before {
+        font-size: 22px;
+        left: 12px;
+    }
+
+    .patience-info:first-of-type .h1 {
+        font-size: 20px;
+    }
+
+    .patience-info:first-of-type .desc {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Блок 2: Важно */
+    .patience-info:nth-of-type(2) {
+        padding: 20px 15px 20px 55px;
+        margin-bottom: 20px;
+        border-radius: 8px;
+    }
+
+    .patience-info:nth-of-type(2)::before {
+        font-size: 22px;
+        left: 12px;
+    }
+
+    .patience-info:nth-of-type(2) .h1 {
+        font-size: 20px;
+    }
+
+    .patience-info:nth-of-type(2) .desc {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    /* Блок 3: Подготовка к УЗИ */
+    .patience-container > a[href*="uzi-doc"] {
+        font-size: 16px;
+        padding: 18px 20px;
+        margin-bottom: 25px;
+        border-radius: 10px;
+    }
+
+    .patience-container > a[href*="uzi-doc"]::before {
+        font-size: 22px;
+    }
+
+    /* Блок 4: Документы */
+    .level-menu-first {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+
+    .price-container-ul {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+
+    .price-container-ul .text {
+        font-size: 22px;
+    }
+
+    .price-menu {
+        gap: 10px;
+    }
+
+    .price-menu li {
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+
+    .price-menu .li-text {
+        font-size: 13px;
+    }
+
+    .price-menu .li-text a {
+        font-size: 13px;
+    }
+
+    .price-menu .li-text a[download] {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+
+    /* Футер */
+    .patience-footer {
+        font-size: 18px;
+        line-height: 1.2;
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+
+    .patience-footer img {
+        max-width: 130px;
+    }
+}
+
+/* ============================================
+   Стили для печати
+   ============================================ */
+@media print {
+    .patience-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .patience-container .price-header {
+        font-size: 24px;
+        margin: 20px 0;
+        color: #000;
+    }
+
+    .patience-info:first-of-type,
+    .patience-info:nth-of-type(2) {
+        background-color: #fff;
+        border: 1px solid #ddd;
+        page-break-inside: avoid;
+        padding: 20px;
+    }
+
+    .patience-info:first-of-type::before,
+    .patience-info:nth-of-type(2)::before {
+        display: none;
+    }
+
+    .patience-info:first-of-type .h1,
+    .patience-info:nth-of-type(2) .h1 {
+        color: #000;
+    }
+
+    .patience-info:first-of-type .desc,
+    .patience-info:nth-of-type(2) .desc {
+        color: #000;
+    }
+
+    .patience-container > a[href*="uzi-doc"] {
+        display: none;
+    }
+
+    .level-menu-first {
+        background-color: #fff;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        padding: 20px;
+    }
+
+    .price-menu li {
+        background-color: #fff;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    .price-menu .li-text a {
+        color: #000;
+    }
+
+    .price-menu .li-text a[download] {
+        background-color: #f0f0f0;
+        color: #000 !important;
+    }
+
+    .patience-footer {
+        background-color: #fff;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin: 30px 0;
+    }
+}
