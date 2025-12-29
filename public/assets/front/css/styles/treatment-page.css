@@ -1,0 +1,470 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.treatment-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+}
+
+.treatment-intro .text .img-pos {
+    position: absolute;
+    /*top: 30%;*/
+    /*left: 11%;*/
+}
+
+.treatment-intro .main-img {
+    margin-top: 106px;
+}
+
+.micro {
+    margin-left: 8%;
+}
+
+.treatment-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.treatment-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.treatment-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.treatment-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.treatment-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.treatment-intro .description .forth-text {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.treatment-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.treatment-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+
+.treatment-date {
+    margin-top: 100px;
+    margin-left: 188px;
+    max-width: 804px;
+    margin-bottom: 70px;
+}
+
+.treatment-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.treatment-date .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.treatment-date .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.micro {
+    display: flex;
+    margin-right: 135px;
+}
+
+.micro .text {
+    margin-right: 95px;
+}
+
+.micro .image {
+    margin: 15px;
+}
+
+.micro .title {
+    margin-top: 60px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.micro .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.method .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.treatment-date .desc-clinic {
+    font-family: IBMPlex;
+    font-size: 16px;
+    line-height: 24px;
+    color: #02111B;
+}
+@media screen and (min-width: 1880px) {
+    .treatment-intro, .treatment-date, .micro {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 1450px) {
+    .treatment-intro .text .img-pos {
+        /*top: 69%;*/
+    }
+
+    .treatment-intro .description {
+        margin-right: 95px;
+        margin-top: 98px;
+    }
+
+    .treatment-intro .description .inner-text {
+        margin-right: 23%;
+    }
+
+    .treatment-intro .description .first-text {
+        margin-left: 106px;
+    }
+
+    .treatment-intro .description .forth-text {
+        margin-bottom: 31px;
+        margin-left: 12px;
+        max-width: 560px;
+    }
+
+    .treatment-intro .description .fifth-text {
+        margin-top: 10px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+
+    .treatment-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+
+    .treatment-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+
+    .treatment-intro .description .second-text {
+        margin-left: 12px;
+        width: 545px;
+    }
+
+    .treatment-date .title {
+        margin-bottom: 27px;
+    }
+
+    .treatment-date {
+        margin-top: 54px;
+        margin-left: 383px;
+        margin-bottom: 21px;
+    }
+
+    .treatment-date .desc-clinic {
+        margin-top: 63px;
+        max-width: 618px;
+    }
+
+    .micro {
+        margin-top: 30px;
+        margin-left: 126px;
+        margin-right: 0;
+    }
+
+    .micro .text {
+        margin-left: 64px;
+        margin-top: 80px;
+        width: 426px;
+    }
+
+    .micro .desc {
+        margin-bottom: 20px;
+    }
+
+    .micro .fifth-text img {
+        position: absolute;
+    }
+
+    .micro .title {
+        margin-bottom: 18px;
+    }
+
+    .micro .fifth-text div {
+        margin-left: 54px;
+        width: 546px;
+    }
+}
+@media screen and (max-width: 1880px) {
+    .treatment-intro .text .img-pos {
+        /*top: 48%;*/
+    }
+}
+@media screen and (max-width: 1271px) and (min-width: 1251px) {
+    .treatment-intro {
+        margin-left: calc(50% - 50vw)!important;
+    }
+}
+@media screen and (max-width: 1199px) and (min-width: 1190px) {
+    .treatment-intro {
+        margin-left: calc(50% - 50vw)!important;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .treatment-intro {
+        margin-left: calc(52% - 50vw);
+    }
+
+    .treatment-intro .text .img-pos {
+        /*left: 6%;*/
+    }
+}
+@media screen and (max-width: 1250px) {
+    .treatment-intro .description {
+        margin-right: 2%;
+    }
+}
+@media screen and (max-width: 1199px) {
+    .treatment-date {
+        margin-left: 475px;
+    }
+    .micro .text {
+        width: 100%;
+        margin-right: 2%;
+    }
+}
+@media screen and (max-width: 1190px) {
+    .treatment-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+
+    .treatment-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .treatment-intro .description .forth-text {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .treatment-intro .description .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .treatment-intro .description .second-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .treatment-date .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .treatment-date .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .treatment-date .desc-clinic {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .treatment-date {
+        max-width: 100%;
+    }
+    .treatment-date .desc-clinic {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .micro .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .micro .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .treatment-date {
+        margin-left: 3%;
+    }
+
+    .micro {
+        margin-left: 2%;
+    }
+
+    .treatment-intro .main-img {
+        width: 520px;
+    }
+}
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+@media screen and (max-width: 1120px) {
+    .treatment-intro {
+        display: block;
+    }
+    .treatment-intro .description .inner-text {
+        text-align: left;
+    }
+    .treatment-intro .description .first-text {
+        margin-left: 0;
+    }
+    .treatment-intro .text .img-pos {
+        /*top: 39%;*/
+        /*left: 2%;*/
+    }
+    .treatment-intro .description .forth-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .treatment-intro .description .second-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .treatment-intro .main-img {
+        margin-top: 20px;
+        width: 100%;
+        padding-right: 2%;
+    }
+    .treatment-date {
+        max-width: 100%;
+    }
+    .treatment-date .desc-clinic {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .micro {
+        display: block;
+    }
+    .micro .text {
+        margin-left: 2%;
+        margin-top: 20px;
+        width: 700px;
+    }
+    .micro .title {
+        margin-top: 20px;
+    }
+}
+@media screen and (max-width: 728px) and (min-width: 721px) {
+    .micro .text {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 720px) {
+    .micro .text {
+        margin-left: 2%;
+        margin-top: 20px;
+        width: 500px;
+    }
+}
+@media screen and (max-width: 555px) and (min-width: 551px) {
+    .treatment-intro {
+        margin-left: calc(51% - 50vw);
+    }
+}
+@media screen and (max-width: 550px) {
+    .micro .text {
+        margin-left: 2%;
+        margin-top: 20px;
+        width: 400px;
+    }
+    .treatment-intro .description .text {
+        max-width: 100%;
+    }
+    .micro .image img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .micro .text {
+        width: 90%;
+    }
+    .treatment-date {
+        max-width: 95%;
+    }
+    .treatment-intro .main-img {
+        width: 100%;
+    }
+}
+/*# sourceMappingURL=implantation-page.css.map */

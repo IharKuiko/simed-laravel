@@ -1,0 +1,609 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.implantation-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+
+}
+.implantation-intro .text .img-pos{
+    position: absolute;
+    top: 30%;
+    left: 11%;
+}
+.implantation-intro .main-img {
+    margin-top: 106px;
+}
+.implantation-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.implantation-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.implantation-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.implantation-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.implantation-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.implantation-intro .description .forth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.implantation-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.implantation-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+.implantation-intro .fifth-text img {
+    margin-right: 30px;
+}
+.date {
+    margin-top: 100px;
+    margin-left: 250px;
+    max-width: 804px;
+    margin-bottom: 70px;
+}
+.date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+.date .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+}
+.korean {
+    margin-left: 155px;
+    display: flex;
+    margin-right: 135px;
+}
+.korean .text {
+    margin-right: 95px;
+}
+.korean .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+.korean .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.korean .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.korean .desc .fifth-text img {
+    margin-right: 20px;
+}
+.korean .fifth-text img {
+    margin-right: 30px;
+}
+.method {
+    display: flex;
+    margin-right: 135px;
+}
+.method .text {
+    margin-right: 95px;
+}
+.method .title {
+    margin-top: 60px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+.method .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.method .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.method .desc .fifth-text img {
+    margin-right: 20px;
+}
+.method .fifth-text img {
+    margin-right: 30px;
+}
+.izrael-impl {
+    margin-top: 80px;
+    margin-left: 155px;
+    display: flex;
+    margin-bottom: 50px;
+    margin-right: 135px;
+}
+.izrael-impl .text {
+    margin-right: 95px;
+}
+.izrael-impl .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+.izrael-impl .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.izrael-impl .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.izrael-impl .desc .fifth-text img {
+    margin-right: 20px;
+}
+.izrael-impl .fifth-text img {
+    margin-right: 20px;
+}
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+@media screen and (min-width: 1880px) {
+    .implantation-intro, .method {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+@media screen and (max-width: 1450px) {
+    .implantation-intro .text .img-pos {
+        /*top: 48%;*/
+    }
+    .implantation-intro .description {
+        margin-right: 95px;
+        margin-top: 98px;
+    }
+    .implantation-intro .description .first-text {
+        margin-left: 110px;
+    }
+    .implantation-intro .description .forth-text {
+        margin-bottom: 21px;
+        margin-left: 12px;
+        max-width: 560px;
+
+    }
+    .implantation-intro .description .fifth-text {
+        margin-top: 10px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+    .implantation-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+    .implantation-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+    .implantation-intro .description .second-text {
+        margin-left: 12px;
+    }
+    .date {
+        margin-top: 95px;
+    }
+    .korean .title {
+        margin-bottom: 29px;
+    }
+    .korean .desc {
+        width: 600px;
+    }
+    .korean .fifth-text img {
+        position: absolute;
+    }
+    .korean .fifth-text div {
+        margin-left: 53px;
+        max-width: 533px;
+    }
+    .korean .text {
+        margin-right: 40px;
+    }
+    .method {
+        margin-top: 60px;
+        margin-left: 11px;
+        margin-right: 0;
+    }
+    .method .text {
+        margin-left: 14px;
+        margin-top: 8px;
+    }
+    .method .desc {
+        margin-bottom: 20px;
+    }
+    .method .fifth-text img {
+        position: absolute;
+    }
+    .method .title {
+        margin-bottom: 28px;
+    }
+    .method .fifth-text div {
+        margin-left: 54px;
+        width: 546px;
+    }
+    .izrael-impl {
+        margin-top: 72px;
+        margin-right: 0px;
+        margin-bottom: 42px;
+    }
+    .izrael-impl .image {
+        margin-top: 7px;
+    }
+    .izrael-impl .text {
+        margin-right: 0;
+    }
+    .izrael-impl .title {
+        margin-bottom: 28px;
+    }
+    .izrael-impl .desc {
+        width: 600px;
+    }
+    .izrael-impl .fifth-text img {
+        position: absolute;
+    }
+    .izrael-impl .fifth-text div {
+        margin-left: 54px;
+        width: 546px;
+    }
+}
+@media screen and (max-width: 1410px) and (min-width: 1401px) {
+    .izrael-impl {
+        margin-left: 120px;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .izrael-impl {
+        margin-left: 70px;
+    }
+}
+@media screen and (max-width: 1350px) {
+    .method .image img {
+        max-width: 500px;
+    }
+    .izrael-impl .image img {
+        width: 100%;
+    }
+    .korean {
+        margin-left: 85px;
+    }
+    .korean .image img {
+        max-width: 500px;
+    }
+    .implantation-intro .description .first-text {
+        margin-left: 6px;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .korean {
+        margin-left: 60px;
+    }
+    .izrael-impl {
+        margin-left: 60px;
+    }
+}
+@media screen and (max-width: 1181px) and (min-width: 1150px) {
+    .izrael-impl {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .korean {
+        margin-right: 0;
+    }
+    .implantation-intro {
+        margin-left: calc(54% - 50vw);
+    }
+    .implantation-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+    .implantation-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+    .implantation-intro .text .img-pos {
+        /*top: 32%;*/
+    }
+    .implantation-intro .text .img-pos {
+        /*left: 2%;*/
+    }
+    .implantation-intro .description .forth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .implantation-intro .description .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .date .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .korean .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .method .title {
+        margin-top: 0;
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .izrael-impl .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .korean .desc {
+        width: 100%;
+    }
+    .izrael-impl .desc {
+        width: 100%;
+    }
+    .izrael-impl .image img {
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1150px) {
+    .korean .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .korean .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .method .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .method .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .izrael-impl .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .izrael-impl .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .izrael-impl .image img {
+        width: 450px;
+    }
+    .korean {
+        margin-right: 50px;
+    }
+    .method .image img {
+        width: 450px;
+    }
+}
+@media screen and (max-width: 1100px) {
+    .implantation-intro {
+        display: block;
+    }
+    .implantation-intro .description .inner-text {
+        text-align: left;
+    }
+    .implantation-intro .description .forth-text {
+        max-width: 100%;
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+    .implantation-intro .description .fifth-text div {
+        margin-right: 2%;
+    }
+    .implantation-intro .description .second-text {
+        margin-left: 1%;
+        margin-right: 2%;
+    }
+    .implantation-intro .description .fifth-text {
+        max-width: 100%;
+    }
+    .implantation-intro .main-img {
+        margin-top: 30px;
+    }
+    .implantation-intro .text .img-pos {
+        /*top: 30%;*/
+    }
+    .date {
+        margin-left: 3%;
+        max-width: 100%;
+        margin-bottom: 70px;
+    }
+    .korean {
+        margin-left: 40px;
+        display: block;
+    }
+    .izrael-impl {
+        margin-left: 40px;
+        display: block;
+    }
+    .korean .fifth-text div {
+        max-width: 100%;
+    }
+    .korean .image img {
+        max-width: 100%;
+    }
+    .image-desk {
+        display: none;
+    }
+    .image-mob {
+        display: block!important;
+        text-align: center;
+    }
+    .method{
+        display: block;
+    }
+    .method .fifth-text div {
+        width: 100%;
+    }
+    .izrael-impl .fifth-text div {
+        width: 100%;
+    }
+    .izrael-impl .image img {
+        width: 450px;
+    }
+    .izrael-impl .image {
+        text-align: center;
+    }
+    .method .image img {
+        width: 100%;
+    }
+    .korean .image {
+        text-align: center;
+    }
+    .date {
+        margin-right: 3%;
+        margin-top: 35px;
+    }
+    .method {
+        margin-left: 0;
+        margin-right: 3%;
+    }
+    .implantation-intro {
+        margin-left: 2%;
+    }
+}
+@media screen and (max-width: 1110px) and (min-width: 1101px) {
+    .izrael-impl {
+        margin-left: 44px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .izrael-impl .image img {
+        width: 100%;
+    }
+    .implantation-intro .main-img {
+        max-width: 100%;
+        padding-right: 3%;
+    }
+    .implantation-intro .description {
+        margin-right: 2%;
+    }
+    .korean {
+        margin-right: 2%;
+    }
+    .method .text {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .korean .text {
+        margin-right: 2%;
+    }
+    .izrael-impl {
+        margin-left: 3%;
+        margin-right: 2%;
+    }
+    .korean {
+        margin-left: 3%;
+    }
+}
+.image-mob {
+    display: none;
+}
+/*# sourceMappingURL=implantation-page.css.map */

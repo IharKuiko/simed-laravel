@@ -1,0 +1,595 @@
+/* Стили для страницы деталей врача */
+
+/* Базовые переменные */
+:root {
+    --primary-color: #065aad;
+    --secondary-color: #02111b;
+    --accent-color: #fecc00;
+    --text-color: #333333;
+    --light-gray: #f8f9fa;
+    --medium-gray: #e9ecef;
+    --border-color: #dee2e6;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --shadow-heavy: 0 16px 48px rgba(0, 0, 0, 0.16);
+    --border-radius: 12px;
+    --transition: all 0.3s ease;
+}
+
+/* Основная статья страницы */
+.doctor-details-article {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: "IBMPlex", sans-serif;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Основной контейнер с информацией о враче */
+.doctor-main-container {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 50px;
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+}
+
+.doctor-main-container:hover {
+    box-shadow: var(--shadow-medium);
+}
+
+/* Левая часть с информацией о враче */
+.doctor-main-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.doctor-main-name h1 {
+    font-family: "Tenor", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: var(--secondary-color);
+    margin: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid var(--light-gray);
+}
+
+.doctor-main-specialization p {
+    font-family: "Tenor", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.doctor-main-experience p {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin: 0;
+    display: inline-block;
+    background: var(--light-gray);
+    padding: 8px 16px;
+    border-radius: 30px;
+}
+
+.doctor-main-education {
+    margin-top: 20px;
+}
+
+.doctor-main-education-title {
+    font-family: "Tenor", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin: 0 0 20px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.doctor-main-education-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.education-p {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.education-p:hover {
+    background: #f0f4f8;
+    transform: translateY(-2px);
+}
+
+.education-p img {
+    width: 24px;
+    height: 24px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.education-p-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+
+}
+
+/* Правая часть с фотографией врача */
+.doctor-main-right {
+    flex: 0 0 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.doctor-main-right img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-medium);
+    transition: var(--transition);
+}
+
+.doctor-main-right img:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-heavy);
+}
+
+/* Второй контейнер с курсами повышения квалификации */
+.doctor-main-container-second {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow-light);
+}
+
+.doctor-professional-courses-title {
+    font-family: "Tenor", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin: 0 0 25px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.doctor-professional-courses-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.doctor-professional-courses-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.doctor-professional-courses-text {
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 15px;
+    background: var(--light-gray);
+    border-radius: var(--border-radius);
+    position: relative;
+    padding-left: 40px;
+    transition: var(--transition);
+}
+
+.doctor-professional-courses-text:hover {
+    background: #f0f4f8;
+    transform: translateX(5px);
+}
+
+
+
+.doctor-professional-courses-text::before {
+    content: "✓";
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+/* Секция с сертификатами */
+.doctor-certificates {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: var(--shadow-light);
+}
+
+.doctor-certificates-title {
+    font-family: "Tenor", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--secondary-color);
+    margin: 0 0 25px 0;
+    position: relative;
+    padding-left: 15px;
+}
+
+.doctor-certificates-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.doctor-certificates .icones {
+    height: auto !important;
+    padding: 0;
+}
+
+.doctor-certificates .container {
+    max-width: 100%;
+    padding: 0;
+}
+
+.doctor-certificates .icones-carousel {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+}
+
+.doctor-certificates .icones-carousel::-webkit-scrollbar {
+    height: 8px;
+}
+
+.doctor-certificates .icones-carousel::-webkit-scrollbar-track {
+    background: var(--light-gray);
+    border-radius: 4px;
+}
+
+.doctor-certificates .icones-carousel::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 4px;
+}
+
+.doctor-certificates .icones-carousel::-webkit-scrollbar-thumb:hover {
+    background: #044a8f;
+}
+
+.doctor-certificates .item {
+    flex: 0 0 auto;
+    width: 300px;
+    height: auto;
+    min-height: 200px;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    transition: var(--transition);
+    cursor: pointer;
+    position: relative;
+}
+
+.doctor-certificates .item:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-heavy);
+}
+
+.doctor-certificates .item img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    transition: var(--transition);
+    display: block;
+}
+
+.doctor-certificates .item:hover img {
+    transform: scale(1.05);
+}
+
+/* Добавляем затемнение при наведении для индикации возможности увеличения */
+.doctor-certificates .item::after {
+    content: "Увеличить";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background: rgba(6, 90, 173, 0.8);
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    opacity: 0;
+    transition: var(--transition);
+    pointer-events: none;
+}
+
+.doctor-certificates .item:hover::after {
+    opacity: 1;
+}
+
+/* Навигационные кнопки для карусели */
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.carousel-prev,
+.carousel-next {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    box-shadow: var(--shadow-light);
+}
+
+.carousel-prev:hover,
+.carousel-next:hover {
+    background: #044a8f;
+    transform: scale(1.1);
+    box-shadow: var(--shadow-medium);
+}
+
+.carousel-prev.disabled,
+.carousel-next.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: scale(1);
+}
+
+.carousel-prev.disabled:hover,
+.carousel-next.disabled:hover {
+    background: #ccc;
+    transform: scale(1);
+}
+
+/* Адаптивность для планшетов */
+@media screen and (max-width: 992px) {
+    .doctor-main-container {
+        flex-direction: column;
+        gap: 30px;
+        padding: 30px;
+    }
+
+    .doctor-main-right {
+        flex: 0 0 auto;
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .doctor-main-name h1 {
+        font-size: 36px;
+    }
+
+    .doctor-main-specialization p {
+        font-size: 20px;
+    }
+
+    .doctor-main-education-title,
+    .doctor-professional-courses-title,
+    .doctor-certificates-title {
+        font-size: 20px;
+    }
+
+    .doctor-certificates .item {
+        width: 250px;
+        height: auto;
+        min-height: 180px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 38px;
+        height: 38px;
+        font-size: 19px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .doctor-details-article {
+        padding: 20px 15px;
+    }
+
+    .doctor-main-container,
+    .doctor-main-container-second,
+    .doctor-certificates {
+        padding: 25px;
+        margin-bottom: 30px;
+    }
+
+    .doctor-main-name h1 {
+        font-size: 30px;
+    }
+
+    .doctor-main-specialization p {
+        font-size: 18px;
+    }
+
+    .doctor-main-experience p {
+        font-size: 16px;
+    }
+
+    .doctor-main-education-title,
+    .doctor-professional-courses-title,
+    .doctor-certificates-title {
+        font-size: 18px;
+    }
+
+    .education-p-text,
+    .doctor-professional-courses-text {
+        font-size: 15px;
+    }
+
+    .doctor-certificates .item {
+        width: 220px;
+        height: auto;
+        min-height: 160px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .doctor-main-name h1 {
+        font-size: 26px;
+    }
+
+    .doctor-main-specialization p {
+        font-size: 16px;
+    }
+
+    .doctor-main-education-title,
+    .doctor-professional-courses-title,
+    .doctor-certificates-title {
+        font-size: 16px;
+    }
+
+    .education-p,
+    .doctor-professional-courses-text {
+        padding: 12px;
+        padding-left: 40px;
+    }
+
+    .education-p-text,
+    .doctor-professional-courses-text {
+        font-size: 14px;
+    }
+
+    .doctor-certificates .item {
+        width: 180px;
+        height: auto;
+        min-height: 130px;
+    }
+
+    .doctor-main-container,
+    .doctor-main-container-second,
+    .doctor-certificates {
+        padding: 20px;
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+}
+
+/* Дополнительные улучшения */
+.doctor-details-article * {
+    box-sizing: border-box;
+}
+
+/* Анимация появления элементов */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.doctor-main-container,
+.doctor-main-container-second,
+.doctor-certificates {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.doctor-main-container-second {
+    animation-delay: 0.2s;
+}
+
+.doctor-certificates {
+    animation-delay: 0.4s;
+}
+
+/* Улучшенная доступность */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Стили для печати */
+@media print {
+    .doctor-details-article {
+        padding: 0;
+        max-width: 100%;
+    }
+
+    .doctor-main-container,
+    .doctor-main-container-second,
+    .doctor-certificates {
+        box-shadow: none;
+        border: 1px solid #ddd;
+        break-inside: avoid;
+        margin-bottom: 20px;
+    }
+
+    .doctor-certificates .icones-carousel {
+        overflow-x: visible;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .doctor-certificates .item {
+        width: 200px;
+        height: auto;
+        min-height: 150px;
+        margin-bottom: 10px;
+    }
+}

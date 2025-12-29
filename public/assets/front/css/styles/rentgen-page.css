@@ -1,0 +1,401 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.rentgen-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+}
+.rentgen-intro .text .img-pos{
+    position: absolute;
+    top: 30%;
+    left: 11%;
+}
+.rentgen-intro .main-img {
+    margin-top: 106px;
+}
+.rentgen-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.rentgen-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.rentgen-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.rentgen-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.rentgen-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.rentgen-intro .description .forth-text {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.rentgen-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.rentgen-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+.rentgen-teeth {
+    margin-left: 9%;
+    display: flex;
+    margin-right: 135px;
+}
+.rentgen-teeth .text {
+    margin-right: 95px;
+}
+
+.desctop-img {
+    margin-right:10px;
+}
+
+.rentgen-teeth .title {
+    margin-top: 60px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+.rentgen-teeth .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.mobile-img {
+    display: none;
+}
+@media screen and (min-width: 1880px) {
+    .rentgen-intro, .rentgen-teeth {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 1450px) {
+    .rentgen-intro .text .img-pos {
+        top: 62%;
+    }
+    .rentgen-intro .description {
+        margin-right: 95px;
+        margin-top: 98px;
+    }
+    .rentgen-intro .description .inner-text {
+        margin-right: 4%;
+    }
+    .rentgen-intro .description .first-text {
+        margin-left: 106px;
+    }
+    .rentgen-intro .description .forth-text {
+        margin-bottom: 38px;
+        margin-left: 12px;
+        max-width: 419px;
+    }
+    .rentgen-intro .description .fifth-text {
+        margin-top: 10px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+    .rentgen-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+    .rentgen-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+    .rentgen-intro .description .second-text {
+        margin-left: 12px;
+        width: 545px;
+    }
+    .rentgen-teeth {
+        margin-top: 71px;
+        margin-left: 126px;
+        margin-right: 0;
+    }
+    .rentgen-teeth .text {
+        margin-left: 64px;
+        margin-top: 101px;
+        width: 577px;
+    }
+    .rentgen-teeth .desc {
+        margin-bottom: 20px;
+        font-family: IBMPlex;
+        font-weight: 400;
+        line-height: 27px;
+        font-size: 18px;
+        color: #02111B;
+        width: 414px;
+    }
+    
+    .rentgen-teeth img{
+        margin: 10px;
+    }
+    
+    .rentgen-teeth .fifth-text img {
+        position: absolute;
+    }
+    .rentgen-teeth .title {
+        margin-bottom: 18px;
+    }
+    .rentgen-teeth .fifth-text div {
+        margin-left: 54px;
+        width: 546px;
+    }
+}
+@media screen and (max-width: 1880px) {
+    .rentgen-intro .text .img-pos {
+        top: 48%;
+    }
+}
+@media screen and (max-width: 415px) and (min-width: 401px) {
+    .rentgen-teeth .text {
+        width: 100%!important;
+    }
+    .rentgen-teeth .desc {
+        width: 100%!important;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .rentgen-intro {
+        margin-left: calc(52% - 50vw);
+    }
+
+    .rentgen-intro .text .img-pos {
+        left: 6%;
+        top: 45%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .rentgen-intro .text .img-pos {
+        top: 59%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .rentgen-intro .description {
+        margin-right: 2%;
+    }
+    .rentgen-intro .text .img-pos {
+        top: 58%;
+    }
+}
+@media screen and (max-width: 1190px) {
+    .rentgen-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+
+    .rentgen-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .rentgen-intro .description .forth-text {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .rentgen-intro .description .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .rentgen-intro .description .second-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .rentgen-date .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+
+    .rentgen-date .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .rentgen-date .desc-clinic {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .rentgen-intro .main-img {
+        width: 520px;
+    }
+    .rentgen-intro .text .img-pos {
+        top: 44%;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .desctop-img {
+        display: none;
+    }
+    .mobile-img {
+        display: block;
+    }
+    .rentgen-intro {
+        display: block;
+    }
+    .rentgen-intro .description .inner-text {
+        text-align: left;
+    }
+    .rentgen-intro .description .first-text {
+        margin-left: 0;
+    }
+    .rentgen-intro .text .img-pos {
+        top: 37%;
+        left: 2%;
+    }
+    .rentgen-intro .description .forth-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .rentgen-intro .description .second-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .rentgen-intro .main-img {
+        margin-top: 20px;
+        width: 100%;
+        padding-right: 2%;
+    }
+    .rentgen-date {
+        max-width: 100%;
+    }
+    .rentgen-date .desc-clinic {
+        max-width: 100%;
+    }
+    .rentgen-teeth {
+        display: block;
+    }
+    .rentgen-teeth {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .rentgen-teeth .text {
+        margin-left: 2%;
+        width: 800px;
+        margin-top: 20px;
+    }
+    .rentgen-teeth .desc {
+        width: 800px;
+    }
+}
+@media screen and (max-width: 850px) {
+    .rentgen-teeth .text {
+        margin-left: 2%;
+        width: 600px;
+        margin-top: 20px;
+    }
+    .rentgen-teeth .desc {
+        width: 600px;
+    }
+}
+@media screen and (max-width: 630px) {
+    .rentgen-intro .text .img-pos {
+        top: 40%;
+        left: 1%;
+    }
+    .rentgen-teeth .text {
+        width: 400px;
+    }
+    .rentgen-teeth .desc {
+        width: 400px;
+        font-size: 16px;
+    }
+    .rentgen-teeth .title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .rentgen-intro .description .text {
+        max-width: 100%;
+    }
+    .rentgen-teeth .image img {
+        width: 100%;
+    }
+    .rentgen-intro .text .img-pos {
+        top: 42%;
+    }
+}
+@media screen and (max-width: 450px) {
+    .rentgen-date {
+        max-width: 80%;
+    }
+    .rentgen-intro .main-img {
+        width: 100%;
+    }
+    .rentgen-intro .text .img-pos {
+        top: 50%;
+    }
+}
+@media screen and (max-width: 400px) {
+    .rentgen-teeth .text {
+        width: 100%;
+    }
+    .rentgen-teeth .desc {
+        width: 100%;
+    }
+}
+/*# sourceMappingURL=implantation-page.css.map */

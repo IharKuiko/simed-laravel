@@ -1,0 +1,409 @@
+@charset "UTF-8";
+@font-face {
+  font-family: IBMPlex;
+  src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+@font-face {
+  font-family: Tenor;
+  src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+  /* Путь к файлу со шрифтом */
+}
+.achiv-intro {
+  margin: 38px 0 0 0;
+  margin-left: calc(60% - 50vw);
+}
+.achiv-intro .sec-text {
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 18px;
+  color: #02111B;
+  max-width: 594px;
+  margin-top: 30px;
+  margin-left: 8%;
+}
+
+.achiv-intro .flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.achiv-intro .text .img-pos {
+  position: absolute;
+  top: 30%;
+  left: 11%;
+}
+
+.achiv-intro .main-img {
+  margin-top: 106px;
+}
+
+.achiv-intro .description {
+  display: flex;
+  margin-left: 5%;
+  margin-top: 6%;
+}
+
+.achiv-intro .description .inner-text {
+  text-align: right;
+  font-family: Tenor;
+  font-weight: 400;
+  line-height: 59px;
+  font-size: 54px;
+  color: #02111B;
+}
+
+.achiv-intro .description .first-text {
+  margin-left: 70px;
+  margin-top: 27px;
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 18px;
+  color: #02111B;
+  margin-bottom: 40px;
+}
+.achiv-intro .description .first-text p {
+  margin-bottom: 0;
+}
+
+.achiv-intro .description .second-text {
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+  color: #02111B;
+  margin-top: 20px;
+}
+
+.achiv-intro .description .third-text {
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 110%;
+  font-size: 54px;
+  color: #FECC00;
+  max-width: 85%;
+  margin-bottom: 10px;
+}
+
+.achiv-intro .description .forth-text {
+  font-family: Tenor;
+  font-weight: 400;
+  line-height: 39px;
+  font-size: 30px;
+  color: #02111B;
+  margin-bottom: 20px;
+}
+
+.achiv-intro .description .fifth-text {
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+  color: #02111B;
+  margin-top: 10px;
+  display: flex;
+}
+
+.achiv-intro .description .fifth-text img {
+  margin-right: 20px;
+}
+
+.achiv-frame {
+  margin-top: 10%;
+}
+
+.achiv-frame img {
+	width: 560px;
+}
+
+.awards {
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+.awards .title {
+  text-align: center;
+  font-family: Tenor;
+  font-weight: 400;
+  line-height: 64px;
+  font-size: 54px;
+  color: #02111B;
+  margin-bottom: 30px;
+}
+.awards .images {
+  margin: 0 3%;
+  text-align: center;
+}
+.awards .images img {
+  max-height: 500px;
+}
+.awards .first-text {
+  margin-left: 20%;
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 18px;
+  color: #02111B;
+  max-width: 594px;
+  margin-top: 70px;
+}
+
+@media screen and (max-width: 1450px) {
+  .achiv-intro .text .img-pos {
+    /*top: 69%;*/
+  }
+  .achiv-intro .description {
+    margin-right: auto;
+    margin-top: 98px;
+  }
+  .achiv-intro .description .inner-text {
+    margin-right: 9%;
+  }
+  .achiv-intro .description .first-text {
+    margin-left: 106px;
+    max-width: 530px;
+    margin-bottom: 78px;
+  }
+  .achiv-intro .description .forth-text {
+    margin-bottom: 21px;
+    margin-left: 12px;
+    max-width: 560px;
+  }
+  .achiv-intro .description .fifth-text {
+    margin-top: 21px;
+    max-width: 544px;
+    margin-left: 12px;
+  }
+  .achiv-intro .description .fifth-text img {
+    margin-right: 20px;
+    position: absolute;
+  }
+  .achiv-intro .description .fifth-text div {
+    margin-left: 53px;
+  }
+  .achiv-intro .description .second-text {
+    margin-left: 12px;
+    width: 530px;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1880px) {
+  .achiv-intro {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+@media screen and (max-width: 1880px) {
+  .achiv-intro .text .img-pos {
+    /*top: 48%;*/
+  }
+}
+@media screen and (max-width: 1450px) {
+  .awards .images img {
+    max-height: 430px;
+  }
+  .achiv-intro .description {
+    margin-left: 0;
+  }
+  .achiv-intro .description .inner-text {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .achiv-frame {
+    margin-top: 20%;
+  }
+  .awards .scroll-gal {
+    overflow: scroll;
+  }
+  .awards .images img {
+    max-height: 500px;
+  }
+  .awards .images {
+    width: max-content;
+    max-width: 160vw;
+  }
+  .achiv-intro {
+    margin-left: calc(52% - 50vw);
+  }
+  .achiv-intro .text .img-pos {
+    /*left: 6%;*/
+    /*top: 45%;*/
+  }
+}
+@media screen and (max-width: 1250px) {
+  .achiv-intro .description {
+    margin-right: 2%;
+  }
+  .achiv-intro {
+    margin-left: calc(52% - 50vw);
+  }
+}
+.kov-image {
+  position: relative;
+  height: 50px;
+}
+
+@media screen and (max-width: 1190px) {
+  .achiv-intro {
+    display: block;
+  }
+  .achiv-intro .description .inner-text {
+    line-height: 48px;
+    font-size: 40px;
+    text-align: left;
+  }
+  .achiv-intro .description .first-text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .achiv-intro .forth-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .achiv-intro .fifth-text {
+    line-height: 21px;
+    font-size: 14px;
+  }
+  .achiv-intro .main-img {
+    margin-top: 30px;
+  }
+  .achiv-intro .second-text {
+    line-height: 21px;
+    font-size: 14px;
+    width: 100% !important;
+  }
+  .achiv-intro .main-img {
+    width: 520px;
+  }
+  .achiv-intro .text .img-pos {
+    /*top: 44%;*/
+  }
+  .achiv-intro .description .inner-text {
+    line-height: 48px;
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 1120px) {
+  .achiv-intro {
+    display: block;
+  }
+  .achiv-intro .description .inner-text {
+    text-align: left;
+  }
+  .achiv-intro .description .first-text {
+    margin-left: 0;
+  }
+  .achiv-intro .text .img-pos {
+    /*top: 37%;*/
+    /*left: 2%;*/
+  }
+  .achiv-intro .description .forth-text {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .achiv-intro .description .second-text {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .achiv-intro .main-img {
+    margin-top: 20px;
+    width: 100%;
+    padding-right: 2%;
+  }
+  .awards .title {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .awards .first-text {
+    line-height: 24px;
+    font-size: 16px;
+  }
+  .achiv-intro .description .inner-text {
+    font-size: 30px;
+    line-height: 31px;
+  }
+  .achiv-intro .sec-text {
+    line-height: 24px;
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1020px) {
+  .achiv-frame {
+    margin-top: 5%;
+  }
+  .achiv-intro .flex {
+    display: block;
+  }
+  .achiv-intro .description {
+    display: block;
+  }
+  .achiv-intro .sec-text {
+    margin-left: 0;
+    max-width: 100%;
+  }
+  .awards .first-text {
+    margin-left: 3%;
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 850px) {
+  .awards .images {
+    max-width: 240vw;
+  }
+}
+@media screen and (max-width: 600px) {
+  .achiv-frame {
+    margin-right: 2%;
+  }
+}
+@media screen and (max-width: 570px) {
+  .awards .images {
+    max-width: 246vw;
+  }
+  .achiv-frame {
+    text-align: center;
+  }
+  .achiv-frame iframe {
+    max-width: 500px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .achiv-intro .description .text {
+    max-width: 100%;
+  }
+  .achiv-frame iframe {
+    max-width: 400px;
+  }
+  .awards .images {
+    max-width: 270vw;
+  }
+}
+@media screen and (max-width: 500px) {
+  .awards .images {
+    max-width: 290vw;
+  }
+}
+@media screen and (max-width: 470px) {
+  .awards .images {
+    max-width: 345vw;
+  }
+}
+@media screen and (max-width: 450px) {
+  .achiv-frame iframe {
+    max-width: -webkit-fill-available;
+  }
+  .achiv-intro .main-img {
+    width: 90%;
+  }
+  .awards .images {
+    max-width: inherit;
+  }
+}
+/*# sourceMappingURL=implantation-page.css.map */
+
+/*# sourceMappingURL=achiv-page.css.map */

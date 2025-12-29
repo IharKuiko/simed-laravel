@@ -1,0 +1,335 @@
+/* Стили для страницы услуг */
+
+/* Базовые переменные */
+:root {
+    --primary-color: #4a6fa5;
+    --secondary-color: #6c9bd1;
+    --accent-color: #e8f4fd;
+    --text-color: #333333;
+    --light-text: #666666;
+    --background-color: #ffffff;
+    --light-gray: #f5f7fa;
+    --border-color: #e1e8ed;
+    --gynecology-color: #d9a7c7; /* Мягкий розовый для гинекологии */
+    --ultrasound-color: #a7c7d9; /* Мягкий голубой для ультразвука */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+}
+
+/* Основная страница услуг */
+.services-page {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    font-family: "Tenor Sans", "IBM Plex Sans", Arial, sans-serif;
+}
+
+/* Заголовок страницы */
+.main-title {
+    font-size: 32px;
+    font-weight: 600;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 50px;
+    line-height: 1.3;
+}
+
+/* Основной блок с услугами */
+.services-block {
+    display: flex;
+    /* flex-direction: column; */
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+/* Блок гинекологических услуг */
+.ginecology-services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Заголовок гинекологических услуг */
+.ginecology-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.ginecology-services-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 30px;
+    background-color: var(--gynecology-color);
+    border-radius: 4px;
+}
+
+/* Контейнер с карточками гинекологических услуг */
+.ginecology-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Карточка отдельной гинекологической услуги */
+.ginecology-item {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.ginecology-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.ginecology-item a {
+    display: block;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.ginecology-item a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--gynecology-color);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.ginecology-item:hover a::before {
+    transform: translateX(0);
+}
+
+/* Название гинекологической услуги */
+.ginecology-item-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.4;
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.ginecology-item:hover .ginecology-item-title {
+    color: var(--gynecology-color);
+}
+
+/* Блок ультразвуковых услуг */
+.ultasound-services {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Заголовок ультразвуковых услуг */
+.ultasound-services-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--text-color);
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.ultasound-services-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 30px;
+    background-color: var(--ultrasound-color);
+    border-radius: 4px;
+}
+
+/* Контейнер с карточками ультразвуковых услуг */
+.ultasound-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* Карточка отдельной ультразвуковой услуги */
+.ultasound-item {
+    background-color: var(--background-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+}
+
+.ultasound-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.ultasound-item a {
+    display: block;
+    padding: 25px 20px;
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+    overflow: hidden;
+}
+
+.ultasound-item a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--ultrasound-color);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.ultasound-item:hover a::before {
+    transform: translateX(0);
+}
+
+/* Название ультразвуковой услуги */
+.ultasound-item-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-color);
+    line-height: 1.4;
+    transition: var(--transition);
+    position: relative;
+    z-index: 2;
+}
+
+.ultasound-item:hover .ultasound-item-title {
+    color: var(--ultrasound-color);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 768px) {
+    .services-page {
+        padding: 40px 0;
+    }
+
+    .main-title {
+        font-size: 28px;
+        margin-bottom: 40px;
+    }
+
+    .services-block {
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+
+    .ginecology-services-title,
+    .ultasound-services-title {
+        font-size: 22px;
+    }
+
+    .ginecology-items,
+    .ultasound-items {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 480px) {
+    .services-page {
+        padding: 30px 0;
+    }
+
+    .main-title {
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+
+    .services-block {
+        gap: 40px;
+        margin-bottom: 50px;
+    }
+
+    .ginecology-services-title,
+    .ultasound-services-title {
+        font-size: 20px;
+    }
+
+    .ginecology-items,
+    .ultasound-items {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .ginecology-item a,
+    .ultasound-item a {
+        padding: 20px 15px;
+    }
+
+    .ginecology-item-title,
+    .ultasound-item-title {
+        font-size: 16px;
+    }
+}
+
+/* Дополнительные стили для улучшения визуального восприятия */
+@media (min-width: 1200px) {
+    .ginecology-items,
+    .ultasound-items {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Анимация появления элементов при загрузке страницы */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.services-page {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.ginecology-services,
+.ultasound-services {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.ginecology-services {
+    animation-delay: 0.2s;
+}
+
+.ultasound-services {
+    animation-delay: 0.4s;
+}
+
+/* Стили для фокусировки доступности */
+.ginecology-item a:focus,
+.ultasound-item a:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}

@@ -1,0 +1,1255 @@
+/* Стили для страницы отзывов */
+
+/* Базовые переменные */
+:root {
+    --primary-color: #065aad;
+    --secondary-color: #4a6fa5;
+    --accent-color: #e8f4fd;
+    --text-color: #333333;
+    --light-text: #666666;
+    --background-color: #ffffff;
+    --light-gray: #f5f7fa;
+    --border-color: #e1e8ed;
+    --rating-color: #ffc107;
+    --service-tag-bg: #e8f4fd;
+    --service-tag-color: #065aad;
+    --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --card-hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+    --swiper-theme-color: #065aad;
+}
+
+/* Основная страница отзывов */
+.reviews-page {
+    padding: 60px 0;
+    background-color: var(--background-color);
+    font-family: "Tenor", "IBMPlex", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+/* Заголовки страницы */
+.page-title {
+    font-family: "Tenor", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.page-subtitle {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 18px;
+    color: var(--light-text);
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5;
+}
+
+/* Контейнер слайдера отзывов */
+.reviews-slider-container {
+    margin-bottom: 80px;
+}
+
+.reviews-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.reviews-header h2 {
+    font-family: "Tenor", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.reviews-header p {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    color: var(--light-text);
+    max-width: 500px;
+    margin: 0 auto;
+    line-height: 1.5;
+}
+
+/* Стили для слайдера на основе Swiper.js */
+.reviews-slider {
+    position: relative;
+    padding: 0 60px;
+    overflow: hidden; /* Возвращаем hidden для корректной работы слайдера */
+    min-height: auto; /* Убираем фиксированную минимальную высоту */
+}
+
+.reviews-slider .swiper-wrapper {
+    padding: 20px 0;
+    align-items: stretch;
+    display: flex;
+}
+
+.reviews-slider .swiper-slide {
+    height: auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+/* Обеспечение одинаковой высоты для всех слайдов */
+.reviews-slider .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    height: auto !important;
+}
+
+.reviews-slider .swiper-slide > * {
+    flex: 1 1 auto;
+}
+
+.reviews-slider .swiper-slide .review-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: auto; /* Карточка с автоматической высотой */
+}
+
+/* Карточка отзыва */
+.review-card {
+    background-color: var(--background-color);
+    border-radius: 16px;
+    box-shadow: var(--card-shadow);
+    padding: 20px;
+    width: 100%;
+    max-width: 380px;
+    height: auto; /* Изменяем на автоматическую высоту */
+    min-height: 300px; /* Устанавливаем минимальную высоту */
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden; /* Возвращаем hidden для корректной обрезки контента */
+    box-sizing: border-box;
+}
+
+.review-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 100%;
+    background-color: var(--primary-color);
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.review-card:hover::before {
+    transform: translateX(0);
+}
+
+/* Заголовок отзыва */
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.reviewer-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    flex-shrink: 0;
+    border: 2px solid var(--accent-color);
+}
+
+.reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.reviewer-details {
+    flex: 1;
+}
+
+.reviewer-name {
+    font-family: "Tenor", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 5px;
+    line-height: 1.2;
+}
+
+.review-date {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 14px;
+    color: var(--light-text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Рейтинг отзыва */
+.review-rating {
+    flex-shrink: 0;
+}
+
+.stars {
+    display: flex;
+    align-items: center;
+}
+
+.star {
+    font-size: 18px;
+    color: #ddd;
+    margin-right: 2px;
+    transition: var(--transition);
+}
+
+.star.filled {
+    color: var(--rating-color);
+}
+
+/* Содержимое отзыва */
+.review-content {
+    margin-bottom: 20px;
+    flex-grow: 1;
+    overflow: hidden; /* Обрезаем избыточный контент */
+}
+
+.review-text-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.review-text {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    word-wrap: break-word; /* Перенос длинных слов */
+    overflow-wrap: break-word; /* Современное свойство для переноса */
+    hyphens: auto;
+    flex-grow: 1;
+}
+
+/* Стили для обрезки длинных текстов */
+.review-text.long-review {
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Уменьшаем до 4 строк для экономии места */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Кнопка "Читать далее" */
+.read-more-btn {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background: none;
+    border: none;
+    padding: 8px 0;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: left;
+    text-decoration: underline;
+}
+
+.read-more-btn:hover {
+    color: var(--secondary-color);
+    text-decoration: none;
+}
+
+/* Тег услуги */
+.review-service {
+    margin-top: auto;
+}
+
+.service-tag {
+    display: inline-block;
+    background-color: var(--service-tag-bg);
+    color: var(--service-tag-color);
+    font-family: "IBMPlex", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 20px;
+    line-height: 1.2;
+}
+
+/* Кнопки навигации слайдера */
+.reviews-slider .swiper-button-next,
+.reviews-slider .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background-color: var(--background-color);
+    border-radius: 50%;
+    box-shadow: var(--card-shadow);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.reviews-slider .swiper-button-next:hover,
+.reviews-slider .swiper-button-prev:hover {
+    background-color: var(--primary-color);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.reviews-slider .swiper-button-next:hover::after,
+.reviews-slider .swiper-button-prev:hover::after {
+    color: #fff;
+}
+
+.reviews-slider .swiper-button-next::after,
+.reviews-slider .swiper-button-prev::after {
+    font-size: 20px;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.reviews-slider .swiper-button-next {
+    right: 0;
+}
+
+.reviews-slider .swiper-button-prev {
+    left: 0;
+}
+
+/* Индикаторы (пагинация) */
+.reviews-slider .swiper-pagination {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.reviews-slider .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: var(--border-color);
+    opacity: 1;
+    transition: var(--transition);
+    margin: 0 4px;
+}
+
+.reviews-slider .swiper-pagination-bullet-active {
+    background-color: var(--primary-color);
+    transform: scale(1.3);
+}
+
+/* Блок со статистикой */
+.reviews-stats {
+    background-color: var(--light-gray);
+    padding: 60px 0;
+    margin-bottom: 60px;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
+
+.stat-number {
+    font-family: "Tenor", sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.stat-label {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    color: var(--light-text);
+    line-height: 1.3;
+}
+
+/* Призыв к действию */
+.reviews-cta {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color) 0%,
+        var(--secondary-color) 100%
+    );
+    padding: 60px 40px;
+    border-radius: 16px;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.cta-content h2 {
+    font-family: "Tenor", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.cta-content p {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 18px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--primary-color);
+    background-color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 40px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: var(--light-gray);
+    color: var(--primary-color);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .reviews-page {
+        padding: 50px 0;
+    }
+
+    .page-title {
+        font-size: 38px;
+        margin-bottom: 15px;
+    }
+
+    .page-subtitle {
+        font-size: 16px;
+        margin-bottom: 50px;
+    }
+
+    .reviews-header h2 {
+        font-size: 28px;
+        margin-bottom: 12px;
+    }
+
+    .reviews-slider {
+        padding: 0 50px;
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .reviews-slider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .reviews-slider .swiper-slide {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-card {
+        padding: 25px;
+        max-width: 340px;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .stat-label {
+        font-size: 15px;
+    }
+
+    .cta-content h2 {
+        font-size: 28px;
+    }
+
+    .cta-content p {
+        font-size: 16px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .reviews-page {
+        padding: 40px 0;
+    }
+
+    .page-title {
+        font-size: 32px;
+        margin-bottom: 12px;
+    }
+
+    .page-subtitle {
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+
+    .reviews-header h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .reviews-header p {
+        font-size: 15px;
+    }
+
+    .reviews-slider-container {
+        margin-bottom: 60px;
+    }
+
+    .reviews-slider {
+        padding: 0 40px;
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .reviews-slider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .reviews-slider .swiper-slide {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 300px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-card {
+        padding: 20px;
+        max-width: 300px;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 300px; /* Устанавливаем минимальную высоту */
+    }
+
+    .reviewer-avatar {
+        width: 50px;
+        height: 50px;
+    }
+
+    .reviewer-name {
+        font-size: 16px;
+    }
+
+    .review-date {
+        font-size: 13px;
+    }
+
+    .star {
+        font-size: 16px;
+    }
+
+    .review-content p {
+        font-size: 15px;
+    }
+
+    .service-tag {
+        font-size: 13px;
+        padding: 5px 10px;
+    }
+
+    .reviews-slider .swiper-button-next,
+    .reviews-slider .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .reviews-slider .swiper-button-next::after,
+    .reviews-slider .swiper-button-prev::after {
+        font-size: 16px;
+    }
+
+    .reviews-stats {
+        padding: 50px 0;
+        margin-bottom: 50px;
+    }
+
+    .stat-number {
+        font-size: 32px;
+    }
+
+    .stat-label {
+        font-size: 14px;
+    }
+
+    .reviews-cta {
+        padding: 50px 30px;
+        margin-bottom: 30px;
+    }
+
+    .cta-content h2 {
+        font-size: 24px;
+    }
+
+    .cta-content p {
+        font-size: 15px;
+        margin-bottom: 25px;
+    }
+
+    .btn-primary {
+        font-size: 15px;
+        padding: 12px 35px;
+    }
+}
+
+/* Адаптивность для маленьких мобильных устройств */
+@media (max-width: 576px) {
+    .reviews-page {
+        padding: 30px 0;
+    }
+
+    .page-title {
+        font-size: 28px;
+    }
+
+    .page-subtitle {
+        font-size: 14px;
+        margin-bottom: 30px;
+    }
+
+    .reviews-header h2 {
+        font-size: 22px;
+    }
+
+    .reviews-slider {
+        padding: 0 30px;
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .reviews-slider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .reviews-slider .swiper-slide {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-card {
+        padding: 20px;
+        max-width: 280px;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 15px;
+    }
+
+    .reviewer-info {
+        margin-bottom: 10px;
+    }
+
+    .reviewer-avatar {
+        width: 45px;
+        height: 45px;
+        margin-right: 12px;
+    }
+
+    .reviewer-name {
+        font-size: 15px;
+    }
+
+    .review-date {
+        font-size: 12px;
+    }
+
+    .review-content p {
+        font-size: 14px;
+    }
+
+    .reviews-slider .swiper-button-next,
+    .reviews-slider .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+    }
+
+    .reviews-slider .swiper-button-next::after,
+    .reviews-slider .swiper-button-prev::after {
+        font-size: 14px;
+    }
+
+    .stats-container {
+        gap: 20px;
+    }
+
+    .stat-item {
+        min-width: 120px;
+    }
+
+    .stat-number {
+        font-size: 28px;
+    }
+
+    .stat-label {
+        font-size: 13px;
+    }
+
+    .reviews-cta {
+        padding: 40px 20px;
+    }
+
+    .cta-content h2 {
+        font-size: 22px;
+    }
+
+    .cta-content p {
+        font-size: 14px;
+    }
+
+    .btn-primary {
+        font-size: 14px;
+        padding: 10px 30px;
+    }
+}
+
+/* Адаптивность для очень маленьких экранов */
+@media (max-width: 480px) {
+    .reviews-slider {
+        padding: 0 20px;
+        min-height: auto; /* Убираем фиксированную высоту */
+    }
+
+    .reviews-slider .swiper-wrapper {
+        align-items: stretch;
+    }
+
+    .reviews-slider .swiper-slide {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 340px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-card {
+        padding: 18px;
+        max-width: 260px;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 340px; /* Устанавливаем минимальную высоту */
+    }
+
+    .reviews-slider .swiper-button-next {
+        right: -10px;
+    }
+
+    .reviews-slider .swiper-button-prev {
+        left: -10px;
+    }
+
+    .stats-container {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .stat-item {
+        min-width: auto;
+    }
+}
+
+/* Анимация появления элементов при загрузке страницы */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.reviews-page {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+.reviews-header {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.reviews-slider {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+.reviews-stats {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.reviews-cta {
+    animation: fadeInUp 0.8s ease-out 0.8s both;
+}
+
+/* Стили для фокусировки доступности */
+.review-card:focus-within {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.reviews-slider .swiper-button-next:focus,
+.reviews-slider .swiper-button-prev:focus {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+.btn-primary:focus {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+}
+
+/* Дополнительные стили для улучшения визуального восприятия */
+@media (min-width: 1200px) {
+    .reviews-slider .swiper-wrapper {
+        padding: 30px 0;
+        align-items: stretch;
+    }
+
+    .reviews-slider .swiper-slide {
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .review-card {
+        max-width: 400px;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+}
+
+/* Стили для активного слайда в Swiper */
+.reviews-slider .swiper-slide-active .review-card {
+    transform: translateY(-5px);
+    box-shadow: var(--card-hover-shadow);
+}
+
+.reviews-slider .swiper-slide-active .review-card::before {
+    transform: translateX(0);
+}
+
+/* Дополнительные стили для мобильных устройств */
+@media (max-width: 768px) {
+    .review-text {
+        font-size: 15px !important; /* Немного уменьшаем шрифт для мобильных */
+        line-height: 1.5 !important;
+    }
+
+    .review-text.long-review {
+        -webkit-line-clamp: 3; /* Уменьшаем до 3 строк на мобильных */
+    }
+}
+
+@media (max-width: 576px) {
+    .review-text {
+        font-size: 14px !important; /* Еще меньше для маленьких экранов */
+        line-height: 1.4 !important;
+    }
+
+    .review-text.long-review {
+        -webkit-line-clamp: 3; /* Оставляем 3 строки для маленьких экранов */
+    }
+}
+
+@media (max-width: 480px) {
+    .review-text {
+        font-size: 13px !important; /* Минимальный размер для самых маленьких экранов */
+        line-height: 1.4 !important;
+    }
+
+    .review-text.long-review {
+        -webkit-line-clamp: 3; /* Оставляем 3 строки для самых маленьких экранов */
+    }
+}
+
+/* Стили для слайдера с эффектом покрытия */
+@media (min-width: 768px) {
+    .reviews-slider .swiper-slide {
+        opacity: 0.5;
+        transition: opacity 0.3s ease;
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    .reviews-slider .swiper-slide > * {
+        flex: 1 1 auto;
+    }
+
+    .reviews-slider .swiper-slide .review-card {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        height: auto; /* Изменяем на автоматическую высоту */
+        min-height: 320px; /* Устанавливаем минимальную высоту */
+    }
+
+    .reviews-slider .swiper-slide-active {
+        opacity: 1;
+    }
+
+    .reviews-slider .swiper-slide-next,
+    .reviews-slider .swiper-slide-prev {
+        opacity: 0.8;
+    }
+}
+
+/* Стили для модального окна отзыва */
+.review-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.review-modal.active {
+    display: flex;
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    position: relative;
+    background-color: var(--background-color);
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 40px;
+    z-index: 1001;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+.review-modal.active .modal-content {
+    transform: scale(1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.modal-reviewer-info {
+    display: flex;
+    align-items: center;
+}
+
+.modal-reviewer-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 20px;
+    flex-shrink: 0;
+    border: 3px solid var(--accent-color);
+}
+
+.modal-reviewer-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.modal-reviewer-details {
+    flex: 1;
+}
+
+.modal-reviewer-name {
+    font-family: "Tenor", sans-serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin: 0 0 8px;
+    line-height: 1.2;
+}
+
+.modal-review-date {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    color: var(--light-text);
+    margin: 0;
+    line-height: 1.2;
+}
+
+.modal-review-rating {
+    flex-shrink: 0;
+}
+
+.modal-review-rating .stars {
+    display: flex;
+    align-items: center;
+}
+
+.modal-review-rating .star {
+    font-size: 22px;
+    color: #ddd;
+    margin-right: 3px;
+}
+
+.modal-review-rating .star.filled {
+    color: var(--rating-color);
+}
+
+.modal-body {
+    margin-bottom: 20px;
+}
+
+.modal-review-text {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 18px;
+    color: var(--text-color);
+    line-height: 1.7;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.modal-review-service {
+    margin-top: auto;
+}
+
+.modal-review-service .service-tag {
+    display: inline-block;
+    background-color: var(--service-tag-bg);
+    color: var(--service-tag-color);
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    border-radius: 20px;
+    line-height: 1.2;
+}
+
+.modal-close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: var(--light-gray);
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    color: var(--text-color);
+    z-index: 1002;
+}
+
+.modal-close-btn:hover {
+    background-color: var(--primary-color);
+    color: #fff;
+    transform: rotate(90deg);
+}
+
+.modal-close-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Адаптивность для модального окна */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+        padding: 30px 20px;
+        max-height: 90vh;
+    }
+
+    .modal-header {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        padding-bottom: 15px;
+    }
+
+    .modal-reviewer-info {
+        margin-bottom: 15px;
+    }
+
+    .modal-reviewer-avatar {
+        width: 60px;
+        height: 60px;
+        margin-right: 15px;
+    }
+
+    .modal-reviewer-name {
+        font-size: 20px;
+    }
+
+    .modal-review-date {
+        font-size: 14px;
+    }
+
+    .modal-review-text {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    .modal-close-btn {
+        top: 15px;
+        right: 15px;
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 576px) {
+    .modal-content {
+        width: 98%;
+        padding: 25px 15px;
+    }
+
+    .modal-reviewer-avatar {
+        width: 50px;
+        height: 50px;
+        margin-right: 12px;
+    }
+
+    .modal-reviewer-name {
+        font-size: 18px;
+    }
+
+    .modal-review-text {
+        font-size: 15px;
+    }
+
+    .modal-review-service .service-tag {
+        font-size: 14px;
+        padding: 6px 12px;
+    }
+}

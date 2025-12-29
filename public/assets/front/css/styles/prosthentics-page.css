@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.prosthetics-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+}
+
+.prosthetics-intro .text .img-pos {
+    position: absolute;
+    top: 30%;
+    left: 11%;
+}
+
+.prosthetics-intro .main-img {
+    margin-top: 106px;
+}
+
+.prosthetics-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.prosthetics-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.prosthetics-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.prosthetics-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.prosthetics-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.prosthetics-intro .description .forth-text {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.prosthetics-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.prosthetics-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+
+.prosthetics-treatment-date {
+    margin-top: 100px;
+    margin-left: 250px;
+    max-width: 804px;
+    margin-bottom: 70px;
+}
+
+.prosthetics-treatment-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.prosthetics-treatment-date .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.prosthetics-treatment-date .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.method .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.prosthetics-desc {
+    margin-left: 9%;
+    margin-bottom: 52px;
+}
+
+.prosthetics-desc .desc-clinic {
+    font-family: IBMPlex;
+    font-size: 18px;
+    line-height: 27px;
+    color: #02111B;
+}
+
+@media screen and (min-width: 1880px) {
+    .prosthetics-intro, .prosthetics-desc {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 1450px) {
+    .prosthetics-intro .text .img-pos {
+        /*top: 69%;*/
+    }
+
+    .prosthetics-intro .description {
+        margin-right: auto;
+        margin-top: 98px;
+    }
+
+    .prosthetics-intro .description .inner-text {
+        margin-right: 9%;
+    }
+
+    .prosthetics-intro .description .first-text {
+        margin-left: 106px;
+        max-width: 530px;
+        margin-bottom: 78px;
+    }
+
+    .prosthetics-intro .description .forth-text {
+        margin-bottom: 21px;
+        margin-left: 12px;
+        max-width: 560px;
+    }
+
+    .prosthetics-intro .description .fifth-text {
+        margin-top: 21px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+
+    .prosthetics-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+
+    .prosthetics-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+
+    .prosthetics-intro .description .second-text {
+        margin-left: 12px;
+        width: 530px;
+        margin-top: 10px;
+    }
+
+    .prosthetics-treatment-date .title {
+        margin-bottom: 19px;
+    }
+
+    .prosthetics-treatment-date {
+        margin-top: 101px;
+        margin-left: 364px;
+        margin-bottom: 21px;
+    }
+
+    .prosthetics-treatment-date .desc {
+        max-width: 571px;
+    }
+
+    .prosthetics-desc .desc-clinic {
+        margin-top: 48px;
+        max-width: 715px;
+        margin-left: 155px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1880px) {
+    .prosthetics-intro .text .img-pos {
+        /*top: 48%;*/
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .prosthetics-intro {
+        margin-left: calc(52% - 50vw);
+    }
+
+    .prosthetics-intro .text .img-pos {
+        /*left: 6%;*/
+        /*top: 45%;*/
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .prosthetics-intro .description {
+        margin-right: 2%;
+    }
+
+    .prosthetics-intro {
+        margin-left: calc(52% - 50vw);
+    }
+}
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+@media screen and (max-width: 1190px) {
+    .prosthetics-intro {
+        display: block;
+    }
+
+    .prosthetics-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .prosthetics-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 0;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .prosthetics-intro .forth-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .prosthetics-intro .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .prosthetics-intro .main-img {
+        margin-top: 30px;
+    }
+
+    .prosthetics-intro .second-text {
+        line-height: 21px;
+        font-size: 14px;
+        width: 100% !important;
+    }
+
+    .prosthetics-treatment-date {
+        margin-left: 2%;
+        max-width: 100%;
+        margin-right: 2%;
+    }
+
+    .prosthetics-treatment-date .desc {
+        max-width: 100%;
+    }
+
+    .prosthetics-desc {
+        margin-left: 0
+    }
+
+    .prosthetics-desc .desc-clinic {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .prosthetics-intro .main-img {
+        width: 520px;
+    }
+
+    .prosthetics-intro .text .img-pos {
+        /*top: 44%;*/
+    }
+
+    .prosthetics-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .prosthetics-intro {
+        display: block;
+    }
+
+    .prosthetics-intro .description .inner-text {
+        text-align: left;
+    }
+
+    .prosthetics-intro .description .first-text {
+        margin-left: 0;
+    }
+
+    .prosthetics-intro .text .img-pos {
+        /*top: 37%;*/
+        /*left: 2%;*/
+    }
+
+    .prosthetics-intro .description .forth-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .prosthetics-intro .description .second-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .prosthetics-intro .main-img {
+        margin-top: 20px;
+        width: 100%;
+        padding-right: 2%;
+    }
+    .prosthetics-desc {
+        margin-left: 3%;
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 990px) {
+}
+
+@media screen and (max-width: 890px) {
+    .prosthetics-intro .text .img-pos {
+        /*top: 31%;*/
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .prosthetics-intro .text .img-pos {
+        /*top: 40%;*/
+        /*left: 1%;*/
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .prosthetics-intro .description .text {
+        max-width: 100%;
+    }
+
+    .prosthetics-intro .text .img-pos {
+        /*top: 42%;*/
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .prosthetics-intro .main-img {
+        width: 100%;
+    }
+    .prosthetics-intro .description .inner-text {
+        font-size: 32px;
+    }
+}
+/*# sourceMappingURL=implantation-page.css.map */

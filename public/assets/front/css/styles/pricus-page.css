@@ -1,0 +1,628 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.pricus-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+}
+
+.pricus-intro .text .img-pos {
+    position: absolute;
+    /*top: 30%;*/
+    /*left: 11%;*/
+}
+
+.pricus-intro .main-img {
+    margin-top: 106px;
+}
+
+.pricus-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.pricus-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.pricus-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.pricus-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.pricus-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.pricus-intro .description .forth-text {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.pricus-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.pricus-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+
+.pricus-intro .fifth-text img {
+    margin-right: 30px;
+}
+
+.pricus-date {
+    margin-top: 100px;
+    margin-bottom: 70px;
+}
+
+.pricus-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.pricus-date .desc {
+    margin: 0 auto;
+    text-align: center;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    max-width: 582px;
+}
+
+.pricus-korean {
+    margin-top: 100px;
+    margin-left: 155px;
+    margin-right: 135px;
+}
+.pricus-korean .flex{
+    display: flex;
+}
+.pricus-korean .text {
+    margin-right: 95px;
+}
+
+.pricus-korean .title {
+    max-width: 604px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.pricus-korean .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.pricus-korean .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.pricus-korean .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.pricus-korean .fifth-text img {
+    margin-right: 30px;
+}
+
+.pricus-method {
+    display: flex;
+    margin-right: 135px;
+}
+
+.pricus-method .text {
+    margin-top: 12%;
+    margin-right: 95px;
+}
+
+.pricus-method .title {
+    margin-top: 60px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+    margin-left: 155px;
+}
+
+.pricus-method .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.pricus-method .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.pricus-method .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.pricus-method .fifth-text img {
+    margin-right: 30px;
+}
+
+.pricus-second-date {
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.pricus-second-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.pricus-second-date .desc {
+    margin: 0 auto;
+    text-align: left;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    max-width: 785px;
+}
+
+.pricus-second-date .desc p {
+    margin-top: 20px;
+}
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+
+@media screen and (min-width: 1880px) {
+    .pricus-intro, .pricus-method, .pricus-korean {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+}
+
+@media screen and (max-width: 1450px) {
+    .pricus-intro .text .img-pos {
+        /*top: 72%;*/
+    }
+
+    .pricus-intro .description {
+        margin-right: 107px;
+        margin-top: 101px;
+    }
+
+    .pricus-intro .description .first-text {
+        margin-left: 107px;
+    }
+
+    .pricus-intro .description .forth-text {
+        margin-bottom: 17px;
+        margin-left: 12px;
+        max-width: 449px;
+    }
+    .pricus-intro .description .second-text {
+        margin-top: 25px;
+    }
+    .pricus-intro .description .fifth-text {
+        margin-top: 10px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+
+    .pricus-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+
+    .pricus-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+
+    .pricus-intro .description .second-text {
+        margin-left: 12px;
+    }
+
+    .pricus-date {
+        margin-top: 60px;
+        margin-bottom: 0;
+    }
+
+    .pricus-second-date {
+        margin-top: 43px;
+        margin-left: 111px;
+    }
+    .pricus-korean {
+        margin-top: 71px;
+    }
+    .pricus-korean .title {
+        margin-bottom: 29px;
+    }
+
+    .pricus-korean .desc {
+        width: 460px;
+    }
+    .pricus-korean .image {
+        margin-top: -71px;
+    }
+
+    .pricus-korean .fifth-text img {
+        position: absolute;
+    }
+
+    .pricus-korean .fifth-text div {
+        margin-left: 53px;
+        max-width: 533px;
+    }
+
+    .pricus-korean .text {
+        margin-right: 14px;
+    }
+
+    .pricus-method {
+        margin-top: 0;
+        margin-left: 11px;
+        margin-right: 0;
+    }
+    .pricus-method .title {
+        margin-left: 145px;
+    }
+
+    .pricus-method .text {
+        margin-left: 35px;
+        margin-top: 180px;
+        margin-right: 182px;
+    }
+    .pricus-method .fifth-text {
+        max-width: 437px;
+    }
+    .pricus-method .desc {
+        margin-bottom: 20px;
+        max-width: 460px;
+    }
+
+    .pricus-method .fifth-text img {
+        position: absolute;
+    }
+
+    .pricus-method .title {
+        margin-bottom: 0;
+    }
+
+    .pricus-method .fifth-text div {
+        margin-left: 54px;
+        width: 546px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    .image-box div {
+        width: 33%;
+    }
+}
+@media screen and (max-width: 1880px) {
+    .pricus-intro .text .img-pos {
+        /*top: 48%;*/
+    }
+}
+@media screen and (max-width: 1424px) and (min-width: 1401px) {
+    .pricus-method .fifth-text {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .pricus-method .desc {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .pricus-method .desc {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .pricus-korean {
+        margin-left: 7%;
+    }
+    .pricus-method .text {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 1400px) {
+    .pricus-intro {
+        margin-left: calc(52% - 50vw);
+    }
+
+    .pricus-intro .text .img-pos {
+        /*left: 6%;*/
+        /*top: 45%;*/
+    }
+    .pricus-method .image img {
+        max-width: 100%;
+    }
+    .pricus-korean .image img {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .pricus-korean .image img {
+        top: 59%;
+    }
+}
+@media screen and (max-width: 1250px) {
+    .pricus-intro .description {
+        margin-right: 2%;
+    }
+    .pricus-korean .image img {
+        top: 58%;
+    }
+}
+@media screen and (max-width: 1190px) {
+    .pricus-intro-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+
+    .pricus-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .pricus-intro .description .forth-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .pricus-intro .description .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .pricus-intro .description .second-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .pricus-intro .main-img {
+        width: 520px;
+    }
+    .pricus-intro .text .img-pos {
+        /*top: 44%;*/
+    }
+    .pricus-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+    .pricus-method .title {
+        margin-left: 0;
+        line-height: 31px;
+        font-size: 26px;
+    }
+    .pricus-method .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .pricus-method .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .pricus-korean {
+        margin-left: 2%;
+    }
+    .pricus-korean .title {
+        line-height: 31px;
+        font-size: 26px;
+    }
+    .pricus-korean .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .pricus-korean .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+    .pricus-korean .image {
+        margin-top: -7px;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .pricus-intro {
+        display: block;
+    }
+    .pricus-intro .description .inner-text {
+        text-align: left;
+    }
+    .pricus-intro .description .first-text {
+        margin-left: 0;
+    }
+    .pricus-intro .text .img-pos {
+        /*top: 37%;*/
+        /*left: 2%;*/
+    }
+    .pricus-intro .description .forth-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .pricus-intro .description .second-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+    .pricus-intro .main-img {
+        margin-top: 20px;
+        width: 100%;
+        padding-right: 2%;
+    }
+    .pricus-method {
+        display: block;
+    }
+    .pricus-method .text {
+        margin-top: 30px;
+    }
+    .pricus-method .fifth-text {
+        max-width: 100%;
+    }
+    .pricus-method .text {
+        margin-right: auto;
+    }
+    .pricus-method .desc {
+        max-width: 100%;
+    }
+    .pricus-korean .flex {
+        display: block;
+    }
+    .pricus-korean .text {
+        margin-top: 30px;
+    }
+    .pricus-korean .fifth-text {
+        max-width: 100%;
+    }
+    .pricus-korean .text {
+        margin-right: auto;
+    }
+    .pricus-korean .desc {
+        max-width: 100%;
+    }
+    .pricus-korean .title {
+        max-width: 100%;
+    }
+    .pricus-korean .desc {
+        width: 100%;
+    }
+    .pricus-second-date {
+        margin-left: 3%;
+    }
+    .pricus-second-date .desc {
+        max-width: 100%;
+    }
+    .pricus-method .text {
+        margin-left: 0;
+    }
+    .pricus-korean {
+        margin-right: 3%;
+        margin-left: 3%;
+    }
+    .pricus-method {
+        margin-right: 3%;
+    }
+    .pricus-date {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .pricus-date .desc {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 990px) {
+}
+@media screen and (max-width: 890px) {
+    .pricus-intro .text .img-pos {
+        /*top: 31%;*/
+    }
+}
+@media screen and (max-width: 630px) {
+    .pricus-intro .text .img-pos {
+        /*top: 40%;*/
+        /*left: 1%;*/
+    }
+}
+@media screen and (max-width: 550px) {
+    .pricus-intro .description .text {
+        max-width: 100%;
+    }
+    .pricus-intro .text .img-pos {
+        /*top: 42%;*/
+    }
+}
+@media screen and (max-width: 450px) {
+    .pricus-intro .main-img {
+        width: 100%;
+    }
+    .pricus-intro .text .img-pos {
+        /*top: 50%;*/
+    }
+}
+@media screen and (max-width: 400px) {
+    .pricus-intro .text .img-pos {
+        /*top: 49%;*/
+    }
+}
+/*# sourceMappingURL=implantation-page.css.map */

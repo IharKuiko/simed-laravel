@@ -1,0 +1,791 @@
+/* CSS-стили для страниц детализации медицинских услуг */
+
+/* CSS-переменные для цветовой схемы и общих стилей */
+:root {
+    /* Основные цвета */
+    --main-color: #065aad;
+    --main-light: #4a6fa5;
+    --main-dark: #044a8a;
+
+    /* Дополнительные цвета */
+    --secondary-color: #6c9bd1;
+    --accent-color: #e8f4fd;
+    --text-color: #333333;
+    --light-text: #666666;
+    --background-color: #ffffff;
+    --light-gray: #f5f7fa;
+    --border-color: #e1e8ed;
+
+    /* Специфические цвета для типов услуг */
+    --gynecology-color: #d9a7c7; /* Мягкий розовый для гинекологии */
+    --ultrasound-color: #a7c7d9; /* Мягкий голубой для ультразвука */
+
+    /* Тени и переходы */
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --hover-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --transition: all 0.3s ease;
+
+    /* Шрифты */
+    --font-tenor: "Tenor Sans", "IBM Plex Sans", Arial, sans-serif;
+    --font-ibm: "IBMPlex", Arial, sans-serif;
+}
+
+/* Основной контейнер страницы детализации услуги */
+.service-detail-container {
+    padding: 40px 0;
+    background-color: var(--background-color);
+    font-family: var(--font-ibm);
+    max-width: 1200px;
+    margin: 0 auto;
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Хлебные крошки */
+.breadcrumb {
+    background-color: transparent;
+    padding: 0;
+    margin-bottom: 30px;
+    font-size: 14px;
+}
+
+.breadcrumb-item {
+    color: var(--light-text);
+}
+
+.breadcrumb-item a {
+    color: var(--main-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb-item a:hover {
+    color: var(--main-dark);
+    text-decoration: underline;
+}
+
+.breadcrumb-item.active {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    content: ">";
+    color: var(--light-text);
+    margin: 0 8px;
+}
+
+/* Заголовок услуги */
+.service-header {
+    margin-bottom: 30px;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.service-title {
+    font-family: var(--font-tenor);
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: var(--text-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+    margin: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+    display: block;
+}
+
+/* Изображение услуги */
+.service-image-container {
+    margin-bottom: 30px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    width: 100%;
+    box-sizing: border-box;
+    clear: both;
+}
+
+.service-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: var(--transition);
+}
+
+.service-image:hover {
+    transform: scale(1.02);
+}
+
+/* Заглушка для изображения услуги */
+.service-image-placeholder {
+    background-color: var(--light-gray);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--light-text);
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.service-image-placeholder svg {
+    margin-bottom: 15px;
+}
+
+/* Информация об услуге */
+.service-info {
+    background-color: var(--light-gray);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: var(--shadow);
+}
+
+.service-info h3 {
+    font-family: var(--font-tenor);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Детали услуги */
+.service-details {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.service-price {
+    font-size: 28px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+
+.service-unit,
+.service-duration,
+.service-category {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.service-unit svg,
+.service-duration svg,
+.service-category svg {
+    margin-right: 10px;
+    flex-shrink: 0;
+}
+
+/* Специфичные цвета для иконок в зависимости от типа услуги */
+.gynecology-service .service-unit svg,
+.gynecology-service .service-duration svg,
+.gynecology-service .service-category svg {
+    color: var(--gynecology-color);
+}
+
+.ultrasound-service .service-unit svg,
+.ultrasound-service .service-duration svg,
+.ultrasound-service .service-category svg {
+    color: var(--ultrasound-color);
+}
+
+/* Стили для связанных услуг */
+.related-service-info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.service-price-small {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+
+.service-unit-small {
+    font-size: 14px;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+/* Описание услуги */
+.service-description {
+    margin-bottom: 40px;
+}
+
+.service-description h2 {
+    font-family: var(--font-tenor);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.service-content p {
+    margin-bottom: 15px;
+}
+
+.service-content ul,
+.service-content ol {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+.service-content li {
+    margin-bottom: 8px;
+}
+
+/* Дополнительные детали процедуры */
+.service-details-section {
+    margin-top: 30px;
+}
+
+.service-details-section h3 {
+    font-family: var(--font-tenor);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.service-details-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+/* Кнопка записи на услугу */
+.service-cta {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-booking {
+    display: inline-block;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 100px;
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.btn-booking:hover {
+    background-color: var(--main-dark);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--hover-shadow);
+}
+
+.btn-booking:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(6, 90, 173, 0.3);
+}
+
+/* Похожие услуги */
+.related-services {
+    margin-top: 50px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border-color);
+}
+
+.related-services h2 {
+    font-family: var(--font-tenor);
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.related-services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.related-service-card {
+    background-color: var(--background-color);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 25px;
+    transition: var(--transition);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+}
+
+.related-service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--hover-shadow);
+}
+
+.related-service-card h4 {
+    font-family: var(--font-tenor);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.related-service-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--light-text);
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.related-service-card .service-price-small {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-bottom: 5px;
+    display: block;
+}
+
+.related-service-card .service-unit-small {
+    font-size: 14px;
+    color: var(--light-text);
+    font-style: italic;
+}
+
+.related-service-card .btn-outline-primary {
+    display: inline-block;
+    background-color: transparent;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    padding: 8px 20px;
+    border-radius: 100px;
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+}
+
+.related-service-card .btn-outline-primary:hover {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+}
+
+/* Модальное окно для записи на услугу */
+.booking-modal .modal-content {
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.booking-modal .modal-header {
+    background-color: var(--light-gray);
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 25px;
+    border-radius: 12px 12px 0 0;
+}
+
+.booking-modal .modal-title {
+    font-family: var(--font-tenor);
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-color);
+}
+
+.booking-modal .modal-body {
+    padding: 25px;
+}
+
+.booking-modal .form-group {
+    margin-bottom: 20px;
+}
+
+.booking-modal .form-label {
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 8px;
+}
+
+.booking-modal .form-control {
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.booking-modal .form-control:focus {
+    border-color: var(--main-color);
+    box-shadow: 0 0 0 3px rgba(6, 90, 173, 0.1);
+    outline: none;
+}
+
+.booking-modal .modal-footer {
+    background-color: var(--light-gray);
+    border-top: 1px solid var(--border-color);
+    padding: 20px 25px;
+    border-radius: 0 0 12px 12px;
+}
+
+.booking-modal .btn-secondary {
+    background-color: transparent;
+    color: var(--light-text);
+    border: 1px solid var(--border-color);
+    padding: 10px 25px;
+    border-radius: 100px;
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.booking-modal .btn-secondary:hover {
+    background-color: var(--border-color);
+}
+
+.booking-modal .btn-primary {
+    background-color: var(--main-color);
+    border: none;
+    padding: 10px 25px;
+    border-radius: 100px;
+    font-family: var(--font-ibm);
+    font-weight: 500;
+    font-size: 16px;
+    transition: var(--transition);
+}
+
+.booking-modal .btn-primary:hover {
+    background-color: var(--main-dark);
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 992px) {
+    .service-detail-container {
+        padding: 30px 20px;
+    }
+
+    .service-header {
+        margin-bottom: 25px;
+        padding-right: 10px;
+    }
+
+    .service-title {
+        font-size: 32px;
+        line-height: 1.2;
+    }
+
+    .service-image-placeholder {
+        height: 280px;
+    }
+
+    .related-services-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .service-detail-container {
+        padding: 20px 15px;
+    }
+
+    .service-header {
+        margin-bottom: 20px;
+        padding-right: 5px;
+    }
+
+    .service-title {
+        font-size: 28px;
+        line-height: 1.2;
+        padding-right: 5px;
+    }
+
+    .service-image-container {
+        margin-bottom: 25px;
+    }
+
+    .service-image-placeholder {
+        height: 220px;
+        font-size: 16px;
+    }
+
+    .service-info {
+        padding: 20px;
+    }
+
+    .service-price {
+        font-size: 24px;
+    }
+
+    .service-description h2 {
+        font-size: 22px;
+    }
+
+    .related-services h2 {
+        font-size: 24px;
+    }
+
+    .related-services-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .related-service-card {
+        padding: 20px;
+    }
+}
+
+/* Адаптивность для маленьких мобильных устройств */
+@media (max-width: 576px) {
+    .service-detail-container {
+        padding: 15px 10px;
+    }
+
+    .breadcrumb {
+        font-size: 13px;
+        margin-bottom: 20px;
+    }
+
+    .service-header {
+        margin-bottom: 15px;
+    }
+
+    .service-title {
+        font-size: 24px;
+        line-height: 1.2;
+        padding-right: 5px;
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
+
+    .service-image-container {
+        margin-bottom: 20px;
+    }
+
+    .service-image-placeholder {
+        height: 180px;
+        font-size: 14px;
+    }
+
+    .service-info {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    .service-info h3 {
+        font-size: 18px;
+    }
+
+    .service-price {
+        font-size: 22px;
+    }
+
+    .service-duration,
+    .service-category {
+        font-size: 15px;
+    }
+
+    .service-description {
+        margin-bottom: 30px;
+    }
+
+    .service-description h2 {
+        font-size: 20px;
+    }
+
+    .service-content {
+        font-size: 15px;
+    }
+
+    .service-details-section h3 {
+        font-size: 18px;
+    }
+
+    .service-details-content {
+        font-size: 15px;
+    }
+
+    .btn-booking {
+        padding: 12px 30px;
+        font-size: 15px;
+    }
+
+    .related-services {
+        margin-top: 40px;
+        padding-top: 30px;
+    }
+
+    .related-services h2 {
+        font-size: 22px;
+    }
+
+    .related-service-card {
+        padding: 15px;
+    }
+
+    .related-service-card h4 {
+        font-size: 16px;
+    }
+
+    .related-service-card p {
+        font-size: 14px;
+    }
+
+    .related-service-card .service-price-small {
+        font-size: 16px;
+    }
+
+    .booking-modal .modal-header,
+    .booking-modal .modal-body,
+    .booking-modal .modal-footer {
+        padding: 15px;
+    }
+
+    .booking-modal .modal-title {
+        font-size: 20px;
+    }
+
+    .booking-modal .form-label {
+        font-size: 15px;
+    }
+
+    .booking-modal .form-control {
+        padding: 10px 12px;
+        font-size: 15px;
+    }
+}
+
+/* Анимация появления элементов при загрузке страницы */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для фокусировки доступности */
+.btn-booking:focus,
+.related-service-card .btn-outline-primary:focus,
+.booking-modal .btn-primary:focus,
+.booking-modal .btn-secondary:focus,
+.booking-modal .form-control:focus {
+    outline: 2px solid var(--main-color);
+    outline-offset: 2px;
+}
+
+/* Дополнительные стили для специфических типов услуг */
+.gynecology-service .service-price {
+    color: var(--gynecology-color);
+}
+
+.gynecology-service .btn-booking {
+    background-color: var(--gynecology-color);
+}
+
+.gynecology-service .btn-booking:hover {
+    background-color: #c795b5;
+}
+
+.ultrasound-service .service-price {
+    color: var(--ultrasound-color);
+}
+
+.ultrasound-service .btn-booking {
+    background-color: var(--ultrasound-color);
+}
+
+.ultrasound-service .btn-booking:hover {
+    background-color: #95b7c9;
+}
+
+/* Стили для уведомлений об успешной отправке формы */
+.booking-success-notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #28a745;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 8px;
+    box-shadow: var(--hover-shadow);
+    z-index: 1000;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+}
+
+.booking-success-notification.show {
+    transform: translateX(0);
+}
+
+/* Стили для индикатора загрузки */
+.loading-indicator {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 999;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading-indicator.active {
+    display: flex;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--light-gray);
+    border-top: 5px solid var(--main-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

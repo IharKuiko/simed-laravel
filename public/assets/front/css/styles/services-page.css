@@ -1,0 +1,243 @@
+.services-page .main-title {
+    text-align: center;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    max-width: 396px;
+    margin: 0 auto;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+.services-page .grid-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.services-page .grid-wrapper .grid-item {
+    width: 24%;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 280px;
+}
+
+.services-page .grid-wrapper .grid-item:hover {
+    /*transition: .5s;*/
+    cursor: pointer;
+    background: #FDFDFD;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+}
+
+.services-page .grid-wrapper .grid-item img {
+    margin: 44px 0 22px 0;
+}
+
+.services-page .grid-wrapper .grid-item .image {
+    min-height: 180px;
+}
+
+.services-page .grid-wrapper .grid-item span {
+    color: #808080;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+}
+
+.services-page .grid-wrapper .grid-item p {
+    padding: 0;
+    margin: 0;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+}
+
+.services-page .more {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 18px;
+    text-transform: uppercase;
+    float: right;
+    color: #02111B;
+}
+
+.services-page .more:hover {
+    cursor: pointer;
+    color: #FECC00;
+    /*transition: .5s;*/
+}
+
+.services-page .more:active {
+    cursor: pointer;
+    color: #FECC00;
+}
+
+.services-page .more img {
+    position: absolute;
+    margin-left: 20px;
+}
+.services-page .grid-item a{
+    text-decoration: none;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+}
+.insurance-block-service .insurance-block-header {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 39px;
+    margin-bottom: 55px;
+    text-align: left;
+    max-width: 890px;
+    margin-left: 155px;
+}
+
+.insurance-block-service .insurance-description p {
+    font-size: 18px;
+    width: 469px;
+    margin-bottom: 24px;
+}
+
+.insurance-block-service .insurance-description {
+    margin-left: 155px;
+    margin-top: 20px;
+}
+
+.insurance-block-service .insurance-description .more {
+    font-family: IBMPlex, sans-serif;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0.03em;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #02111B;
+    margin-bottom: 50px;
+}
+
+.insurance-block-service .insurance-description .more a:hover {
+    cursor: pointer;
+    color: #FECC00;
+}
+
+.insurance-block-service .insurance-description .more:active {
+    cursor: pointer;
+    color: #FECC00;
+}
+
+.insurance-block-service .insurance-description .more img {
+    position: absolute;
+    margin-left: 15px;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 1450px) {
+    .services-page .container {
+        padding: 0 calc(67% - 922px);
+    }
+
+    .services-page .grid-wrapper .grid-item .image {
+        min-height: 179px;
+    }
+
+    .services-page .grid-wrapper .grid-item {
+        min-height: 271px;
+    }
+
+    .services-page .main-title {
+        margin-top: 132px;
+        margin-bottom: 47px;
+        margin-right: 37%;
+    }
+
+    .services-page .more {
+        margin-top: -67px;
+        margin-right: 34px;
+    }
+    .insurance-block-header {
+        margin-top: 62px;
+        margin-bottom: 33px!important;
+    }
+    .insurance-block-service .insurance-description .more img {
+        position: absolute;
+        margin-left: 15px;
+        margin-top: 7px;
+    }
+    .insurance-block-service .insurance-description {
+        margin-left: 155px;
+        margin-top: 20px;
+        padding-bottom: 54px;
+    }
+}
+.specialist-next {
+    display: flex;
+    float: right;
+    cursor: pointer;
+}
+.specialist-next p{
+    margin: 0 15px 0 0;
+    text-transform: uppercase;
+}
+
+@media ( min-width: 1800px ) {
+    .services-page .container {
+        padding: 0!important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services-page .main-title {
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .services-page .main-title {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .insurance-block-service .insurance-block-header {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .services-page .grid-wrapper .grid-item {
+        width: 30%;
+    }
+    .services-page .grid-wrapper .grid-item p {
+        line-height: 24px;
+        font-size: 16px;
+    }
+    .insurance-block-service .insurance-block-header {
+        margin-left: 2%;
+    }
+    .insurance-block-header {
+        margin-top: 0;
+    }
+    .services-page .grid-wrapper .grid-item {
+        min-height: 220px;
+    }
+    .services-page .container {
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 650px) {
+    .services-page .grid-wrapper .grid-item {
+        width: 50%;
+    }
+}
+@media screen and (max-width: 340px) {
+    .insurance-block-service .insurance-description {
+        margin-left: 70px;
+    }
+}
+/*# sourceMappingURL=services-page.css.map */

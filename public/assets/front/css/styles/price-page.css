@@ -1,0 +1,118 @@
+.price-container {
+    margin-left: 240px;
+    margin-right: 270px;
+    margin-bottom: 60px;
+}
+
+.price-container .price-header {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 120%;
+    color: #02111B;
+    text-align: center;
+    margin-top: 80px;
+}
+.price-container .level-menu-first-p {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+}
+.price-container-ul {
+    display: flex;
+    padding: 15px 20px;
+    border-bottom: 2px solid rgba(129, 135, 189, 0.2);
+}
+.price-container-ul .arrow-down, .price-container-ul .arrow-up {
+    margin-left: auto;
+}
+.price-container-ul .arrow-down, .price-container-ul .arrow-down {
+    margin-left: auto;
+}
+.price-menu li {
+    display: flex;
+    border-bottom: 2px solid rgba(129, 135, 189, 0.2);
+    padding: 8px 20px;
+}
+.price-menu .li-text, .price-menu .li-price {
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02111B;
+}
+.price-menu .li-price {
+    margin-left: auto;
+    text-align: end;
+}
+.price-menu-hide {
+    display: none;
+}
+.price-menu-active {
+    display: block;
+}
+.arrow-up {
+    display: none;
+}
+.price-menu .sub-point div {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 130%;
+    color: #02111B;
+    margin-left: 50px;
+}
+
+.price-menu .li-text {
+    max-width: 90%;
+}
+
+@media screen and (max-width: 1025px) {
+    .price-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .price-container .price-header {
+        font-size: 40px;
+    }
+    .price-container .level-menu-first-p {
+        font-size: 24px;
+    }
+    .price-menu .li-text {
+        max-width: 90%;
+    }
+}
+
+@media screen and (max-width: 769px) {
+    .price-container {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .price-container .price-header {
+        font-size: 30px;
+    }
+    .price-container .level-menu-first-p {
+        font-size: 20px;
+    }
+    .price-menu .li-text, .price-menu .li-price {
+        font-size: 14px;
+    }
+    .price-menu .li-text {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 399px) {
+    .price-menu .li-text {
+        max-width: 75%;
+    }
+    .price-menu .sub-point div {
+        margin-left: 0;
+    }
+}

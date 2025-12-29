@@ -1,0 +1,84 @@
+@import "styles/main.css";
+@import "styles/header.css";
+@import "styles/style.min.css@ver=6.9.css";
+@import "styles/about-us-page.css";
+/* @import "styles/achiv-page.css"; */
+@import "styles/contact-page.css";
+@import "styles/doctor-post.css";
+@import "styles/documents.css";
+/* @import "styles/implantation-page.css"; */
+@import "styles/insurance-page.css";
+@import "styles/main-page.css";
+@import "styles/patience.css";
+@import "styles/price-page.css";
+/* @import "styles/pricus-page.css"; */
+/* @import "styles/prosthentics-page.css"; */
+/* @import "styles/rentgen-page.css"; */
+@import "styles/services-page.css";
+/* @import "styles/spa-page.css"; */
+@import "styles/specialists.css";
+/* @import "styles/treatment-page.css"; */
+/* @import "styles/whitening-page.css"; */
+@import "new-styles/main-page.css";
+@import "new-styles/about.css";
+@import "new-styles/doctors.css";
+@import "new-styles/services.css";
+@import "new-styles/prices.css";
+@import "new-styles/reviews.css";
+@import "new-styles/sub-services.css";
+@import "new-styles/service-details.css";
+
+@font-face {
+    font-family: "IBMPlex";
+    src: url("../fonts/IBM/IBMPlexSans-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Tenor";
+    src: url("../fonts/Tenor/TenorSans-Regular.ttf") format("truetype");
+}
+
+:root {
+    --main-color: #065aad;
+}
+
+.btn {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 10px 30px;
+    cursor: pointer;
+    background: var(--main-color);
+    border: none;
+    border-radius: 100px;
+    color: #fff;
+}
+
+.btn:hover {
+    background: #0980f6;
+    color: #fff;
+    /* transition: .2s; */
+}
+
+a {
+    text-decoration: none;
+}
+
+.copyright {
+    padding: 20px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    font-size: 18px;
+    color: #999999;
+    text-align: center;
+    a {
+        color: #999999;
+    }
+}
+
+.purple {
+    background: rgba(129, 135, 189, 0.1);
+}

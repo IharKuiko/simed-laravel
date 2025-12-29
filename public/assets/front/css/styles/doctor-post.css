@@ -1,0 +1,485 @@
+.doctor-main-container p {
+    margin: 0;
+    padding: 0;
+}
+.doctor-main-container {
+    margin: 85px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 49vw);
+}
+.doctor-main-left {
+    margin-right: 95px;
+}
+.doctor-main-name p{
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 110%;
+    color: #02111B;
+    max-width: 557px;
+}
+.doctor-main-specialization p{
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+    margin-top: 30px;
+}
+.doctor-main-experience p{
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 150%;
+    color: #02111B;
+    margin-top: 10px;
+}
+.education-p {
+    display: flex;
+}
+
+.doctor-main-education {
+    margin-top: 70px;
+}
+
+.doctor-main-education-title {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+}
+
+.education-p-text {
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02111B;
+}
+
+.doctor-main-education .doctor-main-education-title {
+    margin-bottom: 20px;
+}
+
+.doctor-main-education .education-p img{
+    margin-right: 15px;
+}
+
+.doctor-main-education .education-p .education-p-text {
+    max-width: 585px;
+}
+
+.doctor-main-education .education-p {
+    margin-top: 10px;
+}
+
+.doctor-main-container-second {
+    margin: 0 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 49vw);
+}
+.margin-block {
+    margin-top: 69px;
+}
+.doctor-professional-courses-title {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.doctor-professional-courses-text {
+    max-width: 982px;
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02111B;
+    margin-top: 10px;
+}
+.doctor-professional-courses-ul {
+    margin-left: 20px;
+}
+
+.doctor-certificates {
+    padding: 50px 40px;
+}
+
+.doctor-main-container-third {
+    margin-left: calc(60% - 49vw);
+    margin-bottom: 50px;
+}
+
+.internships-abroad-p {
+    display: flex;
+}
+
+.internships-abroad-title {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.internships-abroad-p p{
+    max-width: 585px;
+    margin: 10px 0 0 0;
+}
+.internships-abroad-p-text {
+    margin: 0;
+}
+.internships-abroad-p img {
+    margin-right: 15px;
+}
+.work_experience-title {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+.work_experience-p {
+    margin: 10px 0 0 0;
+    display: flex;
+}
+.work_experience-p p{
+    max-width: 585px;
+}
+.work_experience-p-text {
+    margin: 0;
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+}
+.work_experience-p img {
+    margin-right: 15px;
+}
+.mobile-photo-doctor {
+    display: none;
+}
+
+@media screen and (max-width: 1450px) {
+    .doctor-main-left {
+        margin-right: 50px;
+    }
+    .doctors-block {
+        padding: 0;
+    }
+    .specialist-page .doctors-block-grid {
+        grid-template-columns: 315px 315px 315px 315px;
+    }
+    .specialist-page .doctors-block-grid .item-container .doctor-name p {
+        font-size: 14px;
+    }
+    .specialist-page .doctors-block-grid .item-container .doctor-specialization p {
+        font-size: 14px;
+    }
+    .doctor-prof-category p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 1183px) {
+    .doctor-main-container {
+        margin-left: calc(60% - 51vw);
+    }
+}
+@media screen and (max-width: 1160px) {
+    .doctor-main-container {
+        margin-left: calc(60% - 56vw);
+    }
+}
+@media screen and (max-width: 1097px) {
+    .doctor-main-container {
+        margin-left: calc(60% - 57vw);
+    }
+}
+@media screen and (max-width: 1085px) {
+    .doctor-main-right img {
+        max-width: 502px;
+        max-height: 523px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .doctor-main-name p {
+        font-size: 40px;
+    }
+    .doctor-main-specialization p {
+        font-size: 24px;
+    }
+    .doctor-main-experience p {
+        font-size: 16px;
+    }
+    .doctor-main-education .doctor-main-education-title {
+        font-size: 24px;
+    }
+    .education-p-text {
+        font-size: 14px;
+    }
+    .doctor-main-container {
+        margin: 32px 0 0 51px;
+    }
+    .doctor-main-right img {
+        max-width: 502px;
+        max-height: 523px;
+        float: right;
+        /*margin-right: -21px;*/
+    }
+    .doctor-main-education {
+        margin-top: 28px;
+    }
+    .doctor-professional-courses-title {
+        font-size: 24px;
+    }
+    .doctor-main-education .education-p {
+        margin-left: -30px;
+    }
+    /*.margin-block {*/
+    /*    margin-top: 23px*/
+    /*}*/
+    .doctor-main-container-second {
+        margin: 22px 0 0 50px;
+    }
+    .doctor-professional-courses-text {
+        font-size: 14px;
+    }
+    .doctor-professional-courses-ul {
+        margin-left: 15px;
+    }
+    .doctor-certificates {
+        padding: 30px 20px 25px 20px;
+    }
+
+    .owl-item img {
+        max-width: 251px;
+        max-height: 336px;
+    }
+
+    .internships-abroad-title {
+        font-size: 24px;
+        margin-left: 25px;
+    }
+    .internships-abroad-p-text {
+        font-size: 14px;
+        /*max-width: 585px;*/
+        /*margin: 10px 0 0 0;*/
+    }
+    .doctor-main-container-third {
+        margin: -3px 0 0 25px;
+    }
+
+    .type-doctor_type {
+        margin-bottom: 50px;
+    }
+
+    .work_experience-title {
+        font-size: 24px;
+        margin-left: 25px;
+    }
+
+    .work_experience-p p {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 905px) {
+    .doctor-main-container {
+        margin: 32px 0 0 35px;
+    }
+}
+@media screen and (max-width: 888px) {
+    .doctor-main-container {
+        margin: 32px 0 0 26px;
+    }
+}
+@media screen and (max-width: 880px) {
+    .doctor-main-right img {
+        max-width: 374px;
+        max-height: 385px;
+    }
+}
+@media screen and (max-width: 800px) {
+    .doctor-main-right img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+@media screen and (max-width: 769px) {
+
+    .doctor-main-name p {
+        font-size: 30px;
+    }
+    .doctor-main-left {
+        margin-right: 20px;
+    }
+    .doctor-main-container {
+        margin: 32px 0 0 40px;
+    }
+    .doctor-main-education {
+        max-width: 416px;
+    }
+    .education-p:nth-child(n + 5) {
+        min-width: 522px;
+    }
+    .doctor-main-left {
+        max-width: 339px;
+    }
+    .doctor-main-container-second {
+        margin: 22px 93px 0 50px;
+    }
+    .doctor-professional-courses-title {
+        font-size: 20px;
+    }
+    .internships-abroad-title, .work_experience-title {
+        font-size: 18px;
+    }
+    .doctor-professional-courses-title, .doctor-main-education .doctor-main-education-title, .internships-abroad-title, .work_experience-title {
+        margin-bottom: 10px;
+    }
+    .internships-abroad-p {
+        margin-top: 8px;
+    }
+    .internships-abroad-p p {
+        margin: 0;
+    }
+    .doctor-main-education .education-p {
+        margin-left: -26px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .mobile-photo-doctor img{
+        max-height: 393px;
+        display: block;
+        min-width: auto;
+        margin: 50px;
+    }
+    .doctor-main-right {
+        display: none;
+    }
+    .mobile-photo-doctor {
+        display: block;
+    }
+    .mobile-photo-doctor .doctor-cover-img {
+        width: 400px;
+        height: 380px;
+        margin-top: 50px;
+        margin-left: 40px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .education-p:nth-child(n + 5) {
+        min-width: auto;
+    }
+}
+@media screen and (max-width: 500px) {
+    .mobile-photo-doctor .doctor-cover-img {
+        width: auto;
+        height: 450px;
+        margin-top: 10px;
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 428px) {
+    .mobile-photo-doctor img {
+        margin: 0;
+        min-width: -webkit-fill-available;
+        min-height: 450px;
+    }
+    .mobile-photo-doctor {
+        overflow: hidden;
+    }
+}
+@media screen and (max-width: 420px) {
+    .mobile-photo-doctor {
+        display: block;
+    }
+    .mobile-photo-doctor img{
+        max-height: 393px;
+        margin: 15px 0 0 0;
+    }
+    .doctor-main-container {
+        margin: 20px 20px 0 20px;
+    }
+    .doctor-main-right {
+        display: none;
+    }
+    .doctor-main-name p {
+        font-size: 26px;
+    }
+    .doctor-main-specialization p, .doctor-main-education .doctor-main-education-title {
+        font-size: 20px;
+    }
+    .doctor-main-education .education-p {
+        margin-left: -10px;
+    }
+    .doctor-main-education .education-p img, .work_experience-p img {
+        width: 20px;
+        height: 13px;
+        margin-top: 10px;
+    }
+    .doctor-main-education .education-p .education-p-text {
+        min-width: 312px;
+        max-width: 312px;
+    }
+    .education-p:nth-child(n + 5) {
+        min-width: 312px;
+    }
+
+    .doctor-main-container-second {
+        margin: 30px 20px 0 20px;
+    }
+    .doctor-professional-courses-text {
+        max-width: 304px;
+    }
+    .internships-abroad-p img  {
+        max-width: 20px;
+        max-height: 15px;
+        margin-top: 10px;
+        margin-left: -5px;
+    }
+    .doctor-main-container-third {
+        margin: -3px 10px 0 25px;
+    }
+    .internships-abroad-title, .work_experience-title {
+        margin: 0;
+    }
+    .doctor-professional-courses-title {
+        min-width: 345px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .mobile-photo-doctor img {
+        min-height: auto;
+    }
+}
+@media screen and (max-width: 377px) {
+    .mobile-photo-doctor img {
+        min-width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
+    }
+    .education-p:nth-child(n + 5) {
+        min-width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
+    }
+    .doctor-professional-courses-title {
+        min-width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
+    }
+    .doctor-main-education .education-p .education-p-text {
+        min-width: -webkit-fill-available;
+        max-width: -webkit-fill-available;
+    }
+}

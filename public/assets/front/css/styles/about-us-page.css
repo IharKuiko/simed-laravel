@@ -1,0 +1,399 @@
+@charset "UTF-8";
+@font-face {
+  font-family: IBMPlex;
+  src: url(../../fonts/IBM/IBMPlexSans-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+@font-face {
+  font-family: Tenor;
+  src: url(../../fonts/Tenor/TenorSans-Regular.ttf);
+  /* Путь к файлу со шрифтом */ }
+.about-us-intro {
+  margin: 38px 0 0 0;
+  display: flex;
+  margin-left: calc(60% - 50vw); }
+  .about-us-intro .description {
+    display: flex; }
+    .about-us-intro .description .text {
+      margin: auto; }
+    .about-us-intro .description .inner-text {
+      margin-bottom: 27px;
+      display: table;
+      font-family: Tenor;
+      font-weight: 400;
+      line-height: 120%;
+      font-size: 54px;
+      color: #02111B;
+      margin-left: 27%;
+      max-width: 560px; }
+      .about-us-intro .description .inner-text .in-clinic img {
+        margin-top: -13px; }
+    .about-us-intro .description .first-text {
+      margin-top: 27px;
+      font-family: IBMPlex;
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px;
+      color: #02111B;
+      max-width: 85%; }
+    .about-us-intro .description .second-text {
+      margin-top: 10px;
+      font-family: IBMPlex;
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px;
+      color: #02111B;
+      margin-left: 27%;
+      max-width: 500px;
+      margin-bottom: 35px; }
+    .about-us-intro .description .third-text {
+      font-family: Tenor;
+      font-weight: 400;
+      line-height: 110%;
+      font-size: 54px;
+      color: #02111B;
+      max-width: 85%;
+      margin-bottom: 10px; }
+    .about-us-intro .description .forth-text {
+      font-family: IBMPlex;
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px;
+      color: #02111B;
+      max-width: 85%; }
+    .about-us-intro .description .fifth-text {
+      font-family: IBMPlex;
+      font-weight: 400;
+      line-height: 24px;
+      font-size: 16px;
+      color: #02111B;
+      margin-top: 10px; }
+      .about-us-intro .description .fifth-text img {
+        margin-right: 20px; }
+
+.buttons a {
+  text-decoration: none;
+  font-family: IBMPlex;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+  color: #02111B;
+  text-align: center;
+  text-transform: uppercase; }
+  .buttons a:hover {
+    cursor: pointer;
+    color: #FECC00; }
+.buttons img {
+  margin-left: 15px; }
+.buttons .links {
+  max-width: 60%;
+  margin-top: 60px;
+  text-align: right;
+  margin-bottom: 100px; }
+  .buttons .links .order {
+    margin-bottom: 20px; }
+  .buttons .links .document {
+    margin-left: 7%; }
+
+.virtual .main-title {
+  margin: 0 auto;
+  max-width: 1000px;
+  margin-bottom: 50px;
+  color: #02111B;
+  text-align: center;
+  font-family: Tenor;
+  font-weight: 400;
+  line-height: 59px;
+  font-size: 54px; }
+.virtual .iframe {
+  margin: 0 auto;
+  max-width: 900px; }
+
+.why-us-about {
+  margin-top: 140px; }
+  .why-us-about .main-title {
+    margin-bottom: 50px;
+    color: #02111B;
+    text-align: center;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px; }
+  .why-us-about .list {
+    width: 80%; }
+    .why-us-about .list li {
+      color: #02111B;
+      font-family: IBMPlex;
+      font-weight: 400;
+      line-height: 27px;
+      font-size: 18px;
+      list-style: none;
+      margin-bottom: 20px; }
+      .why-us-about .list li img {
+        position: absolute; }
+      .why-us-about .list li span {
+        margin-left: 50px; }
+  .why-us-about .benefits .digit {
+    color: #8187BD;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px; }
+  .why-us-about .benefits .text {
+    color: #02111B;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px; }
+
+.winner-about {
+  margin-bottom: 70px;
+  width: 100vw;
+  margin-left: calc(35% - 50vw); }
+  .winner-about .image {
+    padding-right: 65px; }
+  .winner-about .text {
+    display: table;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B; }
+    .winner-about .text .middle {
+      display: table-cell !important;
+      vertical-align: middle; }
+    .winner-about .text .inner-text {
+      margin-bottom: 28px; }
+    .winner-about .text .learn-more {
+      display: table-footer-group;
+      font-family: Tenor;
+      font-weight: 400;
+      line-height: 45px;
+      font-size: 30px;
+      color: #02111B; }
+
+@media screen and (min-width: 1880px) {
+  .about-us-intro {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+  @media (max-width: 1800px) {
+    .winner-about {
+      margin-left: calc(40% - 50vw); } }
+  @media (max-width: 1690px) {
+    .winner-about {
+      margin-left: calc(49% - 50vw); } }
+
+@media screen and (min-width: 1800px) {
+  .why-us-about .container {
+    padding: 0; }
+
+  .winner-about .container {
+    padding: 0; }
+
+  .winner-about {
+    width: 100%;
+    margin-left: 0; } }
+@media (min-width: 1800px) {
+  .buttons .order {
+    margin-left: 55px; } }
+.container {
+  padding: 0 15px; }
+
+@media (min-width: 1199.98px) {
+  .container {
+    padding: 0 calc(50% - 895px); } }
+@media (max-width: 1560px) {
+  .about-us-intro .description .inner-text {
+    margin-left: 2%; }
+
+  .about-us-intro .description .second-text {
+    margin-left: 12%; }
+
+  .in-clinic img {
+    margin-top: -13px; } }
+@media (max-width: 1450px) {
+  .about-us-intro .text .inner-text img {
+    margin-top: -13px; }
+
+  .about-doctor {
+    max-width: 600px; } }
+@media (max-width: 1300px) {
+  .about-us-intro {
+    margin-left: calc(53% - 50vw); } }
+@media (max-width: 1200px) {
+  .about-us-intro .description .inner-text {
+    line-height: 48px;
+    font-size: 40px; }
+
+  .about-us-intro .description .first-text {
+    font-size: 14px;
+    line-height: 21px; }
+
+  .about-us-intro .description .second-text {
+    font-size: 14px;
+    line-height: 21px; }
+
+  .about-us-intro .description .third-text {
+    line-height: 48px;
+    font-size: 40px; }
+
+  .about-us-intro .description .forth-text {
+    font-size: 14px;
+    line-height: 21px; }
+
+  .about-us-intro .description .fifth-text {
+    font-size: 14px;
+    line-height: 21px; }
+
+  .virtual .main-title {
+    line-height: 48px;
+    font-size: 40px; }
+
+  .why-us-about .main-title {
+    line-height: 48px;
+    font-size: 40px; }
+
+  .why-us-about .list li {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .why-us-about .benefits .text {
+    font-size: 16px;
+    line-height: 24px; }
+
+  .winner-about .dekstop-text {
+    display: none; }
+
+  .winner-about .mobile-text {
+    display: block !important; }
+
+  .winner-about .text .learn-more {
+    font-size: 26px;
+    line-height: 31px; }
+
+  .winner-about .container {
+    max-width: 1070px; }
+
+  .why-us-about .list {
+    width: 70%; } }
+.winner-about .mobile-text {
+  display: none; }
+
+@media (max-width: 1100px) {
+  .about-doctor {
+    max-width: 500px; } }
+@media (max-width: 1000px) {
+  .about-us-intro {
+    display: block; }
+
+  .about-us-intro .description .second-text {
+    max-width: 100%;
+    margin-right: 3%; }
+
+  .about-us-intro .description .inner-text {
+    max-width: 100%; }
+
+  .about-doctor {
+    margin-top: 20px;
+    max-width: 100%; }
+
+  .winner-about .image img {
+    width: 450px; }
+
+  .why-us-about .container {
+    max-width: 800px; }
+
+  .about-us-intro .description .forth-text {
+    margin-right: 3%;
+    max-width: 100%; }
+
+  .about-us-intro .description .forth-text {
+    margin-right: 3%;
+    max-width: 100%; }
+
+  .about-us-intro .description .first-text {
+    margin-right: 3%;
+    max-width: 100%; } }
+@media (max-width: 768px) {
+  .about-us-intro .description .fifth-text {
+    margin-right: 3%; }
+
+  .about-doctor {
+    max-width: 450px; }
+
+  .why-us-about {
+    margin-top: 40px; }
+
+  .why-us-about .flex {
+    display: block; }
+    .why-us-about .flex .benefits {
+      margin-left: 10%; }
+
+  .winner-about {
+    margin-top: 30px; }
+    .winner-about .text {
+      margin-left: 2%; }
+
+  .winner-about .image img {
+    width: 100%; }
+
+  .winner-about .flex {
+    display: block; } }
+@media (max-width: 700px) {
+  .virtual .main-title {
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 20px; }
+
+  .about-us-intro .description .inner-text {
+    margin-bottom: 0;
+    font-size: 30px;
+    line-height: 31px; }
+
+  .about-us-intro .description .first-text {
+    margin-top: 0;
+  }
+
+  .about-us-intro .text .inner-text img {
+    margin-top: -10px; }
+
+  .text .inner-text img {
+    margin-right: -4px; }
+
+  .about-us-intro .description .third-text {
+    font-size: 30px;
+    line-height: 31px; }
+
+  .why-us-about .main-title {
+    font-size: 30px;
+    line-height: 31px;
+    margin-bottom: 30px; }
+
+  .why-us-about .list {
+    width: 100%; }
+
+  .buttons .links {
+    margin-left: 2%;
+    margin-right: 2%;
+    max-width: 100%;
+    text-align: center; } }
+@media (max-width: 450px) {
+  .buttons {
+    margin-left: 3%; }
+
+  .buttons .links .order {
+    margin-right: 3%; }
+
+  .about-doctor {
+    max-width: 100%;
+    padding-right: 2%; }
+
+  .mobile-text {
+    max-width: 100%;
+    padding-bottom: 0; }
+
+  .winner-about .image {
+    padding-right: 0; } }
+
+/*# sourceMappingURL=about-us-page.css.map */

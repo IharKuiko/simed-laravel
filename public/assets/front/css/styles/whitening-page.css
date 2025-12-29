@@ -1,0 +1,718 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.whitening-intro {
+    margin: 38px 0 0 0;
+    display: flex;
+    margin-left: calc(60% - 50vw);
+}
+
+.whitening-intro .text .img-pos {
+    position: absolute;
+    top: 30%;
+    left: 11%;
+}
+
+.whitening-intro .main-img {
+    margin-top: 106px;
+}
+
+.whitening-intro .description {
+    display: flex;
+    margin-right: 104px;
+    margin-top: 6%;
+}
+
+.whitening-intro .description .inner-text {
+    text-align: right;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.whitening-intro .description .first-text {
+    margin-left: 70px;
+    margin-top: 27px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 40px;
+}
+
+.whitening-intro .description .second-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 20px;
+}
+
+.whitening-intro .description .third-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 110%;
+    font-size: 54px;
+    color: #FECC00;
+    max-width: 85%;
+    margin-bottom: 10px;
+}
+
+.whitening-intro .description .forth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.whitening-intro .description .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    display: flex;
+}
+
+.whitening-intro .description .fifth-text img {
+    margin-right: 20px;
+}
+
+.whitening-intro .fifth-text img {
+    margin-right: 30px;
+}
+
+.whitening-korean {
+    margin-left: 155px;
+    display: flex;
+    margin-right: 135px;
+}
+
+.whitening-korean .text {
+    margin-right: 95px;
+    margin-top: 73px;
+}
+
+.whitening-korean .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.whitening-korean .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.whitening-korean .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.whitening-korean .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.whitening-korean .fifth-text img {
+    margin-right: 30px;
+}
+
+.whitening-method {
+    margin-right: 135px;
+}
+
+.whitening-method .text {
+    margin-top: 4%;
+    margin-right: 95px;
+}
+
+.whitening-method .title {
+    margin-top: 60px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+    margin-left: 155px;
+}
+
+.whitening-method .desc {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.whitening-method .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.whitening-method .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.whitening-method .fifth-text img {
+    margin-right: 30px;
+}
+
+.whitening-method .flex {
+    display: flex;
+}
+
+.whitening-second-date {
+    margin-top: 100px;
+}
+
+.whitening-second-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.whitening-second-date .desc {
+    margin: 0 auto;
+    text-align: left;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    color: #02111B;
+    max-width: 785px;
+}
+
+.whitening-second-date .buttons a {
+    display: none;
+    text-decoration: none;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.whitening-second-date .buttons a:hover {
+    cursor: pointer;
+    color: #FECC00;
+}
+
+.whitening-second-date .buttons img {
+    margin-left: 15px;
+}
+
+.whitening-second-date .buttons .links {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 276px;
+    margin-bottom: 100px;
+}
+
+.whitening-second-date .buttons .links .order {
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width: 1880px) {
+    .whitening-intro, .whitening-method, .whitening-korean {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 1880px) {
+    .whitening-intro .text .img-pos {
+        /*top: 48%;*/
+    }
+}
+
+@media screen and (max-width: 1450px) {
+    .whitening-intro .text .img-pos {
+        /*top: 54%;*/
+    }
+
+    .whitening-intro .description {
+        margin-right: 95px;
+        margin-top: 98px;
+    }
+
+    .whitening-intro .description .inner-text {
+        text-align: left;
+        margin-left: 12px;
+    }
+
+    .whitening-intro .description .first-text {
+        margin-left: 110px;
+        margin-bottom: 19%;
+    }
+
+    .whitening-intro .description .forth-text {
+        margin-bottom: 21px;
+        margin-left: 12px;
+        max-width: 560px;
+
+    }
+
+    .whitening-intro .description .fifth-text {
+        margin-top: 10px;
+        max-width: 544px;
+        margin-left: 12px;
+    }
+
+    .whitening-intro .description .fifth-text img {
+        margin-right: 20px;
+        position: absolute;
+    }
+
+    .whitening-intro .description .fifth-text div {
+        margin-left: 53px;
+    }
+
+    .whitening-intro .description .second-text {
+        margin-left: 12px;
+    }
+
+    .whitening-second-date {
+        margin-top: 24px;
+        margin-left: 110px;
+    }
+
+    .whitening-korean .title {
+        margin-bottom: 29px;
+        max-width: 348px;
+    }
+
+    .whitening-korean .desc {
+        width: 600px;
+    }
+
+    .whitening-korean .fifth-text img {
+        position: absolute;
+    }
+
+    .whitening-korean .fifth-text div {
+        margin-left: 53px;
+        max-width: 533px;
+    }
+
+    .whitening-korean .text {
+        margin-right: 40px;
+    }
+
+    .whitening-method {
+        margin-top: 60px;
+        margin-left: 11px;
+        margin-right: 0;
+    }
+
+    .whitening-method .text {
+        margin-left: 14px;
+        margin-top: 50px;
+    }
+
+    .whitening-method .desc {
+        margin-bottom: 20px;
+        max-width: 594px;
+    }
+
+    .whitening-method .fifth-text img {
+        position: absolute;
+    }
+
+    .whitening-method .title {
+        margin-top: 93px;
+        margin-bottom: -5px;
+        margin-left: 145px;
+    }
+
+    .whitening-method .fifth-text div {
+        margin-left: 54px;
+        width: 525px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+}
+
+@media screen and (max-width: 1880px) {
+    .whitening-intro .text .img-pos {
+        /*top: 44%;*/
+    }
+}
+
+@media screen and (max-width: 1400px) {
+    .whitening-intro {
+        margin-left: calc(52% - 50vw);
+    }
+
+    .whitening-intro .text .img-pos {
+        /*left: 6%;*/
+        /*top: 45%;*/
+    }
+
+    .whitening-korean {
+        margin-left: 2%;
+    }
+}
+
+@media screen and (max-width: 1360px) {
+    .image-box div {
+        width: 50%;
+    }
+
+    .image-box div:nth-child(2n+1) {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+    .whitening-method .flex .image img {
+        width: 100%;
+    }
+
+    .whitening-korean .image img {
+        width: 100%;
+        margin-top: 30%;
+    }
+
+    .whitening-intro .description {
+        margin-right: 2%;
+    }
+
+    .whitening-intro {
+        margin-left: calc(52% - 50vw);
+    }
+}
+
+@media screen and (max-width: 1190px) {
+    .whitening-intro {
+        display: block;
+    }
+
+    .whitening-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+        text-align: left;
+    }
+
+    .whitening-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 0;
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .whitening-intro .forth-text {
+        font-size: 16px;
+        line-height: 24px;
+        max-width: 100% !important;
+    }
+
+    .whitening-intro .fifth-text {
+        line-height: 21px;
+        font-size: 14px !important;
+        max-width: 100% !important;
+    }
+
+    .whitening-intro .main-img {
+        margin-top: 30px;
+    }
+
+    .whitening-intro .second-text {
+        line-height: 21px;
+        font-size: 14px !important;
+        width: 100% !important;
+    }
+
+    .whitening-intro .main-img {
+        width: 520px;
+    }
+
+    .whitening-intro .text .img-pos {
+        /*top: 44%;*/
+    }
+
+    .whitening-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+    }
+
+    .whitening-method .title {
+        margin-left: 2%;
+    }
+
+    .whitening-method .title {
+        line-height: 31px;
+        font-size: 26px;
+    }
+
+    .whitening-method .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .whitening-method .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .whitening-method .text {
+        margin-top: 14px;
+    }
+
+    .whitening-korean .title {
+        margin-left: 2%;
+    }
+
+    .whitening-korean .title {
+        line-height: 31px;
+        font-size: 26px;
+    }
+
+    .whitening-korean .desc {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .whitening-korean .fifth-text {
+        line-height: 21px;
+        font-size: 14px;
+    }
+
+    .whitening-korean .text {
+        margin-top: 14px;
+    }
+
+    .whitening-second-date .desc {
+        line-height: 31px;
+        font-size: 26px;
+    }
+    .whitening-intro .whitening-image {
+        text-align: center;
+    }
+}
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+@media screen and (max-width: 1292px) and (min-width: 1250px) {
+    .whitening-method .text {
+        margin-right: 0;
+    }
+    .whitening-method .desc {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .whitening-method .fifth-text {
+        max-width: 100%;
+        margin-right: 2%;
+    }
+    .whitening-method .fifth-text div {
+        width: 100%;
+        margin-right: 2%;
+    }
+    .whitening-korean .text {
+        margin-right: 30px;
+    }
+}
+@media screen and (max-width: 1120px) {
+    .whitening-intro {
+        display: block;
+    }
+
+    .whitening-intro .description .inner-text {
+        text-align: left;
+    }
+
+    .whitening-intro .description .first-text {
+        margin-left: 0;
+    }
+
+    .whitening-intro .text .img-pos {
+        /*top: 37%;*/
+        /*left: 2%;*/
+    }
+
+    .whitening-intro .description .forth-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .whitening-intro .description .second-text {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .whitening-intro .main-img {
+        margin-top: 20px;
+        width: 100%;
+        padding-right: 2%;
+    }
+}
+
+.kov-image {
+    position: relative;
+    height: 50px;
+}
+
+@media screen and (max-width: 1050px) {
+    .whitening-method .flex {
+        display: block;
+    }
+
+    .whitening-korean {
+        display: block;
+    }
+
+    .whitening-method .desc {
+        max-width: 100%;
+    }
+
+    .whitening-method .fifth-text div {
+        width: 100%;
+    }
+
+    .whitening-korean .title {
+        max-width: 100%;
+        margin-top: 60px;
+        margin-left: 0;
+    }
+
+    .whitening-korean .desc {
+        width: 100%;
+    }
+
+    .whitening-korean .fifth-text div {
+        max-width: 100%;
+    }
+
+    .whitening-korean .image img {
+        margin-top: 20px;
+    }
+
+    .whitening-second-date {
+        margin-left: 5%;
+    }
+
+    .whitening-second-date .buttons .links {
+        margin-left: 250px;
+    }
+
+    .whitening-method {
+        margin-right: 3%;
+    }
+
+    .whitening-korean .text {
+        margin-right: 3%;
+    }
+
+    .whitening-second-date {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .image-box div {
+        width: 100%;
+    }
+
+    .whitening-intro .text .img-pos {
+        /*top: 31%;*/
+    }
+}
+
+@media screen and (max-width: 630px) {
+    .whitening-intro .text .img-pos {
+        /*top: 40%;*/
+        /*left: 1%;*/
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .whitening-intro .description .text {
+        max-width: 100%;
+    }
+
+    .whitening-intro .text .img-pos {
+        /*top: 42%;*/
+    }
+
+    .whitening-method .text {
+        margin-right: 0;
+        margin-left: 1%;
+    }
+
+    .whitening-korean {
+        margin-right: 0;
+    }
+
+    .whitening-method .title {
+        margin-left: 1%;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .whitening-intro .main-img {
+        width: 90%;
+    }
+
+    .whitening-intro .text .img-pos {
+        /*top: 50%;*/
+    }
+
+    .whitening-second-date .buttons .links {
+        margin-left: 150px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .whitening-intro .text .img-pos {
+        /*top: 49%;*/
+    }
+}
+
+/*# sourceMappingURL=implantation-page.css.map */

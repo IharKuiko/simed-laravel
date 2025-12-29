@@ -1,0 +1,374 @@
+@charset "UTF-8";
+@font-face {
+    font-family: IBMPlex;
+    src: url(../../fonts/IBM/IBMPlexSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+@font-face {
+    font-family: Tenor;
+    src: url(../../fonts/Tenor/TenorSans-Regular.ttf);
+    /* Путь к файлу со шрифтом */
+}
+
+.insurance-intro {
+    margin: 38px 0 0 0;
+}
+
+.insurance-intro .text .img-pos {
+    position: absolute;
+    top: 48%;
+    left: 11%;
+}
+
+.insurance-intro .main-img {
+    margin-top: 106px;
+}
+
+.insurance-intro .description {
+    margin-top: 6%;
+    max-width: 785px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.insurance-intro .description .inner-text {
+    margin-bottom: 30px;
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 64px;
+    font-size: 54px;
+    color: #02111B;
+}
+
+.insurance-intro .description .first-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 20px;
+}
+
+.insurance-treatment-date {
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 901px;
+    margin-bottom: 70px;
+}
+
+.insurance-treatment-date .title {
+    font-family: Tenor;
+    font-weight: 400;
+    line-height: 39px;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: #02111B;
+}
+
+.insurance-treatment-date .fifth-text {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+}
+
+.insurance-treatment-date .desc .fifth-text img {
+    margin-right: 20px;
+}
+
+.insurance-photo-gallery .flex {
+    display: flex;
+}
+
+.insurance-photo-gallery .container-photo {
+    width: 100%;
+}
+
+.insurance-photo-gallery .gallery {
+    margin-left: auto;
+    display: grid;
+    max-width: 920px;
+    grid-template-columns: repeat(2, 1fr);
+    margin-right: auto;
+}
+
+.insurance-photo-gallery .gallery .asoba {
+    max-width: 200px;
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .task {
+    max-width: 350px;
+    max-height: 100px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .gar {
+    max-width: 460px;
+    max-height: 115px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .prom {
+    max-width: 330px;
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .belstr {
+    max-width: 460px;
+    max-height: 110px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .belgtr {
+    max-width: 330px;
+    max-height: 110px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .belgos {
+    max-width: 330px;
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery .belveb {
+    max-width: 204px;
+    max-height: 80px;
+    margin: 0 auto;
+}
+
+.insurance-photo-gallery .gallery__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.insurance-photo-gallery .gallery__item--1 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+.insurance-photo-gallery .gallery__item--2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+}
+
+.insurance-photo-gallery .gallery__item--3 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 5;
+    grid-row-end: 6;
+}
+
+.insurance-photo-gallery .gallery__item--4 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 7;
+    grid-row-end: 8;
+}
+
+.insurance-photo-gallery .gallery__item--5 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+}
+
+.insurance-photo-gallery .gallery__item--6 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 4;
+    grid-row-end: 5;
+}
+
+.insurance-photo-gallery .gallery__item--7 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 6;
+    grid-row-end: 7;
+}
+
+.insurance-photo-gallery .gallery__item--8 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 8;
+    grid-row-end: 9;
+}
+
+.insurance-photo-gallery figure {
+    margin: 0 !important;
+}
+
+.insurance-photo-gallery .gallery__item--67 {
+    grid-column-start: 4;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    font-family: Tenor;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #02111B;
+}
+
+.insurance-photo-gallery span {
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 24px;
+    font-size: 16px;
+    color: #02111B;
+    display: block;
+    margin-top: 6px;
+}
+
+.last-bk .first-text {
+    margin-top: 100px;
+    font-family: IBMPlex;
+    font-weight: 400;
+    line-height: 27px;
+    font-size: 18px;
+    color: #02111B;
+    margin-bottom: 50px;
+    margin-left: 270px;
+    max-width: 460px;
+}
+
+.last-bk .img-pos {
+    position: absolute;
+    left: 13%;
+    margin-top: -3%;
+}
+
+@media screen and (max-width: 1450px) {
+    .insurance-intro .text .img-pos {
+        top: 69%;
+    }
+
+    .insurance-intro .description {
+        max-width: 829px;
+        margin-left: auto;
+    }
+
+    .insurance-intro .description .text {
+        padding-top: 50px;
+    }
+
+    .insurance-intro .description .inner-text {
+        margin-right: 9%;
+    }
+
+    .insurance-intro .description .first-text {
+        margin-left: 42px;
+        max-width: 785px;
+        margin-bottom: 20px;
+    }
+
+    .insurance-intro .description .second-text {
+        margin-left: 12px;
+        width: 750px;
+        margin-top: 10px;
+    }
+
+    .insurance-treatment-date .title {
+        margin-bottom: 19px;
+    }
+
+    .insurance-treatment-date {
+        margin-top: 71px;
+        margin-bottom: 50px;
+    }
+
+    .insurance-treatment-date .desc {
+        max-width: 571px;
+    }
+
+    .last-bk .img-pos {
+        margin-top: -5%;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    .last-bk .img-pos {
+        left: 20%;
+    }
+    .insurance-intro {
+        margin-right: 3%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .insurance-intro .description .inner-text {
+        line-height: 48px;
+        font-size: 40px;
+        margin-left: 2%;
+    }
+
+    .insurance-intro .description .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .insurance-treatment-date .title {
+        line-height: 31px;
+        font-size: 26px;
+        margin-left: 2%;
+    }
+
+    .last-bk .first-text {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .last-bk .img-pos {
+        left: 25%;
+        margin-top: -8%;
+    }
+    .insurance-photo-gallery {
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .last-bk .first-text {
+        margin-left: 2%;
+        margin-right: 3%;
+    }
+
+    .last-bk .img-pos {
+        left: 3%;
+        margin-top: -12%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .last-bk .first-text {
+        margin-left: 2%;
+    }
+
+    .insurance-photo-gallery .gallery {
+        display: block;
+    }
+
+    .insurance-photo-gallery .gallery img {
+        margin-bottom: 20px !important;
+    }
+    .last-bk .img-pos {
+        margin-top: -20%;
+    }
+}
+
+/*# sourceMappingURL=implantation-page.css.map */

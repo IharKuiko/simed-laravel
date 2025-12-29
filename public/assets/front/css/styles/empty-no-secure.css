@@ -1,0 +1,81 @@
+.no-secure-template .pageContent {
+    margin-left: 19.5%;
+    margin-right: 17.5%;
+    max-width: 900px;
+}
+
+.no-secure-template .pageContent .entry-title {
+    font-family: Tenor, sans-serif;
+    font-weight: 400;
+    line-height: 59px;
+    font-size: 54px;
+    color: #02111B;
+    margin-top: 135px;
+}
+.no-secure-template .pageContent .title {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    margin-bottom: 20px;
+}
+.no-secure-template .pageContent h1 {
+    margin-bottom: 30px;
+}
+.no-secure-template .pageContent .entry-content-page li {
+    display: flex;
+    margin-bottom: 10px;
+}
+.no-secure-template .pageContent .entry-content-page li::before{
+    margin-right: 25px;
+    width: 25px;
+    height: 25px;
+    content: url(../img/line-circle.svg);
+}
+.no-secure-template .pageContent p, li {
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02111B;
+}
+.no-secure-template .pageContent p {
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+@media screen and (max-width: 1220px) {
+    .no-secure-template .pageContent {
+        margin-left: calc(53% - 50vw);
+        margin-right: 5%;
+    }
+
+    .no-secure-template .pageContent p, li {
+        font-size: 14px;
+    }
+
+    .no-secure-template .pageContent .entry-title {
+        font-size: 40px;
+    }
+
+    .no-secure-template .pageContent .title {
+        font-size: 24px;
+    }
+
+    .no-secure-template .pageContent img {
+        height: 100%;
+        width: auto;
+    }
+}
+
+@media (max-width: 700px) {
+    .no-secure-template .pageContent .entry-title {
+        font-size: 30px;
+    }
+
+    .no-secure-template .pageContent .title {
+        font-size: 20px;
+    }
+}

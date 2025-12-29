@@ -1,0 +1,62 @@
+.patience-container {
+    /*max-width: 960px;*/
+    font-family: Tenor, sans-serif;
+    /*margin: 0 auto 60px auto;*/
+}
+
+.patience-container .price-header {
+    margin-bottom: 70px;
+    font-size: 54px;
+}
+
+.patience-container .patience-intro .h1 {
+    font-size: 40px;
+    line-height: 48px;
+}
+
+.patience-container .patience-intro .desc {
+    font-size: 18px;
+    line-height: 27px;
+    margin: 8px;
+    font-family: IBMPlex, sans-serif;
+}
+
+.patience-container .price-menu li {
+    border-bottom: none;
+}
+
+.patience-container .instruction li {
+    display: block;
+}
+
+.patience-container .instruction li img {
+    width: 100%;
+}
+
+.patience-container .level-menu-first-p .h1 {
+    margin: 15px 0;
+}
+
+.patience-container .price-menu li.custom {
+    border-bottom: 2px solid rgba(129, 135, 189, 0.2);
+}
+
+.patience-footer {
+    margin: 70px auto;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+}
+
+.li-text a {
+    text-decoration: none;
+    color: #02111B;
+}
+
+.li-text a:hover {
+    color: #FECC00;
+}
+
+.level-menu-first-p .patience-intro {
+    margin-top: 30px;
+}

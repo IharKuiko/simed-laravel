@@ -1,0 +1,1405 @@
+/* Стили для страниц гинекологии и ультразвуковой диагностики */
+
+/* Основные стили для контента страниц */
+.pageContent {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Контейнер для основного контента */
+.container {
+    background-color: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    padding: 40px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0f4f8;
+}
+
+/* Декоративный элемент в верхнем левом углу */
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.1) 0%,
+        rgba(74, 144, 226, 0.05) 100%
+    );
+    border-radius: 0 0 120px 0;
+    z-index: 0;
+}
+
+/* Заголовки страниц */
+.pageContent h1 {
+    font-family: Tenor, sans-serif;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 110%;
+    color: #02111b;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 15px;
+    z-index: 1;
+}
+
+.pageContent h1::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(to right, var(--main-color), #4a90e2);
+    border-radius: 2px;
+}
+
+/* Стили для первого параграфа - выделение и увеличенный размер */
+.pageContent p:first-of-type {
+    font-family: IBMPlex, sans-serif;
+    font-size: 20px;
+    line-height: 1.7;
+    color: #02111b;
+    margin-bottom: 25px;
+    padding: 25px;
+    background-color: rgba(6, 90, 173, 0.04);
+    border-radius: 12px;
+    border-left: 4px solid var(--main-color);
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.pageContent p:first-of-type:hover {
+    background-color: rgba(6, 90, 173, 0.08);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(6, 90, 173, 0.1);
+}
+
+/* Обычные параграфы с улучшенной стилизацией */
+.pageContent p {
+    font-family: IBMPlex, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+    padding: 5px 0;
+    transition: all 0.2s ease;
+}
+
+/* Визуальный разделитель между текстовыми секциями */
+.pageContent p + ul,
+.pageContent ul + p {
+    margin-top: 30px;
+    position: relative;
+}
+
+.pageContent p + ul::before,
+.pageContent ul + p::before {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(to right, transparent, #e0e6ed, transparent);
+}
+
+/* Улучшенные стили для списков - БОЛЕЕ ЗАМЕТНЫЕ */
+.pageContent ul,
+.container ul {
+    margin: 30px 0;
+    padding: 20px;
+    list-style: none;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.03) 0%,
+        rgba(74, 144, 226, 0.02) 100%
+    );
+    border-radius: 12px;
+    border: 1px solid rgba(6, 90, 173, 0.1);
+    box-shadow: 0 4px 15px rgba(6, 90, 173, 0.08);
+}
+
+.pageContent ul li,
+.container ul li {
+    font-family: IBMPlex, sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #02111b;
+    margin-bottom: 12px;
+    position: relative;
+    padding: 16px 20px 16px 55px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border-left: 4px solid var(--main-color);
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.pageContent ul li:hover,
+.container ul li:hover {
+    background-color: rgba(6, 90, 173, 0.08);
+    transform: translateX(8px);
+    box-shadow: 0 4px 15px rgba(6, 90, 173, 0.15);
+}
+
+/* Улучшенные кастомные иконки для элементов списка */
+.pageContent ul li::before,
+.container ul li::before {
+    content: "✓";
+    color: #ffffff;
+    font-weight: bold;
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+    background: linear-gradient(135deg, var(--main-color) 0%, #4a90e2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(6, 90, 173, 0.3);
+    transition: all 0.3s ease;
+}
+
+.pageContent ul li:hover::before,
+.container ul li:hover::before {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: 0 3px 8px rgba(6, 90, 173, 0.4);
+}
+
+/* Вложенные списки с улучшенной стилизацией */
+.pageContent ul ul,
+.container ul ul {
+    margin: 20px 0;
+    padding: 15px 15px 15px 25px;
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.02) 0%,
+        rgba(74, 144, 226, 0.01) 100%
+    );
+    border-radius: 8px;
+    border: 1px solid rgba(6, 90, 173, 0.08);
+}
+
+.pageContent ul ul li,
+.container ul ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 12px 15px 12px 45px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 3px solid #4a90e2;
+}
+
+.pageContent ul ul li::before,
+.container ul ul li::before {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+    left: 15px;
+    background: linear-gradient(135deg, #4a90e2 0%, #6ba3e5 100%);
+}
+
+/* Последний элемент списка без нижнего отступа */
+.pageContent ul li:last-child,
+.container ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Блок с услугами */
+.gin-serv-block {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+/* Карточка услуги */
+.gin-serv-item {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #f0f0f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.gin-serv-item::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--main-color), #4a90e2);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gin-serv-item:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+.gin-serv-item:hover::before {
+    opacity: 1;
+}
+
+/* Заголовок услуги */
+.gin-serv-item h3 {
+    font-family: Tenor, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #02111b;
+    margin-bottom: 15px;
+    padding-right: 15px;
+}
+
+/* Описание услуги */
+.gin-serv-item p {
+    font-family: IBMPlex, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+/* Цена услуги */
+.gin-serv-item .price {
+    font-family: IBMPlex, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin-top: auto;
+    padding-top: 15px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* Адаптивность для планшетов */
+@media (max-width: 1024px) {
+    .pageContent {
+        padding: 35px 15px;
+    }
+
+    .pageContent h1 {
+        font-size: 42px;
+        margin-bottom: 25px;
+    }
+
+    .pageContent p {
+        font-size: 17px;
+        margin-bottom: 18px;
+    }
+
+    .pageContent ul li,
+    .container ul li,
+    .pageContent ol li,
+    .container ol li {
+        font-size: 17px;
+        margin-bottom: 10px;
+        padding: 14px 18px 14px 50px;
+    }
+
+    .pageContent ul li::before,
+    .container ul li::before,
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 22px;
+        height: 22px;
+        font-size: 13px;
+        left: 16px;
+    }
+
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+        left: 18px;
+    }
+
+    .gin-serv-block {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 25px;
+        margin-top: 40px;
+    }
+
+    .gin-serv-item {
+        padding: 25px;
+    }
+
+    .gin-serv-item h3 {
+        font-size: 22px;
+    }
+
+    .gin-serv-item p {
+        font-size: 15px;
+    }
+
+    .gin-serv-item .price {
+        font-size: 18px;
+    }
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .pageContent {
+        padding: 30px 15px;
+    }
+
+    .pageContent h1 {
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .pageContent p {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+
+    .pageContent ul,
+    .container ul,
+    .pageContent ol,
+    .container ol {
+        padding: 15px;
+        margin: 25px 0;
+    }
+
+    .pageContent ul li,
+    .container ul li,
+    .pageContent ol li,
+    .container ol li {
+        font-size: 16px;
+        margin-bottom: 8px;
+        padding: 12px 15px 12px 45px;
+    }
+
+    .pageContent ul li::before,
+    .container ul li::before,
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+        left: 15px;
+    }
+
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        left: 16px;
+    }
+
+    .gin-serv-block {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 35px;
+    }
+
+    .gin-serv-item {
+        padding: 20px;
+    }
+
+    .gin-serv-item h3 {
+        font-size: 20px;
+    }
+
+    .gin-serv-item p {
+        font-size: 15px;
+    }
+
+    .gin-serv-item .price {
+        font-size: 17px;
+    }
+}
+
+/* Адаптивность для маленьких мобильных устройств */
+@media (max-width: 480px) {
+    .pageContent {
+        padding: 25px 10px;
+    }
+
+    .pageContent h1 {
+        font-size: 32px;
+        margin-bottom: 18px;
+    }
+
+    .pageContent h1::after {
+        width: 60px;
+        height: 3px;
+    }
+
+    .pageContent p {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+
+    .pageContent ul,
+    .container ul,
+    .pageContent ol,
+    .container ol {
+        padding: 12px;
+        margin: 20px 0;
+    }
+
+    .pageContent ul li,
+    .container ul li,
+    .pageContent ol li,
+    .container ol li {
+        font-size: 15px;
+        margin-bottom: 7px;
+        padding: 10px 12px 10px 40px;
+    }
+
+    .pageContent ul li::before,
+    .container ul li::before,
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 18px;
+        height: 18px;
+        font-size: 11px;
+        left: 12px;
+    }
+
+    .pageContent ol li::before,
+    .container ol li::before {
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+        left: 13px;
+    }
+
+    .gin-serv-block {
+        margin-top: 30px;
+    }
+
+    .gin-serv-item {
+        padding: 18px;
+    }
+
+    .gin-serv-item h3 {
+        font-size: 18px;
+        margin-bottom: 12px;
+    }
+
+    .gin-serv-item p {
+        font-size: 14px;
+        margin-bottom: 15px;
+    }
+
+    .gin-serv-item .price {
+        font-size: 16px;
+        padding-top: 12px;
+    }
+}
+
+/* Дополнительные стили для улучшения визуального вида */
+.gin-serv-item:nth-child(odd) {
+    background-color: #f9fbff;
+}
+
+.gin-serv-item:nth-child(even) {
+    background-color: #fff;
+}
+
+/* Анимация появления элементов при прокрутке */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gin-serv-item {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.gin-serv-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+.gin-serv-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+.gin-serv-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+.gin-serv-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+.gin-serv-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+.gin-serv-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+/* Стили для выделения важной информации */
+.pageContent p strong,
+.pageContent ul li strong {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/* Стили для улучшения читаемости */
+.pageContent {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* Стили для заголовков второго уровня */
+.pageContent h2 {
+    font-family: Tenor, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #02111b;
+    margin: 40px 0 25px;
+    padding-bottom: 15px;
+    position: relative;
+    border-bottom: none;
+}
+
+.pageContent h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(to right, var(--main-color), #4a90e2);
+    border-radius: 2px;
+}
+
+/* Стили для заголовков третьего уровня */
+.pageContent h3 {
+    font-family: Tenor, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3;
+    color: #02111b;
+    margin: 30px 0 20px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.pageContent h3::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+}
+
+/* Улучшенные стили для акцентного текста */
+.pageContent .accent-text {
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.08) 0%,
+        rgba(6, 90, 173, 0.04) 100%
+    );
+    padding: 25px;
+    border-radius: 12px;
+    border-left: 4px solid var(--main-color);
+    margin: 30px 0;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(6, 90, 173, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pageContent .accent-text:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(6, 90, 173, 0.15);
+}
+
+.pageContent .accent-text p {
+    margin-bottom: 0;
+    font-weight: 500;
+    color: #02111b;
+    font-size: 18px;
+}
+
+/* Улучшенные стили для информационных блоков */
+.pageContent .info-block {
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border-left: 4px solid #2196f3;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pageContent .info-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(33, 150, 243, 0.15);
+}
+
+.pageContent .info-block p {
+    margin-bottom: 0;
+    color: #0d47a1;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.pageContent .info-block::before {
+    content: "ℹ";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #2196f3;
+    opacity: 0.5;
+}
+
+/* Улучшенные стили для успешных блоков */
+.pageContent .success-block {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border-left: 4px solid #4caf50;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(76, 175, 80, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pageContent .success-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(76, 175, 80, 0.15);
+}
+
+.pageContent .success-block p {
+    margin-bottom: 0;
+    color: #1b5e20;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.pageContent .success-block::before {
+    content: "✓";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #4caf50;
+    opacity: 0.5;
+}
+
+/* Улучшенные стили для предупреждений */
+.pageContent .warning-block {
+    background: linear-gradient(135deg, #fff8e1 0%, #ffecb3 100%);
+    padding: 25px;
+    border-radius: 12px;
+    margin: 30px 0;
+    border-left: 4px solid #ffc107;
+    position: relative;
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.1);
+    transition: all 0.3s ease;
+}
+
+.pageContent .warning-block:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 193, 7, 0.15);
+}
+
+.pageContent .warning-block p {
+    margin-bottom: 0;
+    color: #ff6f00;
+    font-weight: 500;
+    position: relative;
+    z-index: 1;
+}
+
+.pageContent .warning-block::before {
+    content: "⚠";
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    color: #ffc107;
+    opacity: 0.5;
+}
+
+/* Специальный блок для ключевой информации */
+.pageContent .key-info {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e9ecef 100%);
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border: 1px solid #dee2e6;
+    position: relative;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.pageContent .key-info:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.pageContent .key-info h4 {
+    font-family: Tenor, sans-serif;
+    font-size: 20px;
+    color: var(--main-color);
+    margin: 0 0 15px 0;
+    display: flex;
+    align-items: center;
+}
+
+.pageContent .key-info h4::before {
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: var(--main-color);
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+}
+
+.pageContent .key-info h4::after {
+    content: "✓";
+    position: absolute;
+    left: 6px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.pageContent .key-info p {
+    margin: 0;
+    color: #495057;
+    line-height: 1.6;
+}
+
+/* Блок для цитат или рекомендаций */
+.pageContent .quote-block {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 25px 30px;
+    border-radius: 15px;
+    margin: 30px 0;
+    border-left: 4px solid var(--main-color);
+    position: relative;
+    font-style: italic;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.pageContent .quote-block::before {
+    content: "\201C";
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    font-size: 60px;
+    color: rgba(6, 90, 173, 0.1);
+    font-family: Tenor, sans-serif;
+    line-height: 1;
+}
+
+.pageContent .quote-block p {
+    margin: 0;
+    color: #495057;
+    font-size: 18px;
+    position: relative;
+    z-index: 1;
+    padding-left: 20px;
+}
+
+/* Адаптивность для специальных блоков */
+@media (max-width: 768px) {
+    .pageContent .accent-text,
+    .pageContent .info-block,
+    .pageContent .success-block,
+    .pageContent .warning-block,
+    .pageContent .key-info,
+    .pageContent .quote-block {
+        padding: 20px;
+        margin: 25px 0;
+    }
+
+    .pageContent .key-info h4 {
+        font-size: 18px;
+    }
+
+    .pageContent .quote-block p {
+        font-size: 16px;
+    }
+
+    .pageContent .accent-text p,
+    .pageContent .info-block p,
+    .pageContent .success-block p,
+    .pageContent .warning-block p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .pageContent .accent-text,
+    .pageContent .info-block,
+    .pageContent .success-block,
+    .pageContent .warning-block,
+    .pageContent .key-info,
+    .pageContent .quote-block {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    /* Дополнительные микро-анимации для улучшения пользовательского опыта */
+
+    /* Анимация появления для параграфов */
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Анимация появления для списков */
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Применяем анимации к элементам */
+    .pageContent p {
+        animation: fadeInLeft 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    .pageContent ul {
+        animation: fadeInRight 0.6s ease-out forwards;
+        opacity: 0;
+    }
+
+    /* Задержки анимации для последовательного появления */
+    .pageContent p:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+    .pageContent p:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+    .pageContent p:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+    .pageContent p:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+    .pageContent p:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    .pageContent ul:nth-child(1) {
+        animation-delay: 0.2s;
+    }
+    .pageContent ul:nth-child(2) {
+        animation-delay: 0.4s;
+    }
+    .pageContent ul:nth-child(3) {
+        animation-delay: 0.6s;
+    }
+
+    /* Эффект пульсации для важных элементов */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(6, 90, 173, 0.4);
+        }
+        70% {
+            box-shadow: 0 0 0 10px rgba(6, 90, 173, 0);
+        }
+        100% {
+            box-shadow: 0 0 0 0 rgba(6, 90, 173, 0);
+        }
+    }
+
+    .pageContent p:first-of-type {
+        animation: fadeInLeft 0.6s ease-out forwards, pulse 2s infinite;
+    }
+
+    /* Эффект подсветки для элементов списка при наведении */
+    .pageContent ul li::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(to right, var(--main-color), #4a90e2);
+        transition: width 0.3s ease;
+    }
+
+    .pageContent ul li:hover::after {
+        width: 100%;
+    }
+
+    /* Улучшенные стили для выделения важной информации */
+    .pageContent p strong,
+    .pageContent ul li strong {
+        color: var(--main-color);
+        font-weight: 600;
+        position: relative;
+        display: inline-block;
+        transition: all 0.2s ease;
+    }
+
+    .pageContent p strong:hover,
+    .pageContent ul li strong:hover {
+        transform: scale(1.05);
+        text-shadow: 0 1px 3px rgba(6, 90, 173, 0.3);
+    }
+
+    /* Эффект печатной машинки для заголовков */
+    @keyframes typewriter {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+    .pageContent h1 {
+        overflow: hidden;
+        white-space: nowrap;
+        animation: typewriter 2s steps(40, end) forwards;
+    }
+
+    /* Адаптивность для анимаций на мобильных устройствах */
+    @media (max-width: 768px) {
+        .pageContent p,
+        .pageContent ul {
+            animation: none;
+            opacity: 1;
+        }
+
+        .pageContent h1 {
+            animation: none;
+            white-space: normal;
+        }
+
+        .pageContent p:first-of-type {
+            animation: none;
+        }
+    }
+
+    /* Дополнительные стили для улучшения читаемости */
+    .pageContent {
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Эффект размытия фона при наведении на контент */
+    .pageContent:hover {
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+    }
+
+    /* Улучшенная типографика для лучшей читаемости */
+    .pageContent p {
+        text-align: justify;
+        text-justify: inter-word;
+        word-spacing: 0.5px;
+        letter-spacing: 0.3px;
+    }
+
+    /* Специальные стили для выделения важных терминов */
+    .pageContent .highlight {
+        background: linear-gradient(
+            120deg,
+            rgba(6, 90, 173, 0.2) 0%,
+            rgba(6, 90, 173, 0.2) 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 100% 40%;
+        background-position: 0 60%;
+        padding: 2px 4px;
+        border-radius: 3px;
+        transition: all 0.2s ease;
+    }
+
+    .pageContent .highlight:hover {
+        background-size: 100% 100%;
+    }
+
+    /* Улучшенные стили для нумерованных списков */
+    .pageContent ol,
+    .container ol {
+        margin: 30px 0;
+        padding: 20px;
+        list-style: none;
+        position: relative;
+        z-index: 1;
+        background: linear-gradient(
+            135deg,
+            rgba(6, 90, 173, 0.03) 0%,
+            rgba(74, 144, 226, 0.02) 100%
+        );
+        border-radius: 12px;
+        border: 1px solid rgba(6, 90, 173, 0.1);
+        box-shadow: 0 4px 15px rgba(6, 90, 173, 0.08);
+        counter-reset: item;
+    }
+
+    .pageContent ol li,
+    .container ol li {
+        font-family: IBMPlex, sans-serif;
+        font-size: 18px;
+        line-height: 1.6;
+        color: #02111b;
+        margin-bottom: 12px;
+        position: relative;
+        padding: 16px 20px 16px 60px;
+        background-color: #ffffff;
+        border-radius: 10px;
+        border-left: 4px solid var(--main-color);
+        counter-increment: item;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .pageContent ol li:hover,
+    .container ol li:hover {
+        background-color: rgba(6, 90, 173, 0.08);
+        transform: translateX(8px);
+        box-shadow: 0 4px 15px rgba(6, 90, 173, 0.15);
+    }
+
+    .pageContent ol li::before,
+    .container ol li::before {
+        content: counter(item);
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 28px;
+        height: 28px;
+        background: linear-gradient(135deg, var(--main-color) 0%, #4a90e2 100%);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        font-weight: bold;
+        color: white;
+        box-shadow: 0 2px 5px rgba(6, 90, 173, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .pageContent ol li:hover::before,
+    .container ol li:hover::before {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 3px 8px rgba(6, 90, 173, 0.4);
+    }
+
+    /* Последний элемент нумерованного списка без нижнего отступа */
+    .pageContent ol li:last-child,
+    .container ol li:last-child {
+        margin-bottom: 0;
+    }
+
+    /* Вложенные нумерованные списки */
+    .pageContent ol ol,
+    .container ol ol {
+        margin: 20px 0;
+        padding: 15px 15px 15px 25px;
+        background: linear-gradient(
+            135deg,
+            rgba(6, 90, 173, 0.02) 0%,
+            rgba(74, 144, 226, 0.01) 100%
+        );
+        border-radius: 8px;
+        border: 1px solid rgba(6, 90, 173, 0.08);
+    }
+
+    .pageContent ol ol li,
+    .container ol ol li {
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 12px 15px 12px 50px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-left: 3px solid #4a90e2;
+    }
+
+    .pageContent ol ol li::before,
+    .container ol ol li::before {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+        left: 15px;
+        background: linear-gradient(135deg, #4a90e2 0%, #6ba3e5 100%);
+    }
+
+    /* Стили для таблиц (если появятся в будущем) */
+    .pageContent table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 30px 0;
+        background-color: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    }
+
+    .pageContent th {
+        background-color: var(--main-color);
+        color: white;
+        font-family: Tenor, sans-serif;
+        font-size: 18px;
+        padding: 15px;
+        text-align: left;
+    }
+
+    .pageContent td {
+        padding: 15px;
+        border-bottom: 1px solid #e9ecef;
+        font-size: 16px;
+        transition: all 0.2s ease;
+    }
+
+    .pageContent tr:hover td {
+        background-color: rgba(6, 90, 173, 0.05);
+    }
+
+    .pageContent tr:last-child td {
+        border-bottom: none;
+    }
+
+    .pageContent .key-info h4 {
+        font-size: 16px;
+    }
+
+    .pageContent .quote-block p {
+        font-size: 15px;
+    }
+
+    .pageContent .accent-text p,
+    .pageContent .info-block p,
+    .pageContent .success-block p,
+    .pageContent .warning-block p {
+        font-size: 15px;
+    }
+}
+
+/* Дополнительные улучшения для списков - специальные эффекты */
+
+/* Эффект подсветки для всего списка при наведении */
+.pageContent ul:hover,
+.container ul:hover,
+.pageContent ol:hover,
+.container ol:hover {
+    box-shadow: 0 6px 20px rgba(6, 90, 173, 0.12);
+    transform: translateY(-2px);
+}
+
+/* Анимация появления элементов списка */
+@keyframes listItemFadeIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Применяем анимацию к элементам списка */
+.pageContent ul li,
+.container ul li,
+.pageContent ol li,
+.container ol li {
+    animation: listItemFadeIn 0.5s ease-out forwards;
+    opacity: 0;
+}
+
+/* Задержки анимации для последовательного появления */
+.pageContent ul li:nth-child(1),
+.container ul li:nth-child(1),
+.pageContent ol li:nth-child(1),
+.container ol li:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.pageContent ul li:nth-child(2),
+.container ul li:nth-child(2),
+.pageContent ol li:nth-child(2),
+.container ol li:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.pageContent ul li:nth-child(3),
+.container ul li:nth-child(3),
+.pageContent ol li:nth-child(3),
+.container ol li:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.pageContent ul li:nth-child(4),
+.container ul li:nth-child(4),
+.pageContent ol li:nth-child(4),
+.container ol li:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.pageContent ul li:nth-child(5),
+.container ul li:nth-child(5),
+.pageContent ol li:nth-child(5),
+.container ol li:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.pageContent ul li:nth-child(6),
+.container ul li:nth-child(6),
+.pageContent ol li:nth-child(6),
+.container ol li:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.pageContent ul li:nth-child(7),
+.container ul li:nth-child(7),
+.pageContent ol li:nth-child(7),
+.container ol li:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+.pageContent ul li:nth-child(8),
+.container ul li:nth-child(8),
+.pageContent ol li:nth-child(8),
+.container ol li:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+/* Эффект пульсации для иконок при загрузке страницы */
+@keyframes iconPulse {
+    0% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 2px 5px rgba(6, 90, 173, 0.3);
+    }
+    50% {
+        transform: translateY(-50%) scale(1.1);
+        box-shadow: 0 3px 10px rgba(6, 90, 173, 0.5);
+    }
+    100% {
+        transform: translateY(-50%) scale(1);
+        box-shadow: 0 2px 5px rgba(6, 90, 173, 0.3);
+    }
+}
+
+/* Применяем пульсацию к первым трем элементам списка */
+.pageContent ul li:nth-child(1)::before,
+.container ul li:nth-child(1)::before,
+.pageContent ol li:nth-child(1)::before,
+.container ol li:nth-child(1)::before,
+.pageContent ul li:nth-child(2)::before,
+.container ul li:nth-child(2)::before,
+.pageContent ol li:nth-child(2)::before,
+.container ol li:nth-child(2)::before,
+.pageContent ul li:nth-child(3)::before,
+.container ul li:nth-child(3)::before,
+.pageContent ol li:nth-child(3)::before,
+.container ol li:nth-child(3)::before {
+    animation: iconPulse 2s ease-in-out infinite;
+}
+
+/* Дополнительный эффект для выделения важных элементов списка */
+.pageContent ul li.important,
+.container ul li.important,
+.pageContent ol li.important,
+.container ol li.important {
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.1) 0%,
+        rgba(74, 144, 226, 0.05) 100%
+    );
+    border-left: 4px solid #ff6b6b;
+    font-weight: 600;
+}
+
+.pageContent ul li.important::before,
+.container ul li.important::before,
+.pageContent ol li.important::before,
+.container ol li.important::before {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+    content: "!";
+}
+
+/* Эффект для подсветки текста при наведении */
+.pageContent ul li:hover,
+.container ul li:hover,
+.pageContent ol li:hover,
+.container ol li:hover {
+    background: linear-gradient(
+        135deg,
+        rgba(6, 90, 173, 0.08) 0%,
+        rgba(74, 144, 226, 0.04) 100%
+    );
+}
+
+/* Отключаем анимации на мобильных устройствах для производительности */
+@media (max-width: 768px) {
+    .pageContent ul li,
+    .container ul li,
+    .pageContent ol li,
+    .container ol li {
+        animation: none;
+        opacity: 1;
+    }
+
+    .pageContent ul li::before,
+    .container ul li::before,
+    .pageContent ol li::before,
+    .container ol li::before {
+        animation: none;
+    }
+}

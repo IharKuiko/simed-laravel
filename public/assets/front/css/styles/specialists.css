@@ -1,0 +1,140 @@
+.specialist-page .doctors-block-grid {
+    grid-template-columns: 330px 330px 330px 330px;
+    grid-template-rows: 552px 552px 552px;
+}
+.specialist-page .doctors-block {
+    margin-top: 70px;
+}
+.specialist-page .doctors-block .doctors-block-header {
+    margin-bottom: 44px;
+    text-align: center;
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.specialist-page .doctors-block-grid .item-container img {
+    margin-bottom: 30px;
+    width: 100%;
+    height: auto;
+    padding: 0 !important;
+}
+.specialist-page .doctors-block-grid .item-container {
+    max-height: 522px;
+}
+.specialist-page .doctors-block-grid .item-container .doctor-name p, .doctors-block .doctors-block-grid .item-container .doctor-name p {
+    font-family: IBMPlex, sans-serif;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.specialist-page .doctors-block-grid .item-container .doctor-specialization p, .doctors-block .doctors-block-grid .item-container .doctor-specialization p {
+    font-family: IBMPlex, sans-serif;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+.specialist-page .doctors-block-grid .item-container .doctor-name {
+    min-width: 316px;
+}
+.doctors-block-grid .item-container a {
+    text-decoration: none;
+    color: #02111B;
+}
+.specialist-page .doctor-name {
+    margin-top: 0;
+}
+
+@media screen and (min-width: 1600px) {
+    .doctor-main-container-second, .doctor-main-container, .doctor-main-container-third   {
+        margin-left: calc(60% - 40vw) !important;
+        margin-bottom: 50px;
+    }
+}
+@media screen and (max-width: 1455px) {
+    .specialist-page .doctors-block-grid {
+        grid-template-columns: 328px 328px 328px 328px;
+    }
+}
+@media screen and (max-width: 1450px) {
+    .specialist-page .doctors-block-grid .item-container img {
+        padding-right: 15px
+    }
+}
+@media screen and (max-width: 1440px) {
+    .specialist-page .doctors-block-grid .item-container img {
+        padding-right: 15px
+    }
+}
+@media screen and (max-width: 1400px) {
+    .specialist-page .doctors-block-grid {
+        grid-template-columns: 300px 300px 300px !important;
+        grid-template-rows: 552px 552px 552px 552px !important;
+    }
+    .specialist-page .doctors-block-grid {
+        max-width: 950px;
+    }
+    .specialist-page .doctors-block-grid .item-container img {
+        /*padding-right: 30px*/
+    }
+    .specialist-page .doctors-block-grid .item-container {
+        max-height: 475px;
+    }
+}
+@media screen and (max-width: 1127px) {
+    .specialist-page .doctors-block-grid .item-container img {
+        padding-right: 15px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .specialist-page .doctors-block-grid {
+        grid-template-columns: 298px 298px !important;
+        grid-template-rows: 552px 552px 552px 552px !important;
+        margin: 0 auto;
+    }
+
+    .specialist-page .doctors-block-grid .item-container .doctor-name p, .doctors-block .doctors-block-grid .item-container .doctor-name p {
+        font-size: 14px;
+    }
+
+    .specialist-page .doctors-block-grid .item-container .doctor-specialization p, .doctors-block .doctors-block-grid .item-container .doctor-specialization p {
+        font-size: 14px;
+    }
+    .specialist-page .doctors-block-grid .item-container .doctor-prof-category p, .doctors-block .doctor-prof-category p{
+        font-size: 14px;
+    }
+    .specialist-page .doctors-block-grid {
+        max-width: 750px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .specialist-page .doctors-block-grid {
+        max-width: 620px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .specialist-page .doctors-block-grid .item-container img {
+        padding-right: 0;
+    }
+    .specialist-page .doctors-block-grid {
+        grid-template-columns: 100% !important;
+        max-width: 330px;
+        margin: auto;
+        grid-template-rows: auto !important;
+        overflow-x: hidden;
+    }
+    .specialist-page .doctors-block .doctors-block-header {
+        font-size: 24px;
+        max-width: 330px;
+        margin-top: 50px;
+    }
+    .specialist-page .doctors-block {
+        max-width: initial;
+        margin: auto;
+    }
+    .specialist-page .doctors-block-grid .item-container {
+        max-height: 522px;
+    }
+}

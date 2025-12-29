@@ -1,0 +1,155 @@
+.contact-header p {
+    text-align: center;
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 120%;
+    color: #02111B;
+}
+.contact-header {
+    margin-top: 80px;
+}
+.contact-columns {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin-top: 30px;
+}
+.contact-columns .column-right {
+    display: flex;
+    margin-left: auto;
+}
+.contact-columns .column-left {
+    margin-left: 115px;
+}
+.requisites p, .working-hours-header, .phone-header p {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 130%;
+    color: #02111B;
+    margin: 0 0 20px 0;
+}
+.requisites-text p, .working-hours-text p, .phone-text p {
+    margin: 0;
+}
+.requisites-text p, .working-hours-text p, .phone-text p a {
+    font-family: IBMPlex, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #02111B;
+    margin: 0;
+    text-decoration: none;
+}
+.contact-container .working-hours,.contact-container .phone {
+    margin-top: 50px;
+}
+.contact-container .contact-social {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contact-container a {
+    /*border: 1px solid black;*/
+    padding: 4px 2px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+.contact-container a svg {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 6px;
+    width: 50px;
+}
+.contact-container .inst-svg, .contact-container .email-svg, .contact-container .whatsapp-svg {
+    width: auto;
+}
+.contact-container .contact-block span {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 120%;
+    color: #02111B;
+}
+.contact-container .contact-block a {
+    text-decoration: none;
+}
+
+@media screen and (min-width: 1880px) {
+    .contact-container {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media screen and (max-width: 1420px) {
+    .contact-columns {
+        grid-template-columns: 40% 60%;
+    }
+}
+@media screen and (max-width: 1190px) {
+    .contact-columns .column-right {
+        max-width: -webkit-fill-available;
+    }
+    .contact-columns .column-left {
+        margin-left: 30px;
+    }
+}
+@media screen and (max-width: 1025px) {
+    .column-right iframe {
+        max-width: 500px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .contact-columns .column-left {
+        margin-left: 15px;
+    }
+    .column-right iframe {
+        max-width: 350px;
+    }
+    .contact-header {
+        margin-top: 30px;
+    }
+    .contact-header p{
+        font-size: 40px;
+    }
+    .working-hours-text .header-question {
+        width: 30px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .contact-columns {
+        display: block;
+    }
+    .column-right iframe {
+        max-width: 100%;
+        padding: 15px;
+    }
+    .contact-container {
+        margin: 10px;
+    }
+}
+@media screen and (max-width: 390px) {
+    .working-hours .pop-helper {
+        margin-left: 0;
+    }
+}
+@media screen and (max-width: 350px) {
+    .contact-container .pop-helper {
+        margin-left: 0;
+    }
+    .working-hours-text .flex {
+        display: block;
+
+    }
+    .contact-container .flex .header-question {
+        margin: 10px 0;
+    }
+}

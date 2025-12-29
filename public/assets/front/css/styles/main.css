@@ -1,0 +1,248 @@
+.owl-centered .owl-wrapper {
+    display: table !important;
+}
+.owl-centered .owl-item {
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+}
+.owl-centered .owl-item > div {
+    text-align: center;
+}
+.main-photo {
+    margin-top: 70px;
+    margin-bottom: 38px;
+}
+.main-photo img {
+    width: 100%;
+}
+.insurance-block-header {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 110%;
+    text-align: center;
+    margin-bottom: 55px;
+}
+/* .insurance-description p {
+    font-size: 18px;
+    width: 469px;
+    margin-bottom: 24px;
+}
+.insurance-description {
+    margin-left: 50%;
+    margin-top: 47px;
+} */
+.insurance-description .more {
+    font-family: IBMPlex, sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #02111B;
+}
+.insurance-description .more:hover {
+    cursor: pointer;
+    color: #FECC00;
+    /*transition: .2s;*/
+}
+.insurance-description .more:active {
+    cursor: pointer;
+    color: #FECC00;
+}
+.insurance-description .more img {
+    position: absolute;
+    margin-left: 20px;
+}
+.doctors-block {
+    padding: 0 135px;
+    margin-bottom: 150px;
+    margin-top: 113px;
+}
+.doctors-block .doctors-block-header{
+    text-align: center;
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 54px;
+    line-height: 110%;
+    margin-bottom: 50px;
+}
+.site-main .doctors-block-grid {
+    max-width: 1206px;
+}
+.doctors-block-grid {
+    display: grid;
+    grid-template-columns: 376px 376px 376px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+.doctors-block-grid .item-container {
+    padding: 15px;
+}
+.doctors-block-grid .item-container:hover {
+    cursor: pointer;
+    background: #FDFDFD;
+    box-shadow: 0px 8px 24px rgba(129, 135, 189, 0.15);
+    /*transition: .5s;*/
+}
+.doctors-block-grid .item-container img {
+    margin-bottom: 40px;
+}
+.doctors-block-grid .item-container .doctor-name p{
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+.doctors-block-grid .item-container .doctor-specialization p{
+    font-weight: 700;
+    font-size: 18px;
+}
+.doctors-link {
+    /*margin-top: 45px;*/
+    /*margin-left: 15px;*/
+    margin: 45px auto 0 auto;
+    max-width: 1206px;
+}
+.doctors-link .more {
+    font-family: IBMPlex, sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #02111B;
+}
+.doctors-link .more:hover {
+    cursor: pointer;
+    color: var(--main-color);
+    /*transition: .2s;*/
+}
+.doctors-link .more:active {
+    cursor: pointer;
+    color: #FECC00;
+}
+.doctors-link .more img {
+    /* position: absolute;
+    margin-left: 20px; */
+}
+.header {
+    margin-top: -5px;
+}
+
+.doctors-block-grid {
+    max-width: 1370px;
+}
+
+.secure-template {
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.pageContent {
+    margin: 50px 20px 50px 20px;
+    max-width: 1300px;
+}
+
+.insurance-block .insurance-description .more a:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+.doctors-block .more a:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+
+@media screen and (max-width: 1440px) {
+    .pop-it-record {
+        /*left: 35%;*/
+    }
+}
+@media screen and (max-width: 1127px) {
+    .doctors-link {
+        margin-left: 15px;
+    }
+    .doctors-block-grid {
+        grid-template-columns: 295px 295px 295px;
+    }
+    .doctors-block-grid .item-container img {
+        width: 280px;
+        height: 360px;
+        padding-right: 15px;
+    }
+
+}
+@media screen and (max-width: 1025px) {
+    .insurance-block-header {
+        font-size: 40px;
+    }
+    .doctors-block {
+        padding: 0 50px;
+    }
+    .doctors-block .doctors-block-header {
+        font-size: 40px;
+        margin-left: 15px;
+    }
+
+    .insurance-description .more {
+        font-size: 16px;
+    }
+
+
+}
+@media screen and (max-width: 884px) {
+    .doctors-block {
+        padding: 0 5px;
+    }
+    .doctors-block-grid {
+        overflow: hidden;
+        overflow-x: scroll;
+    }
+}
+@media screen and (max-width: 769px) {
+
+
+    .insurance-block-header {
+        font-size: 30px;
+    }
+    .insurance-description .more {
+        font-size: 14px;
+    }
+    .doctors-block .doctors-block-header {
+        font-size: 30px;
+        margin-left: 30px;
+    }
+
+    .pop-it-record {
+        /*left: 27%;*/
+    }
+
+    .doctors-block .doctors-block-header {
+        margin-bottom: 25px;
+    }
+}
+@media screen and (max-width: 540px) {
+    .insurance-block-header  {
+        margin: 70px 20px 24px 20px !important;
+        font-size: 26px;
+        text-align: inherit;
+    }
+    /* .insurance-description {
+        margin: 70px 20px 24px 20px;
+    } */
+    .insurance-description .more {
+        margin-left: 20%;
+    }
+    .main-description .record {
+        position: absolute;
+    }
+    .pop-it-record {
+        left: 0;
+        right: 0;
+        margin: 0 0 0 0;
+        top: 20%;
+    }
+}

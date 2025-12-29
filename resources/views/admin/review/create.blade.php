@@ -1,0 +1,95 @@
+@extends('admin.layouts.default')
+
+@section('title', 'Новый отзыв')
+
+@section('content')
+    <div class="app-content-header">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h3 class="mb-0">Новый отзыв</h3>
+                </div>
+                <div class="col-sm-6">
+                    <ol class="float-sm-end breadcrumb">
+                        <li class="breadcrumb-item"><a href="{{ route('admin.main.index') }}">Админ панель</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('reviews.index') }}">Отзывы</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Новый отзыв</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="app-content">
+        <div class="container-fluid">
+            <form method="post" action="{{ route('reviews.store') }}">
+                @csrf
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="mb-4 card-outline card card-warning">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="client_name" class="form-label required">Имя клиента</label>
+                                    <input type="text" name="client_name" class="form-control" id="client_name"
+                                           value="{{ old('client_name') }}">
+                                </div>
+
+
+
+
+                                <div class="mb-3">
+                                    <label for="review_text_ru" class="form-label">Текст отзыва</label>
+                                    <textarea class="form-control ckeditor" name="review_text" id="review_text_ru" cols="30"
+                                              rows="6">{{ old('review_text') }}</textarea>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="mb-4 card-outline card card-warning">
+                            <div class="card-body">
+                                <div class="mb-3">
+                                    <label for="rating" class="form-label required">Рейтинг</label>
+                                    <select name="rating" id="rating" class="form-select" required>
+                                        <option value="">Выбери рейтинг</option>
+                                        <option value="5" @selected(old('rating') == '5')>⭐⭐⭐⭐⭐ (5/5)</option>
+                                        <option value="4" @selected(old('rating') == '4')>⭐⭐⭐⭐ (4/5)</option>
+                                        <option value="3" @selected(old('rating') == '3')>⭐⭐⭐ (3/5)</option>
+                                        <option value="2" @selected(old('rating') == '2')>⭐⭐ (2/5)</option>
+                                        <option value="1" @selected(old('rating') == '1')>⭐ (1/5)</option>
+                                    </select>
+                                </div>
+
+                                <div class="mb-3">
+                                    <label for="review_date" class="form-label required">Дата отзыва</label>
+                                    <input type="date" name="review_date" class="form-control" id="review_date"
+                                           value="{{ old('review_date', date('Y-m-d')) }}">
+                                </div>
+                                <div class="mb-3">
+                                    <input type="hidden" id="client_photo" name="client_photo" value="">
+                                    <button type="button" class="btn-outline-primary btn popup_selector" data-inputid="client_photo">Фото клиента</button>
+                                    <div class="mt-3 client-photo"></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="status">Статус</label>
+                                    <select name="status" id="status" class="form-control" required>
+                                        <option value="active" @selected(old('status') == 'active')>Активный</option>
+                                        <option value="inactive" @selected(old('status') == 'inactive')>Неактивный</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="card-footer">
+                                <button type="submit" class="btn btn-warning">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+@endsection
+
