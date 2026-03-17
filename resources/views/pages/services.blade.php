@@ -49,24 +49,23 @@
         </div>
     </div>
     
-    <div class="insurance-block-service">
-        <div class="insurance-block-header">Мы позаботились о Вашем удобстве и заключили договора на оказание медицинских услуг со страховыми компаниями:
-        </div>
+    <div class="insurance-block">
+        <div class="insurance-block-header">Медицинские услуги по страховке</div>
         <div class="owl-carousel">
             <div class="item">
                 <img src="{{ asset('assets/front/img/slider/image48.png') }}"
                         alt="insurance">
             </div>
-            <div class="item">
+            <!-- <div class="item">
                 <img src="{{  asset('assets/front/img/slider/image49.png') }}"
                         alt="insurance">
-            </div>
+            </div> -->
             <div class="item">
                 <img src="{{ asset('assets/front/img/slider/image50.png') }}"
                         alt="insurance">
             </div>
             <div class="item">
-                <img src="{{  asset('assets/front/img/slider/image52.png') }}"
+                <img src="{{  asset('assets/front/img/slider/imkliva1.png') }}"
                         alt="insurance">
             </div>
             <div class="item">
@@ -78,7 +77,7 @@
                         alt="insurance">
             </div>
             <div class="item">
-                <img src="{{ asset('assets/front/img/slider/image49.png') }}"
+                <img src="{{ asset('assets/front/img/slider/neftstrach1.png') }}"
                         alt="insurance">
             </div>
             <div class="item">
@@ -86,23 +85,34 @@
                         alt="insurance">
             </div>
             <div class="item">
-                <img src="{{  asset('assets/front/img/slider/image52.png') }}"
+                <img src="{{  asset('assets/front/img/slider/imkliva1.png') }}"
                         alt="insurance">
             </div>
             <div class="item">
                 <img src="{{ asset('assets/front/img/slider/image33.png') }}"
                         alt="insurance">
             </div>
-            <div class="item">
+            <!-- <div class="item">
                 <img src="{{  asset('assets/front/img/ingosstrah.png') }}"
                         alt="insurance">
-            </div>
+            </div> -->
         </div>
         <div class="insurance-description">
+            <p>
+                Мы позаботились о Вашем удобстве и заключили договора на оказание медицинских услуг со
+                страховыми компаниями
+            </p>
+            
+        </div>
+
+       
+
+            <div class="doctors-link">
             <div class="more">
-                <a href="{{ route('insurance') }}">
-                Подробнее
-                    <img src="{{ asset('assets/front/images/arrow.svg') }}" alt="arrow"></a>
+                <a href="{{  route('insurance')  }}">
+                    Подробнее
+                    <img src="{{ asset('assets/front/images/ar.svg') }}"  alt="arrow">
+                </a>
             </div>
         </div>
     </div>

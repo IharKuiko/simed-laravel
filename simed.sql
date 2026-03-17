@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: MySQL-8.2
--- Время создания: Дек 22 2025 г., 06:00
+-- Время создания: Мар 18 2026 г., 00:12
 -- Версия сервера: 8.2.0
 -- Версия PHP: 8.1.28
 
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -40,8 +40,8 @@ CREATE TABLE `cache` (
 --
 
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -53,9 +53,9 @@ CREATE TABLE `cache_locks` (
 
 CREATE TABLE `categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_desc` text COLLATE utf8mb4_unicode_ci,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_desc` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -76,15 +76,15 @@ INSERT INTO `categories` (`id`, `title`, `slug`, `meta_desc`, `created_at`, `upd
 
 CREATE TABLE `doctors` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `specialization` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `professional_category` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `education` text COLLATE utf8mb4_unicode_ci,
-  `experience` text COLLATE utf8mb4_unicode_ci,
-  `additional_education` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
-  `photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `specialization` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `professional_category` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `education` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `experience` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `additional_education` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `photo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -94,9 +94,9 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `name`, `specialization`, `slug`, `professional_category`, `education`, `experience`, `additional_education`, `status`, `photo`, `created_at`, `updated_at`) VALUES
-(1, 'Нерезько Светлана Ивановна', 'Врач-акушер-гинеколог.  Врач ультразвуковой диагностики', 'nerezko-svetlana-ivanovna', 'Первая квалификационная категория', '<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1989, Минский ордена Трудового Красного Знамени государственный медицинский институт</span></span></p>', '30 лет', '<ul>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1990 Акушерство и гинекология</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">13.01-24.01.2003 Избранные вопросы акушерства и гинекологии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">28.11-09.12.2005 Лечебно-профилактическая помощь женщинам при бесплодии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">20.02-03.03.2006 Детская гинекология</span></span></li>\r\n</ul>', 'active', 'uploads/Spec/doct1.webp', '2025-12-18 22:12:17', '2025-12-19 12:12:16'),
+(1, 'Нерезько Светлана Ивановна', 'Врач-акушер-гинеколог.  Врач ультразвуковой диагностики', 'nerezko-svetlana-ivanovna', 'Первая квалификационная категория', '1989, Минский ордена Трудового Красного Знамени государственный медицинский институт', '30 лет', '<ul>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1990 Акушерство и гинекология</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">13.01-24.01.2003 Избранные вопросы акушерства и гинекологии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">28.11-09.12.2005 Лечебно-профилактическая помощь женщинам при бесплодии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">20.02-03.03.2006 Детская гинекология</span></span></li>\r\n</ul>', 'active', 'uploads/Spec/doct1.webp', '2025-12-18 22:12:17', '2025-12-22 22:25:53'),
 (2, 'Нерезько Светлана Ивановна', 'Врач-акушер-гинеколог.  Врач ультразвуковой диагностики', 'nerezko-svetlana-ivanovna-2', 'Первая квалификационная категория', '<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1989, Минский ордена Трудового Красного Знамени государственный медицинский институт</span></span></p>', '30 лет', '<ul>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1990 Акушерство и гинекология</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">13.01-24.01.2003 Избранные вопросы акушерства и гинекологии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">28.11-09.12.2005 Лечебно-профилактическая помощь женщинам при бесплодии</span></span></li>\r\n	<li><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">20.02-03.03.2006 Детская гинекология</span></span></li>\r\n</ul>', 'inactive', 'uploads/Spec/doct1.webp', '2025-12-18 22:15:52', '2025-12-19 13:01:05'),
-(3, 'Целуйко  Светлана Адамовна', 'Врач ультразвуковой диагностики', 'celuyko-svetlana-adamovna', 'Первая квалификационная категория', '<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">1997, Гомельский государственный медицинский институт</span></span></p>', '25 лет', '<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">18.04-29.04.2011 Организация медицинской помощи работающим во вредных условиях</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">16.04-16.05.2012 Клиническая кардиология</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">24.11-05.12.2014 Ультразвуковая диагностика заболевания сердца и сосудов</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">24.08-18.12.2015 Ультразвуковая диагностика. Переподготовка&nbsp; в ГУО &laquo;Белорусская медицинская академия последипломного образования&raquo;</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">09.12-20.12.2019 Диагностические пункции под ультразвуковым контролем</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">18.09-29.09.2023 Ультразвуковая диагностика заболеваний опорно-двигательной системы </span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">10.06-14.06.2024 Ультразвуковая диагностика патологии вен нижних конечностей</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">17.06-21.06.2024 Ультразвуковая диагностика патологии органов пищеварения</span></span></p>', 'active', 'uploads/Spec/doct2.webp', '2025-12-19 09:17:18', '2025-12-19 09:17:18');
+(3, 'Целуйко  Светлана Адамовна', 'Врач ультразвуковой диагностики', 'celuyko-svetlana-adamovna', 'Первая квалификационная категория', '1997, Гомельский государственный медицинский институт', '25 лет', '<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">18.04-29.04.2011 Организация медицинской помощи работающим во вредных условиях</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">16.04-16.05.2012 Клиническая кардиология</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">24.11-05.12.2014 Ультразвуковая диагностика заболевания сердца и сосудов</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">24.08-18.12.2015 Ультразвуковая диагностика. Переподготовка&nbsp; в ГУО &laquo;Белорусская медицинская академия последипломного образования&raquo;</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">09.12-20.12.2019 Диагностические пункции под ультразвуковым контролем</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">18.09-29.09.2023 Ультразвуковая диагностика заболеваний опорно-двигательной системы </span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">10.06-14.06.2024 Ультразвуковая диагностика патологии вен нижних конечностей</span></span></p>\r\n\r\n<p><span style=\"font-size:8.0pt\"><span style=\"font-family:&quot;Times New Roman&quot;,serif\">17.06-21.06.2024 Ультразвуковая диагностика патологии органов пищеварения</span></span></p>', 'active', 'uploads/Spec/doct2.webp', '2025-12-19 09:17:18', '2025-12-22 22:26:20');
 
 -- --------------------------------------------------------
 
@@ -107,7 +107,7 @@ INSERT INTO `doctors` (`id`, `name`, `specialization`, `slug`, `professional_cat
 CREATE TABLE `doctor_education` (
   `id` bigint UNSIGNED NOT NULL,
   `doctor_id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -125,7 +125,7 @@ INSERT INTO `doctor_education` (`id`, `doctor_id`, `title`, `created_at`, `updat
 (6, 1, '20.10-31.10.2008 Лапороскопия и гистероскопия в акушерско-гинекологической практике', '2025-12-19 17:19:23', '2025-12-19 17:19:23'),
 (7, 1, '14.11-25.11.2011 Предопухолевые и опухолевые заболевания репродуктивно-значимых органов у женщин', '2025-12-19 17:19:39', '2025-12-19 17:19:39'),
 (8, 1, '15.05-24.05.2013 Патология шейки матки, влагалища, вульвы. Основы кольпоскопии', '2025-12-19 17:19:56', '2025-12-19 17:19:56'),
-(9, 1, '14.11-13.12.2016 Современные методы диагностики и лечения гинекологических заболеваний в различные периоды жизни женщины. Патология мочевыводящей системы и дисфункция тазового дна у женщин. Кольпоскопический скрининг.', '2025-12-19 17:20:11', '2025-12-19 17:20:11'),
+(9, 1, '14.11-13.12.2016 Современные методы диагностики и лечения гинекологических заболеваний в различные периоды жизни женщины. Патология мочевыводящей системы и дисфункция тазового дна у женщин. Кольпоскопический скрининг', '2025-12-19 17:20:11', '2025-12-19 17:20:11'),
 (10, 1, '02.09-27.12.2019 Ультразвуковая диагностика. Переподготовка в УО \"Витебский государственный ордена Дружбы народов медицинский университет\"', '2025-12-19 17:20:35', '2025-12-19 17:20:35'),
 (11, 1, '08.11-12.11.2021 Ультразвуковая диагностика врождённых пороков развития плода', '2025-12-19 17:20:52', '2025-12-19 17:20:52'),
 (12, 1, '10.01-08.02.2022 Репродуктивная эндокринология. Сексуальная дисфункция у мужчин и женщин', '2025-12-19 17:21:10', '2025-12-19 17:21:10'),
@@ -137,8 +137,7 @@ INSERT INTO `doctor_education` (`id`, `doctor_id`, `title`, `created_at`, `updat
 (18, 3, '09.12-20.12.2019 Диагностические пункции под ультразвуковым контролем', '2025-12-19 17:23:15', '2025-12-19 17:23:15'),
 (19, 3, '18.09-29.09.2023 Ультразвуковая диагностика заболеваний опорно-двигательной системы', '2025-12-19 17:23:29', '2025-12-19 17:23:29'),
 (20, 3, '10.06-14.06.2024 Ультразвуковая диагностика патологии вен нижних конечностей', '2025-12-19 17:23:48', '2025-12-19 17:23:48'),
-(21, 3, '17.06-21.06.2024 Ультразвуковая диагностика патологии органов пищеварения', '2025-12-19 17:24:00', '2025-12-19 17:24:00'),
-(23, 3, 'test2', '2025-12-19 17:24:34', '2025-12-19 17:24:34');
+(21, 3, '17.06-21.06.2024 Ультразвуковая диагностика патологии органов пищеварения', '2025-12-19 17:24:00', '2025-12-19 17:24:00');
 
 -- --------------------------------------------------------
 
@@ -149,9 +148,9 @@ INSERT INTO `doctor_education` (`id`, `doctor_id`, `title`, `created_at`, `updat
 CREATE TABLE `doctor_sertificates` (
   `id` bigint UNSIGNED NOT NULL,
   `doctor_id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -181,11 +180,11 @@ INSERT INTO `doctor_sertificates` (`id`, `doctor_id`, `title`, `image`, `descrip
 
 CREATE TABLE `failed_jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -198,15 +197,15 @@ CREATE TABLE `failed_jobs` (
 CREATE TABLE `ginecology_services` (
   `id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `duration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `unit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -253,11 +252,11 @@ INSERT INTO `ginecology_services` (`id`, `category_id`, `title`, `slug`, `image`
 
 CREATE TABLE `ginecology_service_categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -280,8 +279,8 @@ INSERT INTO `ginecology_service_categories` (`id`, `title`, `slug`, `image`, `de
 
 CREATE TABLE `jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint UNSIGNED NOT NULL,
   `reserved_at` int UNSIGNED DEFAULT NULL,
   `available_at` int UNSIGNED NOT NULL,
@@ -295,13 +294,13 @@ CREATE TABLE `jobs` (
 --
 
 CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL
@@ -315,7 +314,7 @@ CREATE TABLE `job_batches` (
 
 CREATE TABLE `migrations` (
   `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -341,7 +340,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (18, '2025_12_21_153157_create_ginecology_service_categories_table', 11),
 (19, '2025_12_21_153213_create_ginecology_services_table', 11),
 (20, '2025_12_21_153320_create_ultrasound_service_categories_table', 11),
-(22, '2025_12_21_153327_create_ultrasound_services_table', 12);
+(22, '2025_12_21_153327_create_ultrasound_services_table', 12),
+(23, '2025_12_29_221000_create_working_hours_info_table', 13);
 
 -- --------------------------------------------------------
 
@@ -350,8 +350,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -363,13 +363,13 @@ CREATE TABLE `password_reset_tokens` (
 
 CREATE TABLE `posts` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_desc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_desc` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
-  `thumb` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` enum('draft','published','blocked') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'draft',
+  `thumb` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('draft','published','blocked') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'draft',
   `views` bigint UNSIGNED NOT NULL DEFAULT '0',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL,
@@ -404,11 +404,11 @@ CREATE TABLE `post_tag` (
 
 CREATE TABLE `reviews` (
   `id` bigint UNSIGNED NOT NULL,
-  `client_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `review_text` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `client_photo` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `client_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `review_text` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `client_photo` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `rating` tinyint NOT NULL DEFAULT '5',
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `review_date` date NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -436,15 +436,15 @@ INSERT INTO `reviews` (`id`, `client_name`, `review_text`, `client_photo`, `rati
 CREATE TABLE `services` (
   `id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `duration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `unit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -467,10 +467,10 @@ INSERT INTO `services` (`id`, `category_id`, `title`, `slug`, `image`, `descript
 
 CREATE TABLE `service_categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -490,11 +490,11 @@ INSERT INTO `service_categories` (`id`, `title`, `slug`, `image`, `description`,
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -503,7 +503,11 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('gVCuG5KkewUffZtZoMcxXLAGlyUwGOcgsOkigvjM', 1, '127.0.0.1', 'Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Mobile Safari/537.36', 'YTo5OntzOjY6Il90b2tlbiI7czo0MDoiaHhzbGVGOGVTczdPZW9hWTNMRjlCazcxZHFka2dydUptNHQxQkVUciI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjA6Imh0dHBzOi8vc2ltZWQvcHJpY2VzIjtzOjU6InJvdXRlIjtzOjY6InByaWNlcyI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fXM6NTA6ImxvZ2luX3dlYl81OWJhMzZhZGRjMmIyZjk0MDE1ODBmMDE0YzdmNThlYTRlMzA5ODlkIjtpOjE7czo4OiJfb3B0c01ENSI7czozMjoiYjYwNDhhN2Q3MjhkN2Y3ZTRiM2VlNWVlNjNlODQwOTAiO3M6MzoibDFfIjthOjI6e3M6ODoicm9vdHN0YXQiO2E6MDp7fXM6Nzoic3ViZGlycyI7YTo1OntzOjM2OiJIOlxPU1BhbmVsXGhvbWVcc2ltZWRccHVibGljXHVwbG9hZHMiO2I6MTtzOjQ3OiJIOlxPU1BhbmVsXGhvbWVcc2ltZWRccHVibGljXHVwbG9hZHNcMjAyNC0xMS0wMSI7YjowO3M6NDM6Ikg6XE9TUGFuZWxcaG9tZVxzaW1lZFxwdWJsaWNcdXBsb2Fkc1xTZXJ0LTEiO2I6MDtzOjQzOiJIOlxPU1BhbmVsXGhvbWVcc2ltZWRccHVibGljXHVwbG9hZHNcU2VydC0yIjtiOjA7czo0MToiSDpcT1NQYW5lbFxob21lXHNpbWVkXHB1YmxpY1x1cGxvYWRzXFNwZWMiO2I6MDt9fXM6OToiYXJjaGl2ZXJzIjthOjI6e3M6NjoiY3JlYXRlIjthOjM6e3M6MTc6ImFwcGxpY2F0aW9uL3gtdGFyIjthOjM6e3M6MzoiY21kIjtzOjM6InRhciI7czo0OiJhcmdjIjtzOjQ6Ii1jaGYiO3M6MzoiZXh0IjtzOjM6InRhciI7fXM6MTg6ImFwcGxpY2F0aW9uL3gtZ3ppcCI7YTozOntzOjM6ImNtZCI7czozOiJ0YXIiO3M6NDoiYXJnYyI7czo1OiItY3poZiI7czozOiJleHQiO3M6MzoidGd6Ijt9czoxNToiYXBwbGljYXRpb24vemlwIjthOjM6e3M6MzoiY21kIjtzOjExOiJwaHBmdW5jdGlvbiI7czo0OiJhcmdjIjthOjI6e2k6MDtzOjQ6InNlbGYiO2k6MTtzOjEzOiJ6aXBBcmNoaXZlWmlwIjt9czozOiJleHQiO3M6MzoiemlwIjt9fXM6NzoiZXh0cmFjdCI7YTozOntzOjE3OiJhcHBsaWNhdGlvbi94LXRhciI7YTo1OntzOjM6ImNtZCI7czozOiJ0YXIiO3M6NDoiYXJnYyI7czozOiIteGYiO3M6MzoiZXh0IjtzOjM6InRhciI7czo2OiJ0b1NwZWMiO3M6MzoiLUMgIjtzOjc6ImdldHNpemUiO2E6NDp7czo0OiJhcmdjIjtzOjQ6Ii14dmYiO3M6NjoidG9TcGVjIjtzOjE3OiItLXRvLXN0ZG91dHx3YyAtYyI7czo1OiJyZWdleCI7czo0ODoiL14uKyg/OlxyXG58XG58XHIpW15cclxuMC05XSooWzAtOV0rKVteXHJcbl0qJC9zIjtzOjc6InJlcGxhY2UiO3M6MjoiJDEiO319czoxODoiYXBwbGljYXRpb24veC1nemlwIjthOjU6e3M6MzoiY21kIjtzOjM6InRhciI7czo0OiJhcmdjIjtzOjQ6Ii14emYiO3M6MzoiZXh0IjtzOjM6InRneiI7czo2OiJ0b1NwZWMiO3M6MzoiLUMgIjtzOjc6ImdldHNpemUiO2E6NDp7czo0OiJhcmdjIjtzOjQ6Ii14dmYiO3M6NjoidG9TcGVjIjtzOjE3OiItLXRvLXN0ZG91dHx3YyAtYyI7czo1OiJyZWdleCI7czo0ODoiL14uKyg/OlxyXG58XG58XHIpW15cclxuMC05XSooWzAtOV0rKVteXHJcbl0qJC9zIjtzOjc6InJlcGxhY2UiO3M6MjoiJDEiO319czoxNToiYXBwbGljYXRpb24vemlwIjthOjM6e3M6MzoiY21kIjtzOjExOiJwaHBmdW5jdGlvbiI7czo0OiJhcmdjIjthOjI6e2k6MDtzOjQ6InNlbGYiO2k6MTtzOjE1OiJ6aXBBcmNoaXZlVW56aXAiO31zOjM6ImV4dCI7czozOiJ6aXAiO319fXM6ODoidmlkZW9MaWIiO3M6NjoiZmZtcGVnIjtzOjE0OiI6TEFTVF9BQ1RJVklUWSI7aToxNzY2MzM1NjkxO30=', 1766379151);
+('cHABkYzSNtwhll54pPDWXx0OQ4Q5IxzzTo0EJLSm', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiQjFQYVMycjN4cTNWVHJBN1Vya3FzZjdZTEpOc3h2c1BHR2dZT2YyZyI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MjI6Imh0dHBzOi8vc2ltZWQvY29udGFjdHMiO3M6NToicm91dGUiO3M6ODoiY29udGFjdHMiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1768337776),
+('d5T9I2ckpBM6MWEqJ6RKHprADgyVUaa0M7sbtzF0', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSHZrV3VDbHlybmtLNG5CTGttR1BRMVV3VWtlc082dG5uTTdENUNOMCI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MTM4OiJodHRwczovL3NpbWVkL2dpbmVjb2xvZ3ktc2VydmljZS1kZXRhaWxzL3BvdnRvcm55eS1wcmllbS12cmFjaGEtYWt1c2hlcmEtZ2luZWtvbG9nYS1wb3Z0b3JueXktcHJpZW0tdnJhY2hhLWFrdXNoZXJhLWdpbmVrb2xvZ2EtYmV6LW9zbW90cmEiO3M6NToicm91dGUiO3M6MjY6ImdpbmVjb2xvZ3lfc2VydmljZV9kZXRhaWxzIjt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1767981203),
+('dkelYekE6EN6ETDOPbetsmNPFbKKgMzqc5tngSAs', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoieFgyYXExVlE2R3hzSVJMZFRpWm9LSkpMZGZEc1ZldXdleVZhRmFEVSI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzg6Imh0dHBzOi8vc2ltZWQvYWRtaW4vd29ya2luZy1ob3Vycy1pbmZvIjtzOjU6InJvdXRlIjtzOjI0OiJ3b3JraW5nLWhvdXJzLWluZm8uaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1768337776),
+('KCUEp91JOf5CreqeODu8gIwyaFDm2f5aBpwtgmHf', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiY3lkMmJPZ2Mxejc1blRmZ2tJd1lBSUZoS3Z5TWFnSDZrS2xlOFAyRiI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6MTM6Imh0dHBzOi8vc2ltZWQiO3M6NToicm91dGUiO3M6NDoiaG9tZSI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1768219327),
+('OrH4r8rLOa3xiNiisLl3HIq5nAaFZ4WdI3X2pod4', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiWlgyeHd5bVZZdGRVNTZxWEgyU3RFVkVuMzJ6WE9waXkxNEpBT3BEViI7czo5OiJfcHJldmlvdXMiO2E6Mjp7czozOiJ1cmwiO3M6Mzg6Imh0dHBzOi8vc2ltZWQvYWRtaW4vd29ya2luZy1ob3Vycy1pbmZvIjtzOjU6InJvdXRlIjtzOjI0OiJ3b3JraW5nLWhvdXJzLWluZm8uaW5kZXgiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1768303171);
 
 -- --------------------------------------------------------
 
@@ -513,9 +517,9 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `tags` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `meta_desc` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `meta_desc` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -537,15 +541,15 @@ INSERT INTO `tags` (`id`, `title`, `slug`, `meta_desc`, `created_at`, `updated_a
 CREATE TABLE `ultrasound_services` (
   `id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
-  `title` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `details` text COLLATE utf8mb4_unicode_ci,
-  `duration` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `price` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `unit` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `title` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `details` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `duration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `price` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `unit` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -558,7 +562,7 @@ INSERT INTO `ultrasound_services` (`id`, `category_id`, `title`, `slug`, `image`
 (1, 1, 'Ультразвуковое исследование  органов брюшной полости (осмотр печени, желчного пузыря, поджелудочной железы, обзорное УЗИ кишечника, селезенки, почек, надпочечников и забрюшинных лимфоузлов) дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-organov-bryushnoy-polosti-osmotr-pecheni-zhelchnogo-puzyrya-podzheludochnoy-zhelezy-obzornoe-uzi-kishechnika-selezenki-pochek-nadpochechnikov-i-zabryushinnyh-limfouzlov-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '36,20', NULL, 'active', '2025-12-21 16:48:51', '2025-12-21 16:48:51'),
 (2, 1, 'Ультразвуковое исследование  печени и желчевыводящей системы, дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-pecheni-i-zhelchevyvodyashchey-sistemy-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '15,50', NULL, 'active', '2025-12-21 16:49:26', '2025-12-21 16:49:26'),
 (3, 1, 'Ультразвуковое исследование  поджелудочной железы, дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-podzheludochnoy-zhelezy-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '15,10', NULL, 'active', '2025-12-21 16:49:49', '2025-12-21 16:49:49'),
-(4, 1, 'Ультразвуковое исследование  селезенки, дуплексное сканирование сосудов одного анатомического региона.', 'ultrazvukovoe-issledovanie-selezenki-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '12,50', NULL, 'active', '2025-12-21 16:50:17', '2025-12-21 16:50:17'),
+(4, 1, 'Ультразвуковое исследование  селезенки, дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-selezenki-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '12,50', NULL, 'active', '2025-12-21 16:50:17', '2025-12-29 11:35:18'),
 (5, 1, 'Ультразвуковое исследование кишечника без заполнения жидкостью', 'ultrazvukovoe-issledovanie-kishechnika-bez-zapolneniya-zhidkostyu', NULL, NULL, NULL, NULL, '8,14', NULL, 'active', '2025-12-21 16:50:38', '2025-12-21 16:50:38'),
 (6, 1, 'Ультразвуковое исследование    почек и надпочечников; дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-pochek-i-nadpochechnikov-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '18,50', NULL, 'active', '2025-12-21 16:51:03', '2025-12-21 16:51:03'),
 (7, 1, 'Ультразвуковое исследование   почек, надпочечников и мочевого пузыря с определением остаточной мочи; дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-pochek-nadpochechnikov-i-mochevogo-puzyrya-s-opredeleniem-ostatochnoy-mochi-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '26,30', NULL, 'active', '2025-12-21 16:51:31', '2025-12-21 16:51:31'),
@@ -573,7 +577,7 @@ INSERT INTO `ultrasound_services` (`id`, `category_id`, `title`, `slug`, `image`
 (16, 1, 'Ультразвуковое исследование плода в I триместре с 11 до 14 недель беременности', 'ultrazvukovoe-issledovanie-ploda-v-i-trimestre-s-11-do-14-nedel-beremennosti', NULL, NULL, NULL, NULL, '19,85', NULL, 'active', '2025-12-21 16:55:49', '2025-12-21 16:55:49'),
 (17, 1, 'Ультразвуковое исследование плода в I триместре с 11 до 14 недель беременности или во II или III триместре беременности при наличии пороков плода', 'ultrazvukovoe-issledovanie-ploda-v-i-trimestre-s-11-do-14-nedel-beremennosti-ili-vo-ii-ili-iii-trimestre-beremennosti-pri-nalichii-porokov-ploda', NULL, NULL, NULL, NULL, '31,71', NULL, 'active', '2025-12-21 16:56:09', '2025-12-21 16:56:09'),
 (18, 1, 'Ультразвуковое  исследование   при беременности - II-III триместр дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-pri-beremennosti-ii-iii-trimestr-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '34,00', NULL, 'active', '2025-12-21 16:56:37', '2025-12-21 16:56:37'),
-(19, 1, 'Ультразвуковое исследование при беременности II-III триместр  (двойня) матки и придатков с мочевым пузырем (трансабдоминально) с дуплексным сканированием сосудов плода (дважды), сосудов пуповины (дважды).', 'ultrazvukovoe-issledovanie-pri-beremennosti-ii-iii-trimestr-dvoynya-matki-i-pridatkov-s-mochevym-puzyrem-transabdominalno-s-dupleksnym-skanirovaniem-sosudov-ploda-dvazhdy-sosudov-pupoviny-dvazhdy', NULL, NULL, NULL, NULL, '51,20', NULL, 'active', '2025-12-21 16:57:00', '2025-12-21 16:57:00'),
+(19, 1, 'Ультразвуковое исследование при беременности II-III триместр  (двойня) матки и придатков с мочевым пузырем (трансабдоминально) с дуплексным сканированием сосудов плода (дважды), сосудов пуповины (дважды)', 'ultrazvukovoe-issledovanie-pri-beremennosti-ii-iii-trimestr-dvoynya-matki-i-pridatkov-s-mochevym-puzyrem-transabdominalno-s-dupleksnym-skanirovaniem-sosudov-ploda-dvazhdy-sosudov-pupoviny-dvazhdy', NULL, NULL, NULL, NULL, '51,20', NULL, 'active', '2025-12-21 16:57:00', '2025-12-29 11:35:47'),
 (20, 1, 'Ультразвуковое исследование    плода  во II или III триместре беременности; дуплексное сканирование сосудов плода, сосудов пуповины, сосудов матки', 'ultrazvukovoe-issledovanie-ploda-vo-ii-ili-iii-trimestre-beremennosti-dupleksnoe-skanirovanie-sosudov-ploda-sosudov-pupoviny-sosudov-matki', NULL, NULL, NULL, NULL, '40,20', NULL, 'active', '2025-12-21 16:57:29', '2025-12-21 16:57:29'),
 (21, 1, 'Ультразвуковое исследование   щитовидной железы с региональными лимфоузлами, дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-shchitovidnoy-zhelezy-s-regionalnymi-limfouzlami-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '19,30', NULL, 'active', '2025-12-21 16:57:51', '2025-12-21 16:57:51'),
 (22, 1, 'Ультразвуковое исследование   молочных желез с региональными лимфоузлами у женщин, дуплексное сканирование сосудов одного анатомического региона', 'ultrazvukovoe-issledovanie-molochnyh-zhelez-s-regionalnymi-limfouzlami-u-zhenshchin-dupleksnoe-skanirovanie-sosudov-odnogo-anatomicheskogo-regiona', NULL, NULL, NULL, NULL, '24,80', NULL, 'active', '2025-12-21 16:58:14', '2025-12-21 16:58:14'),
@@ -601,11 +605,11 @@ INSERT INTO `ultrasound_services` (`id`, `category_id`, `title`, `slug`, `image`
 
 CREATE TABLE `ultrasound_service_categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci,
-  `status` enum('active','inactive') COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `status` enum('active','inactive') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'active',
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -625,12 +629,12 @@ INSERT INTO `ultrasound_service_categories` (`id`, `title`, `slug`, `image`, `de
 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `is_admin` tinyint UNSIGNED NOT NULL DEFAULT '0',
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -641,7 +645,32 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `is_admin`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Admin', 'coooll81@gmail.com', 1, NULL, '$2y$12$0nvvcsWU8dCkpY/MZkn97eK1v6FXNpl/NtYdpP2qcxuh7r/KF/uvW', NULL, '2025-12-15 18:08:16', '2025-12-15 18:08:16'),
-(2, 'TestUser', 'user1@mail.com', 0, NULL, '$2y$12$9uJMkiVoJYSAtDZ4d6EJZOR7QkQSDOtIRHni3dKnO87LHmoTy39Ae', NULL, '2025-12-16 11:30:38', '2025-12-16 11:34:21');
+(2, 'TestUser', 'user1@mail.com', 0, NULL, '$2y$12$9uJMkiVoJYSAtDZ4d6EJZOR7QkQSDOtIRHni3dKnO87LHmoTy39Ae', NULL, '2025-12-16 11:30:38', '2025-12-16 11:34:21'),
+(3, 'Vitali', 'vitali.dedik@yandex.ru', 1, NULL, '$2y$12$JOmvnlHl/AgoKIMemARUW.lIDGGqwRD36FOw8GoYXPeqQ.9e.bVS.', NULL, '2025-12-23 05:59:26', '2025-12-23 06:00:56');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `working_hours_infos`
+--
+
+CREATE TABLE `working_hours_infos` (
+  `id` bigint UNSIGNED NOT NULL,
+  `text` text COLLATE utf8mb4_unicode_ci NOT NULL COMMENT 'Текст информации о времени работы',
+  `valid_until` datetime DEFAULT NULL COMMENT 'Время до которого будет показываться информация',
+  `is_active` tinyint(1) NOT NULL DEFAULT '1' COMMENT 'Активна ли информация',
+  `position` int NOT NULL DEFAULT '0' COMMENT 'Позиция для сортировки',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `working_hours_infos`
+--
+
+INSERT INTO `working_hours_infos` (`id`, `text`, `valid_until`, `is_active`, `position`, `created_at`, `updated_at`) VALUES
+(1, '31 декабря - выходной день', '2025-12-31 23:59:59', 1, 0, '2025-12-29 22:17:12', '2025-12-29 22:03:33'),
+(2, '1 января - выходной день', '2026-01-02 23:39:00', 1, 0, '2025-12-29 21:39:43', '2025-12-29 21:39:43');
 
 --
 -- Индексы сохранённых таблиц
@@ -802,6 +831,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Индексы таблицы `working_hours_infos`
+--
+ALTER TABLE `working_hours_infos`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -857,7 +892,7 @@ ALTER TABLE `jobs`
 -- AUTO_INCREMENT для таблицы `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
@@ -905,6 +940,12 @@ ALTER TABLE `ultrasound_service_categories`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT для таблицы `working_hours_infos`
+--
+ALTER TABLE `working_hours_infos`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --

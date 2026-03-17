@@ -33,7 +33,7 @@
             Образование:        
         </h3>
         <div class="education-p">
-          <!-- <img src="{{ asset('assets/front/images/line-circle.svg') }}" alt="line-circle" /> -->
+          
           <p class="education-p-text">
               {{ $doctor->education }}         
             </p>
@@ -85,21 +85,15 @@
                         <p>No sertificates available.</p>
                     </div>
                 @endforelse
-                    <!-- <div class="item">
-                        <img src="wp-content/uploads/2022/08/image-38.jpg" alt="diploma">
-                    </div> -->
+                   
 
                 </div>
             </div>
         </section>
-        <!-- <style>
-        .slick-list {
-            width: 100%;
-        }
-        </style> -->
+        
 
     </div>
     
 
-</article><!-- #post-54 -->
+</article>
 @endsection

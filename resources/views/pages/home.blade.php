@@ -17,7 +17,7 @@
                         «Симед» – представляет собой современный медицинский центр, оказывающий услуги по ультразвуковой диагностике и гинекологии. Оснащен самым современным высокотехнологичным медицинским оборудованием от лучших мировых производителей.
                     </div>
                     <div class="btn-record">
-                        <button class="record btn">
+                        <button id="btn_toggler2" class="record btn">
                             Записаться на прием
                         </button>
                     </div>
@@ -30,40 +30,7 @@
             <div class="promo-sub-title">
                 Профессиональное медицинское обслуживание по самым высоким стандартам
             </div>
-            <!-- <div class="flex">
-                <div class="main-description">
-                    <div class="title">
-                        С заботой о Вашем здоровье
-                    </div>
-                    <div class="images images-mobile">
-                        <div class="ellipse">
 
-                        </div>
-                        <img src="{{ asset('assets/front/images/result.png') }}"
-                                class="doctor-image" alt="doctors-main">
-                    </div>
-                    <div class="description">
-                        «Симед» – представляет собой современный медицинский центр, оказывающий услуги по ультразвуковой диагностике и гинекологии. Оснащен самым современным высокотехнологичным медицинским оборудованием от лучших мировых производителей.
-                    </div>
-                    <div class="btn-record">
-                        <button class="record">
-                            Записаться на прием
-                        </button>
-                    </div>
-                </div>
-                <div>
-                    <div class="images images-desktop">
-                        <div class="ellipse">
-
-                        </div>
-                        <img src="{{ asset('assets/front/images/result.png') }}"
-                                class="doctor-image" alt="doctors-main">
-                    </div>
-                </div>
-            </div>
-            <div class="text">
-                Профессиональное медицинское обслуживание по самым высоким стандартам
-            </div> -->
         </div>
     </div>
 
@@ -92,33 +59,7 @@
 
     </div>
 
-    {{--<div class="intro">
-        <div class="flex container">
-            <div class="inner-text mobile-text">
-                Добро пожаловать в <img
-                        src="{{ asset('assets/front/images/logo60.webp') }}"
-                        alt="logo">
-            </div>
-            
-            <video width="320" height="560" controls>
-                <source src="{{  asset('assets/front/images/video/vid.mp4') }}" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <!-- <video src="{{  asset('assets/front/images/video/vid.mp4') }}"></video> -->
-            <div class="text">
-                <div class="inner-text desktop-text">
-                    Добро пожаловать в <img
-                            src="{{ asset('assets/front/images/logo.webp') }}"
-                            alt="clinic">
-                </div>
-                <div class="learn-more">
-                    <a href="about-us.html">
-                        Узнать о нас больше
-                        <img src="{{ asset('assets/front/images/ar.svg') }}" alt="arrow"></a>
-                </div>
-            </div>
-        </div>
-    </div>--}}
+
 
     <div class="services">
         <div class="container">
@@ -192,26 +133,7 @@
                         </li>
                     </ul>
                 </div>
-                <!-- <div class="benefits">
-                    <div class="digit">
-                        7
-                    </div>
-                    <div class="text">
-                        Лет работы
-                    </div>
-                    <div class="digit">
-                        15
-                    </div>
-                    <div class="text">
-                        Ведущих специалистов
-                    </div>
-                    <div class="digit">
-                        20 000+
-                    </div>
-                    <div class="text">
-                        Довольных клиентов
-                    </div>
-                </div> -->
+ 
             </div>
         </div>
     </div>
@@ -259,10 +181,7 @@
                 <img src="{{ asset('assets/front/img/slider/image48.png') }}"
                         alt="insurance">
             </div>
-            <div class="item">
-                <img src="{{  asset('assets/front/img/slider/image49.png') }}"
-                        alt="insurance">
-            </div>
+
             <div class="item">
                 <img src="{{ asset('assets/front/img/slider/image50.png') }}"
                         alt="insurance">
@@ -295,10 +214,7 @@
                 <img src="{{ asset('assets/front/img/slider/image33.png') }}"
                         alt="insurance">
             </div>
-            <!-- <div class="item">
-                <img src="{{  asset('assets/front/img/ingosstrah.png') }}"
-                        alt="insurance">
-            </div> -->
+           
         </div>
         <div class="insurance-description">
             <p>
@@ -320,8 +236,6 @@
         </div>
     </div>
 
-    <!-- <div class="main-photo">
-        <img src="{{ asset('assets/front/img/uklinik-team.jpg') }}" alt="Team">
-    </div> -->
+
     
 @endsection

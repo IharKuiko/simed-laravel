@@ -47,10 +47,7 @@
                     <img src="{{   asset('assets/front/img/slider/image33.png') }}"
                          class="gallery__img prom" alt="prom">
                 </figure>
-                <!-- <figure class="gallery__item gallery__item--4">
-                    <img src="{{  asset('assets/front/img/slider/image49.png') }}"
-                         class="gallery__img task" alt="task">
-                </figure> -->
+               
                 <figure class="gallery__item gallery__item--5">
                     <img src="{{  asset('assets/front/img/slider/asoba.png') }}"
                          class="gallery__img asoba" alt="asoba">
@@ -63,10 +60,7 @@
                     <img src="{{  asset('assets/front/img/slider/image48.png') }}"
                          class="gallery__img gar" alt="gar">
                 </figure>
-                <!-- <figure class="gallery__item gallery__item--8">
-                    <img src="{{ asset('assets/front/img/ingosstrah.png') }}"
-                         class="gallery__img gar" alt="gar">
-                </figure> -->
+                
             </div>
         </div>
     </div>

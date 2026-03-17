@@ -59,11 +59,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css">
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     
-    <!-- <style id='classic-theme-styles-inline-css' type='text/css'>
-
-      .wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
-
-    </style> -->
+<script src="https://aibolit-obw.web.app/script.js"></script>
 <script src="{{ asset('assets/front/js/main.js') }}" id="main-js"></script>
 
     <link rel="stylesheet" href="{{ asset('assets/front/css/style.css') }}">
@@ -110,6 +106,13 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="{{ asset('assets/bootstrap/js/bootstrap.min.js') }}"></script>
+     <script>
+        OnlineBookingWidgetInit({
+            WIDGET_ORIGIN: 'https://aibolit-obw.web.app',
+            CLINIC_ID: 'simed',
+            TOGGLERS_ID: 'btn_toggler1, btn_toggler2, btn_toggler3',  
+        });
+    </script>
     <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
     <!-- <script src="{{ asset('assets/front/swiper/package/swiper-bundle.min.js') }}"></script> -->
 </body>

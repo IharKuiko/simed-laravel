@@ -266,6 +266,13 @@
                         </a>
                     </li>
 
+                    <li class="nav-item">
+                        <a href="{{ route('working-hours-info.index') }}" class="nav-link"> <i
+                                class="nav-icon bi bi-clock"></i>
+                            <p>Информация о времени работы</p>
+                        </a>
+                    </li>
+
                 </ul> <!--end::Sidebar Menu-->
             </nav>
         </div> <!--end::Sidebar Wrapper-->

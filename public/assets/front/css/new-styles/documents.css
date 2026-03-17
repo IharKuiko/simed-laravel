@@ -1,0 +1,465 @@
+/* Стили для страницы "Документы" */
+
+/* ============================================
+   Базовые стили и переменные
+   ============================================ */
+:root {
+    --main-color: #065aad;
+    --sec-color: #f8f9fa;
+    --text-color: #333;
+    --light-gray: #e9ecef;
+    --transition: all 0.3s ease;
+    --card-bg: #f1f8ff;
+    --card-border: #065aad;
+}
+
+/* ============================================
+   Основной контейнер
+   ============================================ */
+.patience-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 15px;
+    font-family: "IBMPlex", sans-serif;
+    color: var(--text-color);
+}
+
+/* ============================================
+   Заголовок страницы
+   ============================================ */
+.patience-container .price-header {
+    font-family: Tenor, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 42px;
+    line-height: 1.2;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* ============================================
+   Блоки документов - Аккордеон
+   ============================================ */
+.level-menu-first {
+    margin-bottom: 40px;
+    padding: 40px;
+    background-color: var(--sec-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.level-menu-first-p {
+    width: 100%;
+}
+
+/* Заголовок блока документов */
+.price-container-ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--main-color);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.price-container-ul:hover {
+    opacity: 0.8;
+}
+
+.price-container-ul .text {
+    font-family: Tenor, sans-serif;
+    font-size: 32px;
+    color: var(--main-color);
+}
+
+/* Стрелки аккордеона */
+.price-container-ul .arrow-down,
+.price-container-ul .arrow-up {
+    display: block;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.price-container-ul .arrow-down img,
+.price-container-ul .arrow-up img {
+    width: 24px;
+    height: 24px;
+}
+
+.price-container-ul .arrow-up {
+    display: none;
+}
+
+/* Список документов - скрыт по умолчанию */
+.price-menu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Активное состояние аккордеона */
+.price-menu.price-menu-active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.price-menu li {
+    display: flex;
+    align-items: flex-start;
+    padding: 20px 25px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.price-menu li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-left-color: var(--main-color);
+}
+
+.price-menu .li-text {
+    font-family: "IBMPlex", sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: var(--text-color);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: center;
+    width: 100%;
+}
+
+.price-menu .li-text a {
+    text-decoration: none;
+    color: var(--main-color);
+    transition: var(--transition);
+    font-weight: 500;
+}
+
+.price-menu .li-text a:hover {
+    text-decoration: underline;
+    color: #044a8f;
+}
+
+/* Стиль для кнопки скачивания PDF */
+.price-menu .li-text a[download] {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    background-color: var(--main-color);
+    color: #fff !important;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none !important;
+    transition: var(--transition);
+    margin-left: auto;
+}
+
+.price-menu .li-text a[download]:hover {
+    background-color: #044a8f;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(6, 90, 173, 0.3);
+    text-decoration: none !important;
+}
+
+.price-menu .li-text a[download]::before {
+    content: "📥";
+    font-size: 16px;
+}
+
+/* ============================================
+   Футер страницы
+   ============================================ */
+.patience-footer {
+    margin: 60px auto 0;
+    font-family: Tenor, sans-serif;
+    font-size: 28px;
+    line-height: 1.4;
+    text-align: center;
+    color: var(--main-color);
+    padding: 40px 20px;
+    background: linear-gradient(135deg, var(--sec-color) 0%, #e3f2fd 100%);
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.patience-footer img {
+    max-width: 200px;
+    height: auto;
+    margin-top: 20px;
+    display: inline-block;
+    transition: var(--transition);
+}
+
+.patience-footer img:hover {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   Анимация появления элементов
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.level-menu-first,
+.patience-footer {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.level-menu-first:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.level-menu-first:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.patience-footer {
+    animation-delay: 0.3s;
+}
+
+/* ============================================
+   Адаптивность для планшетов (max-width: 992px)
+   ============================================ */
+@media screen and (max-width: 992px) {
+    .patience-container {
+        padding: 40px 15px;
+    }
+
+    .patience-container .price-header {
+        font-size: 36px;
+        margin-bottom: 40px;
+    }
+
+    .level-menu-first {
+        padding: 30px;
+    }
+
+    .price-container-ul .text {
+        font-size: 28px;
+    }
+
+    .price-menu li {
+        padding: 18px 20px;
+    }
+
+    .price-menu .li-text {
+        font-size: 15px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .price-menu .li-text a[download] {
+        width: 100%;
+        margin-left: 0;
+        justify-content: center;
+    }
+
+    .patience-footer {
+        font-size: 24px;
+        padding: 30px 15px;
+    }
+
+    .patience-footer img {
+        max-width: 180px;
+    }
+}
+
+/* ============================================
+   Адаптивность для мобильных устройств (max-width: 768px)
+   ============================================ */
+@media screen and (max-width: 768px) {
+    .patience-container {
+        padding: 30px 15px;
+    }
+
+    .patience-container .price-header {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .level-menu-first {
+        padding: 25px 15px;
+        margin-bottom: 30px;
+        border-radius: 15px;
+    }
+
+    .price-container-ul {
+        margin-bottom: 25px;
+        padding-bottom: 15px;
+    }
+
+    .price-container-ul .text {
+        font-size: 24px;
+    }
+
+    .price-menu {
+        gap: 12px;
+    }
+
+    .price-menu li {
+        padding: 15px 18px;
+        border-radius: 10px;
+    }
+
+    .price-menu .li-text {
+        font-size: 14px;
+    }
+
+    .price-menu .li-text a[download] {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+
+    .patience-footer {
+        font-size: 22px;
+        line-height: 1.3;
+        padding: 25px 15px;
+        border-radius: 12px;
+    }
+
+    .patience-footer img {
+        max-width: 150px;
+    }
+}
+
+/* ============================================
+   Адаптивность для маленьких мобильных устройств (max-width: 480px)
+   ============================================ */
+@media screen and (max-width: 480px) {
+    .patience-container {
+        padding: 20px 10px;
+    }
+
+    .patience-container .price-header {
+        font-size: 26px;
+        margin-bottom: 30px;
+    }
+
+    .level-menu-first {
+        padding: 20px 12px;
+        border-radius: 12px;
+    }
+
+    .price-container-ul {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+
+    .price-container-ul .text {
+        font-size: 22px;
+    }
+
+    .price-menu {
+        gap: 10px;
+    }
+
+    .price-menu li {
+        padding: 12px 15px;
+        border-radius: 8px;
+    }
+
+    .price-menu .li-text {
+        font-size: 13px;
+    }
+
+    .price-menu .li-text a {
+        font-size: 13px;
+    }
+
+    .price-menu .li-text a[download] {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+
+    .patience-footer {
+        font-size: 18px;
+        line-height: 1.2;
+        padding: 20px 10px;
+        border-radius: 10px;
+    }
+
+    .patience-footer img {
+        max-width: 130px;
+    }
+}
+
+/* ============================================
+   Стили для печати
+   ============================================ */
+@media print {
+    .patience-container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .patience-container .price-header {
+        font-size: 24px;
+        margin: 20px 0;
+        color: #000;
+    }
+
+    .level-menu-first {
+        background-color: #fff;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        padding: 20px;
+    }
+
+    .price-menu {
+        display: block !important;
+    }
+
+    .price-menu li {
+        background-color: #fff;
+        box-shadow: none;
+        border-bottom: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    .price-menu .li-text a {
+        color: #000;
+    }
+
+    .price-menu .li-text a[download] {
+        background-color: #f0f0f0;
+        color: #000 !important;
+    }
+
+    .patience-footer {
+        background-color: #fff;
+        box-shadow: none;
+        border: 1px solid #ddd;
+        margin: 30px 0;
+    }
+}

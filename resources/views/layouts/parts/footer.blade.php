@@ -45,7 +45,7 @@
     <div class="column3">
       <p class="big-text">Запишитесь к нам на консультацию</p>
       <div class="btn-footer">
-        <div class="btn-round">
+        <div id="btn_toggler3" class="btn-round">
           <p class="btn-text">Записаться на прием</p>
         </div>
       </div>
@@ -57,7 +57,7 @@
         </p>
         <div class="flex">
           <p>Сб-Вс 09:00-16:00</p>
-          <!-- <div class="footer-question"></div> -->
+          <div class="footer-question"></div>
           <div class="pop-helper">
             <div class="helper-header">
               <div class="close">
@@ -69,11 +69,12 @@
                 Режим работы:
               </div>
               <div class="text-main">
-                  <p>Пн-Пт  09:00-20:00</p>
+                  <p>Пн-Пт 09:00-20:00</p>
                   <p>
                     Сб 09:00-16:00
                   </p>
-                               
+                  <div class="working-hours-info-container"></div>
+                                
                 </div>
             </div>
           </div>

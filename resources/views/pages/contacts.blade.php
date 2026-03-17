@@ -16,24 +16,14 @@
             <p>Реквизиты:</p>
           </div>
           <div class="requisites-text">
-            <p>Адрес: г.Речица, ул. Строителей, 2а, каб.47</p>
+            <p>Адрес: г.Речица, ул. Строителей 2а, каб.47</p>
             <p> УНП: 100394906</p>
             <p>Свидетельство о регистрации от 14.12.2021</p>
             <p>Регистрирующий орган: Речицкий Райисполком</p>
             <p>Зарегистрирован в Торговом реестре 14.12.2021</p>
           </div>
 		  <div class="working-hours">
-			  <!-- <div class="requisites">
-				  <p>Приём граждан по личным вопросам:</p>
-			  </div>
-			  <div class="requisites-text">
-          <p>
-            Директор: Дворонин Максим Арсеньевич<br>
-            1-ый вторник месяца с 14.00 до 15:00<br>
-            Предварительная запись на приём по тел. 33-99-11<br>
-            Личный прием граждан осуществляется при предъявлении документа, удостоверяющего личность.
-          </p>
-			  </div> -->
+			  
 		  </div>
           <div class="working-hours">
             <div class="working-hours-header">
@@ -73,11 +63,7 @@
           </div>
         </div>
         <div class="column-right">
-            <!-- <div style="position:relative;overflow:hidden;">
-                <a href="https://yandex.by/maps/org/yu_klinik/180376536625/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Ю-Клиник</a>
-                <a href="https://yandex.by/maps/155/gomel/category/dental_clinics/184106132/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Стоматологическая клиника в Гомеле</a>
-                <iframe src="https://yandex.by/map-widget/v1/-/CCUV6KhksD" width="710" height="564" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe>
-            </div> -->
+            
             <div style="position:relative;overflow:hidden;"><a href="https://yandex.by/maps/org/simed/175847619449/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:0px;">Симед</a><a href="https://yandex.by/maps/26008/rechitsa/category/medical_center_clinic/184106108/?utm_medium=mapframe&utm_source=maps" style="color:#eee;font-size:12px;position:absolute;top:14px;">Медцентр, клиника в Речице</a><iframe src="https://yandex.by/map-widget/v1/?ll=30.350088%2C52.372576&mode=poi&poi%5Bpoint%5D=30.349863%2C52.372616&poi%5Buri%5D=ymapsbm1%3A%2F%2Forg%3Foid%3D175847619449&z=20.08" width="710" height="564" frameborder="1" allowfullscreen="true" style="position:relative;"></iframe></div>
         </div>
     </div>

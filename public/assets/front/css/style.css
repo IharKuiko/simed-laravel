@@ -82,3 +82,7 @@ a {
 .purple {
     background: rgba(129, 135, 189, 0.1);
 }
+
+header#widget-header {
+    margin-top: 60px;
+}

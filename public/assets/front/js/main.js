@@ -69,13 +69,13 @@ jQuery(document).ready(function ($) {
         }
     });
 
-    $(".record").click(function () {
-        $(".pop-it-record").show();
-        $(".pop-helper").hide();
-        $("body").addClass("hide-page");
-        $(".ellipse").css("box-shadow", "unset");
-        $(".ellipse").css("background", "unset");
-    });
+    // $(".record").click(function () {
+    //     $(".pop-it-record").show();
+    //     $(".pop-helper").hide();
+    //     $("body").addClass("hide-page");
+    //     $(".ellipse").css("box-shadow", "unset");
+    //     $(".ellipse").css("background", "unset");
+    // });
 
     $(".footer-whatsapp").click(function (e) {
         e.preventDefault();
@@ -86,13 +86,13 @@ jQuery(document).ready(function ($) {
         $(".ellipse").css("background", "unset");
     });
 
-    $(".btn-round").click(function () {
-        $(".pop-it-record").show();
-        $(".pop-helper").hide();
-        $("body").addClass("hide-page");
-        $(".ellipse").css("box-shadow", "unset");
-        $(".ellipse").css("background", "unset");
-    });
+    // $(".btn-round").click(function () {
+    //     $(".pop-it-record").show();
+    //     $(".pop-helper").hide();
+    //     $("body").addClass("hide-page");
+    //     $(".ellipse").css("box-shadow", "unset");
+    //     $(".ellipse").css("background", "unset");
+    // });
 
     $(document).mouseup(function (e) {
         var container = $(".pop-it-record");
@@ -122,11 +122,45 @@ jQuery(document).ready(function ($) {
         $(".ellipse").css("background", "rgba(254, 204, 0, 0.0784313725)");
     });
 
+    // Функция для загрузки информации о времени работы
+    function loadWorkingHoursInfo() {
+        $.ajax({
+            url: "/api/working-hours-info",
+            method: "GET",
+            dataType: "json",
+            success: function (response) {
+                if (response.success && response.data.length > 0) {
+                    // Очищаем контейнеры
+                    $(".working-hours-info-container").empty();
+
+                    // Добавляем информацию в каждый контейнер
+                    response.data.forEach(function (info) {
+                        const infoHtml =
+                            '<div class="working-hours-info-item">' +
+                            "<p>" +
+                            info.text +
+                            "</p>" +
+                            "</div>";
+                        $(".working-hours-info-container").append(infoHtml);
+                    });
+                }
+            },
+            error: function () {
+                console.error(
+                    "Ошибка при загрузке информации о времени работы"
+                );
+            },
+        });
+    }
+
     // Обработчик для header-question (делегирование событий)
     $(document).on("click", ".header-question", function (e) {
         e.stopPropagation();
         e.preventDefault();
         const $popHelper = $(this).siblings(".pop-helper");
+
+        // Загружаем информацию перед открытием
+        loadWorkingHoursInfo();
 
         // Скрываем все другие pop-helper
         $(".pop-helper").not($popHelper).hide();
@@ -141,6 +175,9 @@ jQuery(document).ready(function ($) {
         e.stopPropagation();
         e.preventDefault();
         const $popHelper = $(this).siblings(".pop-helper");
+
+        // Загружаем информацию перед открытием
+        loadWorkingHoursInfo();
 
         // Скрываем все другие pop-helper
         $(".pop-helper").not($popHelper).hide();

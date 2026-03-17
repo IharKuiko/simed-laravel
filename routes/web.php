@@ -13,6 +13,8 @@ use App\Http\Controllers\Admin\GinecologyServiceCategoryController;
 use App\Http\Controllers\Admin\GinecologyServiceController;
 use App\Http\Controllers\Admin\UltrasoundServiceCategoryController;
 use App\Http\Controllers\Admin\UltrasoundServiceController;
+use App\Http\Controllers\Admin\WorkingHoursInfoController;
+use App\Http\Controllers\Api\WorkingHoursInfoController as ApiWorkingHoursInfoController;
 
 // Route::get('/', function () {
 //     return view('welcome');
@@ -38,27 +40,9 @@ Route::get('/privacy-policy', function () {
     return view('pages.privacy-policy');
 })->name('privacy-policy');
 
-Route::get('/for-patients', function () {
-    return view('pages.for-patients');
-})->name('for-patients');
-
-Route::get('/av-policy', function () {
-    return view('pages.av-policy');
-})->name('av-policy');
-
-
-Route::get('/med-agree', function () {
-    return view('pages.med-agree');
-})->name('med-agree');
-
-Route::get('/offer-agree', function () {
-    return view('pages.offer-agree');
-})->name('offer-agree');
-
-
-Route::get('/data-privacy', function () {
-    return view('pages.data-privacy');
-})->name('data-privacy');
+Route::get('sitemap.xml', function () {
+    return response()->file(public_path('sitemap.xml'));
+});
 
 Route::get('/documents', function () {
     return view('pages.documents');
@@ -90,6 +74,8 @@ Route::prefix('admin')->middleware('admin')->group(function () {
     Route::resource('/ultrasound-service-categories', UltrasoundServiceCategoryController::class);
     Route::resource('/ultrasound-services', UltrasoundServiceController::class);
     Route::resource('/reviews', \App\Http\Controllers\Admin\ReviewController::class);
+    Route::resource('/working-hours-info', WorkingHoursInfoController::class)->except(['create', 'edit', 'show']);
+    Route::post('/working-hours-info/{workingHoursInfo}/toggle', [WorkingHoursInfoController::class, 'toggleActive'])->name('working-hours-info.toggle');
 });
 
 Route::middleware('auth')->group(function () {
@@ -97,5 +83,7 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::get('/api/working-hours-info', [ApiWorkingHoursInfoController::class, 'index'])->name('api.working-hours-info.index');
 
 require __DIR__.'/auth.php';
